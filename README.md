@@ -1,2 +1,2 @@
 # Echologie.org
-Codes relatifs au site Echologie.org
+Ici se trouvent quelques pages du site Echologie.org
