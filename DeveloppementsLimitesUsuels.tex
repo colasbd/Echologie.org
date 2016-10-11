@@ -1,0 +1,164 @@
+%% LyX 2.2.1 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[french,english,12pt]{paper}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage[landscape,a4paper]{geometry}
+\geometry{verbose,tmargin=28mm,bmargin=0mm,lmargin=30mm,rmargin=30mm}
+\pagestyle{empty}
+\setlength{\parskip}{\bigskipamount}
+\setlength{\parindent}{0pt}
+\usepackage{multirow}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+%% Because html converters don't know tabularnewline
+\providecommand{\tabularnewline}{\\}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usetikzlibrary{shapes}
+\usepackage{mathrsfs}
+\usepackage{mathabx}
+\usepackage{txfonts}
+\usepackage{pxfonts}
+%\usepackage{yhmath}
+
+\makeatother
+
+\usepackage{babel}
+\makeatletter
+\addto\extrasfrench{%
+   \providecommand{\og}{\leavevmode\flqq~}%
+   \providecommand{\fg}{\ifdim\lastskip>\z@\unskip\fi~\frqq}%
+}
+
+\makeatother
+\begin{document}
+\bf
+
+\selectlanguage{french}%
+\newdimen\un \un=1mm
+\def\bordure{
+	\begin{tikzpicture}[overlay,remember picture]
+		\node(Triskell) at ($(current page.north west)+(21*\un,-20*\un)$){};
+		\def\p{.75}
+		\def\ang{45}
+		\def\alp{160.2}
+		\def\bet{72.42}
+		\def\gam{-13.2}
+		\draw[very thick, line width = 7pt, color=red!25!blue!33.333!green!50]
+			($(current page.north west)+(20*\un,-20*\un)$)
+			-- ($(current page.north east)+(-24*\un,-20*\un)$)
+			node [draw, ellipse, fill, text=white, pos=.5] {\titre}
+			arc (90 : 0 : 4*\un)
+			-- ($(current page.south east)+(-20*\un,24*\un)$)
+			node[text=white, near end, rotate=90]
+				{\tiny Document sous licence GNU FDL. Copyright 2016, Jean-Christophe Jameux}
+			arc (0 : -90 : 4*\un)
+			-- ($(current page.south west)+(24*\un,20*\un)$)
+			node[draw, ellipse, fill, text=white, pos=.15] {Echologie.org}
+			arc (-90 : -180 : 4*\un)
+			-- ($(current page.north west)+(20*\un,-20*\un)$);
+		\draw[fill=white,color=red!25!blue!33.333!green!50]
+			(Triskell) + (1.2*\un,-6*\un) circle (15*\un);
+		\draw[fill=white,color=white] (Triskell) circle (2*\un);
+		\draw[fill=white,color=white] (Triskell) + ({120*(1+\p)} : 3*\un)
+			arc ({120*(1+\p)} : 120 : 3*\un)
+			arc (180+\ang : 180-\ang :3*\un)
+			arc (\alp-\ang : \alp+\ang+24.8 : 5*\un);
+		\draw[fill=white,color=white] (Triskell) + (120*\p : 3*\un)
+			arc (120*\p : 0 : 3*\un)
+			arc (90+\ang : 90-\ang : 6*\un)
+			arc (\bet-\ang : \bet+\ang+5.9 : 8*\un);
+		\draw[fill=white,color=white] (Triskell) + ({120*(2+\p)} : 3*\un)
+			arc ({120*(2+\p)} : 240 : 3*\un)
+			arc (\ang : -\ang : 12*\un)
+			arc (\gam-\ang : \gam+\ang+.85 : 13*\un);
+\end{tikzpicture}}
+
+\def\titre{\large\bf Développements limités usuels}
+
+\selectlanguage{english}%
+A\hphantom{D} On trouvera ci-dessous des approximations utiles au
+voisinage de 0. Ces approximations permettent d'obtenir des \hphantom{De}équivalents
+simples dans de nombreuses situations. Les graphiques en regard de
+certaines fonctions permettent de se rendre compte de la qualité de
+l'approximation suivant l'ordre auquel on pousse le développement
+limité.
+
+\large
+
+\medskip{}
+
+\hspace{-14mm}%
+\begin{tabular}{crll}
+\phantom{$\frac{1}{\frac{1}{\frac{1}{\frac{1}{1}}}}Decalage$} & \multirow{1}{*}[70mm]{\hphantom{Fonctions}} & Approximation affine & \hfill{}Développement limité d'ordre $n$\hfill{}\null\tabularnewline
+\vphantom{$\frac{1}{\frac{1}{\frac{1}{\frac{1}{\frac{1}{1}}}}}$} & $f(x)$ & $=f(0)+f'(0)\cdot x+o\left(x\right)$\hspace{-2mm} & $=f(0)+f'(0)\cdot x+f''(0)\cdot\frac{x^{2}}{2!}+f'''(0)\cdot\frac{x^{3}}{3!}+\cdots+f^{\left(n\right)}\left(0\right)\cdot\frac{x^{n}}{n!}+o\left(x^{n}\right)$\tabularnewline
+\vphantom{$\frac{1}{\frac{1}{\frac{1}{\frac{1}{\frac{1}{1}}}}}$}\begin{tikzpicture}[yscale=.5, overlay, xshift=15, yshift=-40]
+	\shorthandoff{:}
+	\draw[->,>=latex] (-1,0) -- (2.5,0);
+	\draw[->,>=latex](0,-.4) -- (0,8);
+	\draw plot[domain=-1:2](\x,e^\x);
+	\draw[color = purple] plot[domain=-1:2](\x,1+\x);
+	\draw[color = blue] plot[domain=-1:2](\x, 1 + \x + .5*\x*\x);
+	\draw[color = green] plot[domain=-1:2](\x, {1 + \x + .5*\x*\x + (1/6)*\x^3});
+\end{tikzpicture} & $e^{x}$ & $=1+x+o\left(x\right)$ & $=1+x+\frac{x^{2}}{2!}+\frac{x^{3}}{3!}-\cdots+\frac{x^{n}}{n!}+o\left(x^{n}\right)$\tabularnewline
+\vphantom{$\frac{1}{\frac{1}{\frac{1}{\frac{1}{\frac{1}{1}}}}}$}\begin{tikzpicture}[xscale=2, yscale=1, overlay, xshift=290, yshift=20]
+	\shorthandoff{:}
+	\draw[->,>=latex] (-.8,0) -- (1.9,0);
+	\draw[->,>=latex] (0,-1) -- (0,1);
+	\draw plot[domain=-1:1](2.718281828^\x-1,\x);
+	\draw[color = purple] plot[domain=-.8:1.8](\x,\x);
+	\draw[color = blue] plot[domain=-.8:1.8](\x, \x - \x*\x/2);
+	\draw[color = green] plot[domain=-.8:1.8](\x, \x - \x*\x/2 + \x^3/3);
+\end{tikzpicture} & $\ln\left(1+x\right)$ & $=x+o\left(x\right)$ & $=x-\frac{x^{2}}{2}+\frac{x^{3}}{3}-\cdots+\left(-1\right)^{n+1}\cdot\frac{x^{n}}{n}+o\left(x^{n}\right)$\tabularnewline
+\vphantom{$\frac{1}{\frac{1}{\frac{1}{\frac{1}{\frac{1}{1}}}}}$}\begin{tikzpicture}[xscale=1.5, yscale=1, overlay, xshift=20, yshift=-70]
+	\shorthandoff{:}
+	\draw[->,>=latex] (-1,0) -- (1,0);
+	\draw[->,>=latex] (0,-.2) -- (0,4);
+	\draw plot[domain=-1:.7](\x,{1/(1 - \x)});
+	\draw[color = purple] plot[domain=-1:1](\x,1 + \x);
+	\draw[color = blue] plot[domain=-1:1](\x, 1 + \x + \x*\x);
+	\draw[color = green] plot[domain=-1:.9](\x, 1 + \x + \x*\x + \x^3);
+\end{tikzpicture} & ${\displaystyle \frac{1}{1-x}}$ & $=1+x+o\left(x\right)$ & $=1+x+x^{2}+x^{3}+\cdots+x^{n}+o\left(x^{n}\right)$\tabularnewline
+\vphantom{$\frac{1}{\frac{1}{\frac{1}{\frac{1}{\frac{1}{1}}}}}$}\begin{tikzpicture}[xscale=2, yscale=1, overlay, xshift=290, yshift=-10]
+	\shorthandoff{:}
+	\draw[->,>=latex] (-.8,0) -- (1.9,0);
+	\draw[->,>=latex] (0,-.2) -- (0,2.5);
+	\draw plot[domain=-.6:1.8](\x,{1/(1 + \x)});
+	\draw[color = purple] plot[domain=-.8:1.6](\x,1-\x);
+	\draw[color = blue] plot[domain=-.8:1.6](\x, 1 - \x + \x*\x);
+	\draw[color = green] plot[domain=-.7:1.2](\x, 1 - \x + \x*\x - \x^3);
+\end{tikzpicture} & ${\displaystyle \frac{1}{1+x}}$ & $=1-x+o\left(x\right)$ & $=1-x+x^{2}-x^{3}+\cdots+\left(-1\right)^{n}\cdot x^{n}+o\left(x^{n}\right)$\tabularnewline
+\vphantom{$\frac{1}{\frac{1}{\frac{1}{\frac{1}{\frac{1}{1}}}}}$}\begin{tikzpicture}[overlay, scale=.1, rotate=-20, xshift=400, yshift=240]
+	\draw [opacity=.5, fill, color=red!25!blue!33.333!green!50] (0,0)
+	.. controls +(0,2)  and +(0,2)
+	.. (3,0)
+	.. controls +(0,-2) and +(0,2)
+	.. (0,-4)
+	.. controls +(0,2)  and +(0,-2)
+	.. (-3,0)
+	.. controls +(0,2)  and +(0,2)
+	.. (0,0);
+\end{tikzpicture} & $\left(1+x\right)^{\alpha}$ & $=1+\alpha x+o\left(x\right)$ & $={\displaystyle 1+}\alpha x+\frac{\alpha\left(\alpha-1\right)}{2!}\cdot x^{2}+\frac{\alpha\left(\alpha-1\right)\left(\alpha-2\right)}{3!}\cdot x^{3}+\cdots+\frac{\alpha\cdots\left(\alpha-n+1\right)}{n!}\cdot x^{n}+o\left(x^{n}\right)$\tabularnewline
+\vphantom{$\frac{1}{\frac{1}{\frac{1}{\frac{1}{\frac{1}{1}}}}}$}\begin{tikzpicture}[xscale=1.5, yscale=2, overlay, xshift=20, yshift=-30]
+	\shorthandoff{:}
+	\draw[->,>=latex] (-1,0) -- (1,0);
+	\draw[->,>=latex](0,-.1) -- (0,1.5);
+	\draw plot[domain=0:1.5](\x^2-1,\x);
+	\draw[color = purple] plot[domain=-1:1](\x,1+.5*\x);
+	\draw[color = blue] plot[domain=-1:1](\x, 1 + .5*\x - .125*\x*\x);
+	\draw[color = green] plot[domain=-1:1](\x, 1 + .5*\x - .125*\x*\x + .0625*\x^3);
+\end{tikzpicture} & $\sqrt{1+x}$ & $=1+\frac{1}{2}x+o\left(x\right)$ & $=1+\frac{1}{2}x-\frac{1}{8}x^{2}+\frac{1}{16}x^{3}+\cdots+\left(-1\right)^{n+1}\cdot\frac{1\times3\times\cdots\times\left(2n-3\right)}{2\times4\times\cdots\times2n}\cdot x^{n}+o\left(x^{n}\right)$\tabularnewline
+\vphantom{$\frac{1}{\frac{1}{\frac{1}{\frac{1}{\frac{1}{1}}}}}$} & $\sqrt[3]{1+x}$ & $=1+\frac{1}{3}x+o\left(x\right)$ & $=1+\frac{1}{3}x-\frac{1}{9}x^{2}+\frac{5}{81}x^{3}+\cdots+\left(-1\right)^{n+1}\cdot\frac{2\times5\times8\times\cdots\times\left(3n-4\right)}{3^{n}\cdot n!}\cdot x^{n}+o\left(x^{n}\right)$\tabularnewline
+\end{tabular}
+
+\selectlanguage{french}%
+\bordure\selectlanguage{english}%
+
+\end{document}

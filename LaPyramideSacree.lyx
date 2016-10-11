@@ -1,0 +1,1055 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass paper
+\begin_preamble
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usetikzlibrary{shapes}
+\usepackage{mathrsfs}
+\usepackage{mathabx}
+\usepackage{txfonts}
+\usepackage{pxfonts}
+\usepackage{titling}
+\usepackage{array}
+%\usepackage{yhmath}
+\end_preamble
+\options 10pt
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation landscape
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 0mm
+\topmargin 0mm
+\rightmargin 0mm
+\bottommargin 0mm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip bigskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle empty
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+
+\lang french
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+title{
+\backslash
+large
+\backslash
+bf La Pyramide Sacrée}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlength
+\backslash
+extrarowheight{0mm}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+parindent0mm
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+parskip0.6mm
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+def
+\backslash
+ks#1{
+\backslash
+raise-1.5mm
+\backslash
+hbox{
+\backslash
+begin{tikzpicture}
+\backslash
+draw[dashed] (0,0)circle(0.25);
+\backslash
+node at (0,0){$#1$};
+\backslash
+end{tikzpicture}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+def
+\backslash
+coeur[#1]{ 		
+\backslash
+draw [#1] (0,0) 		 ..
+ controls +(0,2)  and +(0,2)  ..
+ (3,0) 		 ..
+ controls +(0,-2) and +(0,2)  ..
+ (0,-4) 		 ..
+ controls +(0,2)  and +(0,-2) ..
+ (-3,0) 		 ..
+ controls +(0,2)  and +(0,2)  ..
+ (0,0); }
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+		  
+\backslash
+null
+\backslash
+vfill
+\backslash
+hfill
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}[scale=11,remember picture]
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+shorthandoff{:}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[line width=3mm](0,0)--++(60:1.5)--+(-60:1.5)--cycle;
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[line width=3mm](60:0.5)--++(60:0.5)--++(0:0.5)--++(-60:0.5)--cycle;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node[scale=10](A) at (0.75,0.2){$+$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node[scale=10](M) at (0.75,0.65){$
+\backslash
+times$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node[scale=10](P) at (0.75,1.02){$
+\backslash
+wedge$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node[above left] at ($(A)+(-.02,.02)$){$a+b=b+a$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node[above right] at ($(A)+(.02,-.02)$) {$ 		
+\backslash
+arraycolsep0mm 		
+\backslash
+begin{array}{rl} 			(a+b)+c	&	=a+(b+c)
+\backslash
+
+\backslash
+ 					&	=a+b+c 		
+\backslash
+end{array} 	$}; 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node[below right] at ($(A)+(.02,-.02)$){$a+0=a$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node[below left] at ($(A)+(-.02,-.02)$){$a+(-a)=0$};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node at ($(A)+(0,-.12)$){$
+\backslash
+ks x+a=b
+\backslash
+Longleftrightarrow x=
+\backslash
+ks b-a
+\backslash
+Longleftrightarrow x=
+\backslash
+ks b+(-a)$}; 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node (a1) at ($(60:0.5)+(180:.3)$){$k
+\backslash
+left(a+b
+\backslash
+right)=ka+kb$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node (a2) at ($(60:0.5)+(180:.3)+(-120:0.2)$){$k
+\backslash
+left(a-b
+\backslash
+right)=ka-kb$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node (a3) at ($(60:0.5)+(0:1.3)$){$
+\backslash
+left(a+b
+\backslash
+right)k=ak+bk$}; 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[->,>=latex] (a1) to[out=-10,in=10] node[left]{ 		
+\backslash
+hsize4cm 		
+\backslash
+vbox{ 			
+\backslash
+begin{center} 				en remplaçant l'addition				 				par une soustraction
+ 			
+\backslash
+end{center} 		} 	} (a2);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+coeur[shift={($(60:0.5)+(0:1.3)+(0,.03)$)},ball color=lightgray,scale=0.05,rotate=-1
+6,opacity=.2]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node (a4) at ($(60:0.5)+(0:1.2)+(-50:0.25)$){$
+\backslash
+displaystyle
+\backslash
+frac ak+
+\backslash
+frac bk=
+\backslash
+frac{a+b}k$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+draw[->,>=latex] (a3) to[out=-170,in=170] node[right]{ 		
+\backslash
+hsize5cm 		
+\backslash
+vbox{ 			
+\backslash
+begin{center} 				en remplaçant la multiplication				 				par une division
+ 			
+\backslash
+end{center} 		} 	} (a4);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node at ($(M)+(-.1,0)$){$a
+\backslash
+cdot b=b
+\backslash
+cdot a$};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node at ($(M)+(0,.11)$)
+\end_layout
+
+\begin_layout Plain Layout
+
+	{ 
+\backslash
+vbox{
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+begin{center}
+\end_layout
+
+\begin_layout Plain Layout
+
+			$(a
+\backslash
+cdot b)
+\backslash
+cdot c$
+\backslash
+par
+\end_layout
+
+\begin_layout Plain Layout
+
+			
+\backslash
+kern-2mm 			=
+\backslash
+par		
+\end_layout
+
+\begin_layout Plain Layout
+
+			
+\backslash
+kern-1.8mm 			$a
+\backslash
+cdot (b
+\backslash
+cdot c)$
+\backslash
+par		
+\end_layout
+
+\begin_layout Plain Layout
+
+			
+\backslash
+kern-2mm 			=
+\backslash
+par
+\end_layout
+
+\begin_layout Plain Layout
+
+			
+\backslash
+kern-1.8mm 			$abc$
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+end{center} 	}};
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+node at ($(M)+(.1,0)$){$a
+\backslash
+cdot1=a$}; 	
+\backslash
+node at ($(M)+(0,-.08)$){$
+\backslash
+displaystyle a
+\backslash
+cdot
+\backslash
+frac1a=1$}; 	
+\backslash
+coordinate(Om)at($(M)+(-.2,-.08)$); 	
+\backslash
+node at ($(M)+(0,-.15)$){$
+\backslash
+displaystyle
+\backslash
+ks x
+\backslash
+cdot a=b
+\backslash
+Longleftrightarrow x=
+\backslash
+frac{
+\backslash
+ks b}a
+\backslash
+Longleftrightarrow x=
+\backslash
+ks b
+\backslash
+cdot
+\backslash
+frac1a$}; 	
+\backslash
+node (m1) at ($(60:0.5)+(60:0.5)+(180:0.3)$){$k^{a+b}=k^a
+\backslash
+cdot k^b$}; 	
+\backslash
+node (m3) at ($(60:0.5)+(60:0.5)+(0:0.8)$){$
+\backslash
+left(ab
+\backslash
+right)^k=a^k
+\backslash
+cdot b^k$}; 	
+\backslash
+node (m2) at ($(60:0.5)+(60:0.5)+(180:0.3)+(-120:0.2)$){$k^{a-b}=
+\backslash
+displaystyle
+\backslash
+frac{k^a}{k^b}$}; 	
+\backslash
+node (m4) at ($(60:0.5)+(60:0.5)+(0:0.8)+(-60:0.2)$){$
+\backslash
+displaystyle
+\backslash
+left(
+\backslash
+frac ab
+\backslash
+right)^k=
+\backslash
+frac{a^k}{b^k}$}; 	
+\backslash
+draw[->,>=latex] (m1) to[out=-10,in=10] node[left]{ 		
+\backslash
+hsize4cm 		
+\backslash
+vbox{ 			
+\backslash
+begin{center} 				en remplaçant l'addition				 				par une soustraction
+ 			
+\backslash
+end{center} 		} 	} (m2); 	
+\backslash
+draw[->,>=latex] (m3) to[out=-170,in=170] node[right]{ 		
+\backslash
+hsize5cm 		
+\backslash
+vbox{ 			
+\backslash
+begin{center} 				en remplaçant la multiplication				 				par une division
+ 			
+\backslash
+end{center} 		} 	} (m4);
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+node at ($(P)+(-.1,-.1)$){$a^b
+\backslash
+neq b^a$}; 	
+\backslash
+node at ($(P)+(.1,-.1)$){$a^1=a$}; 	
+\backslash
+node at ($(P)+(0,.1)$){$
+\backslash
+left(a^b
+\backslash
+right)^c
+\backslash
+neq a^{
+\backslash
+left(b^c
+\backslash
+right)}$}; 
+\backslash
+end{tikzpicture} 
+\backslash
+hfill
+\backslash
+null
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vfill
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang french
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+% Logo, bordures et Copyleft
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newdimen
+\backslash
+un 
+\backslash
+un=1mm
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+def
+\backslash
+bordure{
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+begin{tikzpicture}[overlay,remember picture]
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+node(Triskell) at ($(current page.north west)+(21*
+\backslash
+un,-20*
+\backslash
+un)$){};
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+def
+\backslash
+p{.75}
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+def
+\backslash
+ang{45}
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+def
+\backslash
+alp{160.2}
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+def
+\backslash
+bet{72.42}
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+def
+\backslash
+gam{-13.2}
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+draw[very thick, line width = 7pt, color=red!25!blue!33.333!green!50]
+\end_layout
+
+\begin_layout Plain Layout
+
+			($(current page.north west)+(20*
+\backslash
+un,-20*
+\backslash
+un)$)
+\end_layout
+
+\begin_layout Plain Layout
+
+			-- ($(current page.north east)+(-24*
+\backslash
+un,-20*
+\backslash
+un)$)
+\end_layout
+
+\begin_layout Plain Layout
+
+			node [draw, ellipse, fill, text=white, pos=.5] {
+\backslash
+thetitle}
+\end_layout
+
+\begin_layout Plain Layout
+
+			arc (90 : 0 : 4*
+\backslash
+un)
+\end_layout
+
+\begin_layout Plain Layout
+
+			-- ($(current page.south east)+(-20*
+\backslash
+un,24*
+\backslash
+un)$)
+\end_layout
+
+\begin_layout Plain Layout
+
+			node[text=white, pos=.5, rotate=90]
+\end_layout
+
+\begin_layout Plain Layout
+
+				{
+\backslash
+tiny Document sous licence GNU FDL.
+\end_layout
+
+\begin_layout Plain Layout
+
+					Vous pouvez le distribuer et le modifier librement.
+\end_layout
+
+\begin_layout Plain Layout
+
+					Sources et licence complète disponibles sur le site Echologie.org.
+\end_layout
+
+\begin_layout Plain Layout
+
+					Copyright 2016, Jean-Christophe Jameux}
+\end_layout
+
+\begin_layout Plain Layout
+
+			arc (0 : -90 : 4*
+\backslash
+un)
+\end_layout
+
+\begin_layout Plain Layout
+
+			-- ($(current page.south west)+(24*
+\backslash
+un,20*
+\backslash
+un)$)
+\end_layout
+
+\begin_layout Plain Layout
+
+			node[draw, ellipse, fill, text=white, pos=.15] {Echologie.org}
+\end_layout
+
+\begin_layout Plain Layout
+
+			arc (-90 : -180 : 4*
+\backslash
+un)
+\end_layout
+
+\begin_layout Plain Layout
+
+			-- ($(current page.north west)+(20*
+\backslash
+un,-20*
+\backslash
+un)$);
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+draw[fill=white,color=red!25!blue!33.333!green!50]
+\end_layout
+
+\begin_layout Plain Layout
+
+			(Triskell) + (1.2*
+\backslash
+un,-6*
+\backslash
+un) circle (15*
+\backslash
+un);
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+draw[fill=white,color=white] (Triskell) circle (2*
+\backslash
+un);
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+draw[fill=white,color=white] (Triskell) + ({120*(1+
+\backslash
+p)} : 3*
+\backslash
+un)
+\end_layout
+
+\begin_layout Plain Layout
+
+			arc ({120*(1+
+\backslash
+p)} : 120 : 3*
+\backslash
+un)
+\end_layout
+
+\begin_layout Plain Layout
+
+			arc (180+
+\backslash
+ang : 180-
+\backslash
+ang :3*
+\backslash
+un)
+\end_layout
+
+\begin_layout Plain Layout
+
+			arc (
+\backslash
+alp-
+\backslash
+ang : 
+\backslash
+alp+
+\backslash
+ang+24.8 : 5*
+\backslash
+un);
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+draw[fill=white,color=white] (Triskell) + (120*
+\backslash
+p : 3*
+\backslash
+un)
+\end_layout
+
+\begin_layout Plain Layout
+
+			arc (120*
+\backslash
+p : 0 : 3*
+\backslash
+un)
+\end_layout
+
+\begin_layout Plain Layout
+
+			arc (90+
+\backslash
+ang : 90-
+\backslash
+ang : 6*
+\backslash
+un)
+\end_layout
+
+\begin_layout Plain Layout
+
+			arc (
+\backslash
+bet-
+\backslash
+ang : 
+\backslash
+bet+
+\backslash
+ang+5.9 : 8*
+\backslash
+un);
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+draw[fill=white,color=white] (Triskell) + ({120*(2+
+\backslash
+p)} : 3*
+\backslash
+un)
+\end_layout
+
+\begin_layout Plain Layout
+
+			arc ({120*(2+
+\backslash
+p)} : 240 : 3*
+\backslash
+un)
+\end_layout
+
+\begin_layout Plain Layout
+
+			arc (
+\backslash
+ang : -
+\backslash
+ang : 12*
+\backslash
+un)
+\end_layout
+
+\begin_layout Plain Layout
+
+			arc (
+\backslash
+gam-
+\backslash
+ang : 
+\backslash
+gam+
+\backslash
+ang+.85 : 13*
+\backslash
+un);
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang french
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+bordure
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

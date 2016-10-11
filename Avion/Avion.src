@@ -1,0 +1,237 @@
+<p class="dialEleve">J'ai vu que vous aviez retweeté une énigme de @CultureMath hier. J'ai eu beau l'aborder avec <a title="Du coton dans la tête" href="http://echologie.org/du-coton-dans-la-tete/">toute mon attention</a>, impossible de la résoudre.</p>
+<p class="dialEcho">Celle de l'avion ?</p>
+<p class="dialEleve">Oui. Celle-ci :</p>
+
+<blockquote class="twitter-tweet" data-lang="fr">
+<p dir="ltr" lang="fr" style="text-align: left;"><a href="https://twitter.com/hashtag/QuestionDuJeudi?src=hash">#QuestionDuJeudi</a> 1 avion survole 1 circuit circulaire en revenant à son pt de départ. Mq sa traj. passe par 2 pts opposés à la mm altitude.</p>
+— Culture Math (@CultureMath) <a href="https://twitter.com/CultureMath/status/713101961126608897">24 mars 2016</a></blockquote>
+<script src="//platform.twitter.com/widgets.js" async="" charset="utf-8"></script>
+<p class="dialEcho">Je trouve très bien que tu t'intéresses à ce compte Twitter. Tout le monde devrait le suivre ! Voudrais-tu que nous essayions de résoudre cette énigme ensemble ?</p>
+<p class="dialEleve">Pourquoi pas. Mais surtout, je ne suis pas sûr d'avoir compris le problème...</p>
+<p class="dialEcho">Tu as lu la <a title="La question du jeudi (57) : circuit aérien" href="http://culturemath.ens.fr/content/la-question-du-jeudi-57-circuit-a%C3%A9rien">version longue</a> du problème ?</p>
+<p class="dialEleve"><span style="font-weight: inherit;">Oui. On nous demande de démontrer qu'il y a toujours deux points diamétralement opposés du circuit au dessus desquels l'avion est à la même altitude, mais je ne vois vraiment pas comment ça pourrait être vrai quelque soit le trajet de l'avion.</span></p>
+<p class="dialEcho">Et pourquoi est-ce que tu trouves ça si invraisemblable ?</p>
+<p class="dialEleve">Parce-que je ne vois pas ce que le fait que les deux points soient diamétralement opposés vient faire dans le problème. Si on avait dit par exemple de démontrer que, quelque soit le trajet de l'avion, il existait deux points du circuit distant de cinq mètres tels que les altitudes de l'avion au dessus de ces points soient égales, ça crève les yeux que ce n'est pas toujours vrai.</p>
+<p class="dialEcho">C'est une remarque assez judicieuse, mais malheureusement fausse. Le problème reste vrai dans ce cas. Néanmoins, il se produit un phénomène très particulier quand nous prenons des points diamétralement opposés qui ne se produit pas quand on prend des points distants de cinq mètres, et qui simplifie considérablement le problème.</p>
+<p class="dialEleve">Ah ? Et quoi donc ?</p>
+<p class="dialEcho">Je ne vais pas te gâcher la surprise. Mais remarque néanmoins qu'un point du circuit n'a qu'un seul point diamétralement opposé, alors qu'il a deux points distants de cinq mètres...</p>
+<p class="dialEleve">Alors là, je ne vois vraiment pas ce que ça change à l'histoire.</p>
+<p class="dialEcho">C'est même pire que ça, le problème est encore plus compliqué si le périmètre du circuit n'est pas un multiple entier de cinq mètres... Mais cantonnons-nous à la version proposé. Je vais te montrer comment un mathématicien aborde ce genre de problème, et tu verras que tout deviendra vite assez simple. Cette énigme illustre à merveille certaines habitudes de pensé du mathématicien. Ce sera surement très instructif.</p>
+<p class="dialEleve">Ok. Mais est-ce que déjà on pourrait clarifier un peu le problème ?</p>
+<p class="dialEcho">Eh bien justement. La première chose que fait le mathématicien c'est de clarifier le problème. Il introduit des notations adéquates qui lui permettront de raisonner plus facilement.</p>
+<p class="dialEleve">Et quelles notations va-t-on utiliser ?</p>
+<p class="dialEcho">Eh bien à toi de me le dire. Quelles sont les différents éléments du problème ?</p>
+<p class="dialEleve">Le circuit circulaire au sol, Le trajet de l'avion en l'air et... C'est tout ?</p>
+<p class="dialEcho">Pas tout à fait. Mais pour commencer, appelons $\mathscr C$ le circuit et $\mathscr T$ la trajectoire. Peux-tu me dire quels types d'objets mathématiques sont $\mathscr C$ et $\mathscr T$ ?</p>
+<p class="dialEleve">Qu'entendez-vous par type ?</p>
+<p class="dialEcho">Le type d'un objet mathématiques c'est grosso-modo ce qui caractérise ce que l'on peut faire avec cet objet.</p>
+<p class="dialEleve">Ouais. Votre réponse ne m'avance pas vraiment.</p>
+<p class="dialEcho">Je vais te donner un exemple. Un nombre peut être additionner à un autre. On peut faire des calculs avec. Bref, on peut lui faire subir des opérations de nature arithmétique. Ainsi, 7 est un objet mathématique de type nombre. C'est même un objet de type nombre entier naturel.</p>
+<p class="dialEleve">On peut avoir plusieurs types ?</p>
+<p class="dialEcho">Si on peut subir différentes sortes de manipulations, oui. Quoique certains mathématiciens considèrent que le nombre entier 7 n'est pas identique au nombre réel 7.</p>
+<p class="dialEleve">Pourquoi ça ?</p>
+<p class="dialEcho">Parce qu'on ne peut pas leur faire subir les mêmes transformations.</p>
+<p class="dialEleve">Par exemple ?</p>
+<p class="dialEcho">On ne peut pas toujours diviser par 7 avec des nombres entiers (bien qu'on puisse toujours faire une division euclidienne) alors qu'avec les nombres réels on peut toujours. Mais nous ne nous préoccuperons pas de ce genre de subtilités. Nous dirons simplement que 7 est de type nombre entier, et que plus généralement, il est de type nombre réel.</p>
+<p class="dialEleve">Je vois, les types c'est comme les ensembles quoi. 7 appartient à l'ensemble des nombres entiers, qui est lui même contenu dans l'ensemble des nombres réels...</p>
+<p class="dialEcho">C'est absolument ça. La distinction entre les deux notions est d'une certaine façon de nature psychologique. La différence c'est que le théoricien des ensembles se demande si un élément appartient à un ensemble donné quand le théoricien des types se demande qu'elles sont les fonctions qu'il peut appliquer à l'objet. C'est d'ailleurs ce dernier point de vu qui est utilisé en informatique dans les langages de programmation dit fonctionnels. Un programme y est vu comme une fonction qui transforme des données d'un certain type en entrée en des données d'un certain autre type en sortie.</p>
+<p class="dialEleve">Avec tout ça, je ne sais toujours pas quelles sont les types de $\mathscr C$ et $\mathscr T...$ Je sais juste que $\mathscr C$ est un cercle et $\mathscr T$ est une courbe fermée.</p>
+<p class="dialEcho">Eh bien, ça y est ! Tu as répondu à la question.</p>
+<p class="dialEleve">C'est ça leur type ? Cercle et courbe ?</p>
+<p class="dialEcho">Oui, on peut même simplement dire que ce sont des courbes, puisqu'un cercle est une courbe, et plus généralement, on peut dire que ce sont des figures, car on peut leur faire subir des transformations de nature géométriques, comme des symétries, ou encore leur associer des mesures. Mais ce n'est pas très intéressant dans notre problème. Par contre, on aurait intérêt à être un peu plus abstrait et dire que, plus généralement, ils sont de type espace, car on peut se déplacer <em>dedans.</em></p>
+<p class="dialEleve">Comment des courbes pourraient-elles être des espaces ? Ce sont des figures à une seule dimension, qui elles mêmes vivent dans un espace à trois dimensions. Elles sont juste <em>dans </em>l'espace. Non ?</p>
+<p class="dialEcho">Non.</p>
+<p class="dialEleve">Ah ?</p>
+<p class="dialEcho">Oui.</p>
+<p class="dialEleve">Et alors ?</p>
+<p class="dialEcho">Et alors pour un mathématicien, espace signifie simplement objet <em>dans</em> lequel on peut se déplacer. Donc $\mathscr C$ et $\mathscr T$ sont des espaces.</p>
+<p class="dialEleve">Certes, mais quand je marche <em>sur</em> le circuit, en fait je suis <em>dans</em> l'espace, le vrai, pas <em>dans</em> le circuit lui-même.</p>
+<p class="dialEcho">Il faut faire preuve d'un peu d'abstraction. Oublie l'espace, ne considère que le cercle. Pas le cercle comme une figure dessinée sur le sol, mais simplement le cercle. Un point <em>dans </em>ce cercle ne pourrait se déplacer que le long du cercle, soit dans le sens des aiguilles d'une montre, soit dans le sens contraire. Il ne serait même pas au courant qu'il existe d'autres directions. Pour ce point, le cercle représenterait bien tout l'espace. Un espace unidimensionnel.</p>
+<p class="dialEleve">Je crois que je vois.</p>
+<p class="dialEcho">Alors c'est parfait. Voir, c'est tout ce que je te demande. Maintenant, est-ce que la donnée de ces deux espaces suffit à exprimer abstraitement, mathématiquement, et surtout complètement, notre problème ?</p>
+<p class="dialEleve">Bah, pas vraiment. Il faudrait dire ce que c'est que l'altitude, ce que c'est que des points diamétralement opposés...</p>
+<p class="dialEcho">Alors faisons ça. C'est quel type d'objet mathématique l'altitude ?</p>
+<p class="dialEleve">Un nombre ?</p>
+<p class="dialEcho">Pas tout à fait. À moins que tu ne considères qu'un nombre puisse changer de valeur au cours du temps, mais c'est très inusuel.</p>
+<p class="dialEleve">Et c'est mal ?</p>
+<p class="dialEcho">Dans l'absolu non. Mais si chacun utilise les mots à sa façon sans se préoccuper de ce que les autres entendent par là, cela risque de compliquer quelque peu la communication...</p>
+<p class="dialEleve">Ouais. J'avoue. Donc c'est quoi l'altitude pour vous ?</p>
+<p class="dialEcho">C'est une fonction.</p>
+<p class="dialEleve">Une fonction de quoi ?</p>
+<p class="dialEcho">Eh bien, on peut dire que l'altitude dépend du temps, mézalor il faut introduire une horloge sous la forme d'un intervalle de la forme $[0 ; T]$, où $T$ représenterait le temps total du trajet. Ou alors on dit que l'altitude est une fonction de la position le long de la trajectoire.</p>
+<p class="dialEleve">Et c'est quoi le mieux ?</p>
+<p class="dialEcho">Le mieux c'est de prendre ce que tu préfères ! Et comme tu as d'office considéré la trajectoire...</p>
+<p class="dialEleve">En effet. Donc on considère $a$, la fonction qui a tout point de la trajectoire associe l'altitude de l'avion en ce point.</p>
+<p class="dialEcho">Tout simplement. On dit que $a$ est une fonction de l'espace $\mathscr T$ dans l'ensemble $\mathbb R$ des nombres réels. Et on note ça $a : \mathscr T\longrightarrow \mathbb R$ ou encore $\mathscr T \xrightarrow {\ a\ }\mathbb R$.</p>
+<p class="dialEleve">Mais l'altitude est toujours positive, il vaudrait mieux prendre $\mathbb R_+$.</p>
+<p class="dialEcho">Certes, mais nous verrons que ça ne change rien à l'histoire. Si l'avion passait sous terre pendant son vol le résultat serait tout aussi vrai.</p>
+<p class="dialEleve">Un avion sous le sol... Vous n'êtes pas à une abstraction près !</p>
+<p class="dialEcho">Oh que non ! Comme la plupart des matheux, je déteste m'imposer (ou me laisser imposer) des restrictions qui n'ont aucun rapport avec l'essence du problème.</p>
+<p class="dialEleve">Ah les profs de maths, tous des rebelles.</p>
+<p class="dialEcho">C'est ça, moque toi. Verrais-tu plutôt comment exprimer la notion de points diamétralement opposés à l'aide de la notion de fonction ?</p>
+<p class="dialEleve">Il suffit simplement de considérer la fonction $d$ de $\mathscr C$ dans $\mathscr C$ qui à tout point associe son point diamétralement opposé, j'imagine.</p>
+<p class="dialEcho">Tout simplement. Je n'aurais pas dit mieux. Et verrais-tu ce que cette fonction $d$ a de vraiment très particulier ?</p>
+<p class="dialEleve">Euh... À priori non.</p>
+<p class="dialEcho">C'est quoi le point diamétralement opposé du point diamétralement opposé d'un point $c$ de $\mathscr C$ ?</p>
+<p class="dialEleve">C'est juste $c$. Ah oui, OK. Donc, pour tout $c$ dans $\mathscr C$, on a que $d(d(c))=c$.</p>
+<p class="dialEcho">Précisément, on dit que $d$ est involutive. Ce qu'on résume par la formule \[\forall c\in\mathscr C,\ d\left(d\left( c\right)\right)=c\] Tu connais déjà très bien deux fonctions involutives: la fonction inverse \[\mathbb R^* \longrightarrow \mathbb R^*, x\mapsto \frac1x\] et la fonction qui a tout nombre associe son opposé \[\mathbb R \longrightarrow \mathbb R, x\mapsto -x\] Ces trois fonctions entretiennent d'ailleurs des relations plus ou moins complexes...</p>
+<p class="dialEleve">Je vous crois sur parole. Et donc on a tout maintenant ?</p>
+<p class="dialEcho">Il nous manque un truc très important. Regarde ce que nous avons pour l'instant, il n'y a rien qui te chagrine ?</p>
+<a href="http://echologie.org/wp-content/uploads/2016/03/AvionDiag1.png" rel="attachment wp-att-326"><img class="size-medium wp-image-326 aligncenter" src="http://echologie.org/wp-content/uploads/2016/03/AvionDiag1-300x289.png" alt="AvionDiag1" width="300" height="289" /></a>
+<p class="dialEleve">Ah oui, en effet. On a deux morceaux de l'histoire complètement déconnectés. C'est embêtant.</p>
+<p class="dialEcho">Rassure-toi. Nous allons vite y remédier. Nous allons introduire un dictionnaire entre $\mathscr C$ et $\mathscr T$.</p>
+<p class="dialEleve">Un dictionnaire ? Et c'est quel type d'objet mathématique ça ?</p>
+<p class="dialEcho">C'est juste un couple de fonctions réciproques l'une de l'autre entre les espaces $\mathscr C$ et $\mathscr T$. La première étant simplement la projection $p$ de $\mathscr T$ sur $\mathscr C$. Comme sur ce dessin.</p>
+<a href="http://echologie.org/wp-content/uploads/2016/03/Avion1.png" rel="attachment wp-att-325"><img class="size-medium wp-image-325 aligncenter" src="http://echologie.org/wp-content/uploads/2016/03/Avion1-274x300.png" alt="Avion1" width="274" height="300" /></a>
+<p class="dialEleve">Ok. On a tout ce qu'il nous faut pour démarrer notre raisonnement maintenant j'espère.</p>
+<p class="dialEcho">Oui, oui. Je te rassures. Commençons par traduire notre problème en terme des fonctions que nous avons introduites.</p>
+<p class="dialEleve">D'accord.</p>
+<p class="dialEcho">Eh bien ?</p>
+<p class="dialEleve">Eh bien quoi ? Vous voulez que je le fasse ?</p>
+<p class="dialEcho">Bah oui, tant qu'à faire.</p>
+<p class="dialEleve">Hum... On veut démontrer qu'il existe $t$ dans $\mathscr T$ tel que $a(t)=a(d(t))$.</p>
+<p class="dialEcho">Ah... Et c'est censé être quoi $d(t)$ ?</p>
+<p class="dialEleve">Bonne question.</p>
+<p class="dialEcho">Dis-moi comment aller de $\mathscr T$ dans $\mathbb R$ sur ce diagramme.</p>
+<a href="http://echologie.org/wp-content/uploads/2016/03/AvionDiag2.png" rel="attachment wp-att-343"><img class="size-medium wp-image-343 aligncenter" src="http://echologie.org/wp-content/uploads/2016/03/AvionDiag2-300x289.png" alt="AvionDiag2" width="300" height="289" /></a>
+<p class="dialEleve">Comme ça</p>
+<a href="http://echologie.org/wp-content/uploads/2016/03/AvionDiag3.png" rel="attachment wp-att-344"><img class="size-medium wp-image-344 aligncenter" src="http://echologie.org/wp-content/uploads/2016/03/AvionDiag3-300x289.png" alt="AvionDiag3" width="300" height="289" /></a>
+<p class="dialEcho">Certes. Mais on peut aussi faire comme ça</p>
+<a href="http://echologie.org/wp-content/uploads/2016/03/AvionDiag4.png" rel="attachment wp-att-345"><img class="size-medium wp-image-345 aligncenter" src="http://echologie.org/wp-content/uploads/2016/03/AvionDiag4-300x289.png" alt="AvionDiag4" width="300" height="289" /></a>
+<p class="dialEleve">Ah oui, d'accord. Alors il faut plutôt dire tel que $a(t)=a(s(d(p(t))))$.</p>
+<p class="dialEcho">Exactement. D'ailleurs ton identité gagnerait à être écrite à l'aide d'une fonction composée. On écrirait plutôt que pout tout $t$ dans $\mathscr T$ $a(t)=a\circ s\circ d\circ p(t)$ (ce qui se lit $a$ <em>rond</em> $s$ <em>rond</em> $d$ <em>rond</em> $p$. Ou même plus simplement $a=a\circ s\circ d\circ p$. Cela évite d'abord les enchevêtrements de parenthèses, mais surtout cette couche d'abstraction permet de bien voir qu'en définitive, la fonction composée $a\circ s\circ d\circ p$ n'est autre qu'une fonction de type $\mathscr T \longrightarrow \mathbb R$.</p>
+<p class="dialEleve">Je ne vois pas bien ce que vous voulez dire.</p>
+<p class="dialEcho">Eh bien, cela permet de se ramener au diagramme suivant, dans lequel on ne fait plus référence à $\mathscr C$.</p>
+<a href="http://echologie.org/wp-content/uploads/2016/03/AvionDiag5.png" rel="attachment wp-att-346"><img class="size-medium wp-image-346 aligncenter" src="http://echologie.org/wp-content/uploads/2016/03/AvionDiag5-300x157.png" alt="AvionDiag5" width="300" height="157" /></a>
+<p class="dialEleve">Et à part l'hygiène, il y a un intérêt pratique ?</p>
+<p class="dialEcho">En tout cas, cela permet sans doute de penser plus facilement à une technique que tu as déjà croisée cent fois dans ta vie et qui permet de montrer que deux nombres sont égaux ou encore de résoudre des équations à première vue peu sympathiques, comme c'est le cas ici.</p>
+<p class="dialEleve">On veut résoudre une équation nous ?</p>
+<p class="dialEcho">Oui. Ou du moins, pour être plus exact, on veut démontrer que l'équation $a(t)=a\circ s\circ d\circ p(t)$ admet au moins une solution en $t\in\mathscr T$.</p>
+<p class="dialEleve">Mais $t$ n'est pas un nombre.</p>
+<p class="dialEcho">Non. En effet. C'est un point. Un point de type $\mathscr T$.</p>
+<p class="dialEleve">De type $\mathscr T$ ? Un espace peut être un type ?</p>
+<p class="dialEcho">C'est un abus de langage courant. Cela permet de distinguer les différents types de point, ou de figures en général, en fonction de l'espace dans lequel ils vivent.</p>
+<p class="dialEleve">Hum. Et donc on peut écrire des équations avec des points ?</p>
+<p class="dialEcho">Pourquoi ne pourrait-on pas ?</p>
+<p class="dialEleve">Ouais. Vu comme ça. Et alors c'est quoi cette astuce géniale pour résoudre des équations ?</p>
+<p class="dialEcho">Pas une astuce, une technique ! Elle consiste à remplacer une égalité de la forme $a=b$ en l'équation équivalente $a-b=0$.</p>
+<p class="dialEleve">Ah oui. Ce truc là j'ai même dû le voir mille fois en cours !</p>
+<p class="dialEcho">Eh bien on peut utiliser cette technique dès que $a$ et $b$ sont des nombres.</p>
+<p class="dialEleve">Mais nous on a des points.</p>
+<p class="dialEcho">Non. Regarde bien : dans notre équation $t$ désigne bien un point de $\mathscr T$, mais $a\left(t\right)$ et $a\circ s\circ d\circ p\left(t\right)$ désignent des nombres réels.</p>
+<p class="dialEleve">Ah oui. C'est juste. Et maintenant comment montrer que l'équation $a\left(t\right)\ -\ a\circ s\circ d\circ p\left(t\right) = 0$ admet une solution ?</p>
+<p class="dialEcho">Nous allons pour ça encore monter dans l'abstraction. Nous allons simplifier le problème en introduisant la fonction $h:\mathscr T\longrightarrow \mathbb R,\ t \mapsto a\left(t\right)\ -\ a\circ s\circ d\circ p\left(t\right)$.</p>
+<p class="dialEleve">Et donc on doit juste démontrer que l'équation $h\left(t\right)=0$ admet une solution. Ça paraît peut-être plus simple comme ça, mais on est parti tellement loin de notre problème que je ne vois même pas ce qu'on pourrait bien raconter pour amorcer un raisonnement...</p>
+<p class="dialEcho">Je comprends ton désarroi, mais c'est juste parce que tu ne regardes pas cette équation au bon niveau.</p>
+<p class="dialEleve">Vous voulez dire qu'une équation peut avoir plusieurs niveaux de lectures.</p>
+<p class="dialEcho">Oui. Ici, on peut réfléchir au niveau du point $t$, ou on peut résonner directement au niveau de l'espace $\mathscr T$ tout entier. Ce faisant, on ne voit plus $h$ comme une <em>fonction</em> qui à tout $t\in\mathscr T$ associe un réel $h\left(t\right)\in\mathbb R$, mais comme une <em>application</em> de l'espace $\mathscr T$ sur l'espace $\mathbb R$.</p>
+<p class="dialEleve">Alors là vous m'achevez ! Vous m'avez transformez $\mathbb R$ en un espace et je suis passé complètement à côté de la notion d'application. J'ai déjà entendu mes profs de maths utiliser le mot application à la place de fonction, mais ils nous disaient que c'était un synonyme.</p>
+<p class="dialEcho">Ce n'est pas vraiment un synonyme. C'est plutôt une manière différente d'envisager le même objet. Un peu comme les types et les ensembles. Dans notre cas, nous allons simplement considérer $\mathscr T$ comme une courbe fermée (un bout de ficelle qui se mord la queue) et $\mathbb R$ comme une grande ficelle ayant un point particulier (on dit souvent un point distingué), à savoir 0.</p>
+<p class="dialEleve">Et donc l'application $h$ revient à poser la boucle $\mathscr T$ sur la ficelle $\mathbb R$. Et montrer que $h\left(t\right)=0$ admet une solution reviendra à dire que...</p>
+<p class="dialEcho">Oui ?</p>
+<p class="dialEleve">Attendez !</p>
+<p class="dialEcho">...</p>
+<p class="dialEleve">Ça reviendra à dire que... Quand on applique $\mathscr T$ sur $\mathbb R$, $\mathscr T$ recouvrira le point 0.</p>
+<p class="dialEcho">Exactement ! Et c'est là que notre travail d'abstraction va payer. Parce que nous allons pouvoir mettre en place une stratégie de démonstration qui comme tu vas le voir, nous donnera la solution en une ligne !</p>
+<p class="dialEleve">Une ligne ?</p>
+<p class="dialEcho">Et encore ! Un début de ligne. Il suffit que tu me donnes un argument massue pour justifier que 0 est recouvert par $\mathscr T$. On dira dans ce cas que 0 appartient à l'image de $\mathscr T$ par $h$.</p>
+<p class="dialEleve">Hum... J'aurais tendance à dire qu'il faudrait montrer que dans l'image de $h$, il y a à la fois des nombres positifs et des nombres négatifs.</p>
+<p class="dialEcho">Oui. À ceci près qu'il ne faut pas dire <em>il faudrait montrer</em> mais <em>il suffirait de montrer</em>. Mais oui, comme $\mathscr T$ est en un seul morceau (on dit qu'il est <em>connexe</em>) et que $h$ ne déchire pas $\mathscr T$ (on dit qu'elle est <em>continue</em>), il nous suffira de trouver deux points $t_1$ et $t_2$ tels que $h\left(t_1\right)$ et $h\left(t_2\right)$ soient de signe contraire. Deux théorèmes assez élémentaires se cachent derrière ça.</p>
+<p class="dialEleve">Lesquels ?</p>
+<p class="dialEcho">Le premier affirme que l'image d'un connexe par une application continue est connexe.</p>
+<p class="dialEleve">Ça semble raisonnable.</p>
+<p class="dialEcho">Le second prétend que seules les intervalles sont des parties connexes de R.</p>
+<p class="dialEleve">C'est plutôt naturel comme résultat à vrai dire.</p>
+<p class="dialEcho">Oui, d'ailleurs, dans le cas des fonctions numériques, les fonctions de $\mathbb R$ dans $\mathbb R$, celles qu'on aborde au lycée, ces deux résultats se résument en ce qu'on appelle le <strong>Théorème des valeurs intermédiaires</strong>, ou <strong>TVI</strong>.</p>
+<p class="dialEleve">Ah oui, j'ai vu un mec tweeter juste "tvi" pour répondre au problème !</p>
+<blockquote class="twitter-tweet" data-conversation="none" data-lang="fr"><p lang="und" dir="ltr"><a href="https://twitter.com/CultureMath">@CultureMath</a> tvi</p>&mdash; matchre (@matchretien) <a href="https://twitter.com/matchretien/status/713254096778698752">25 mars 2016</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p class="dialEleve">Et donc on va devoir utiliser la définition de $h$ pour montrer qu'on a bien l'existence de $t_1$ et $t_2$, je présume.</p>
+<p class="dialEcho">Oui. Bien sûr. Nous sommes monté de plus en plus dans l'abstraction pour arriver à une formulation extrêmement simple du problème, mais maintenant il va falloir un peu (mais vraiment un tout petit peu) mettre les mains dans le moteur.</p>
+<p class="dialEleve">Alors allons-y. Je suis près à me salir les mains !</p>
+<p class="dialEcho">Bien ! Nous avons dit tout à l'heure que $d$ était une fonction involutive. Je t'ai dit que c'était le cœur du problème. Est-ce que tu pourrais me dire ce que cela signifie concrètement pour notre fonction $h$ ? Et d'ailleurs, c'est quoi la fonction $h$ ?</p>
+<p class="dialEleve">C'est... Euh... La différence d'altitude entre un point de la trajectoire et son point diamétralement opposé.</p>
+<p class="dialEcho">Oui. En fait c'est plus exactement la fonction qui à tout point de la trajectoire associe la différence d'altitude entre ce point et son point diamétralement opposé. Et même pour être encore plus exact encore, elle associe la différence algébrique.</p>
+<p class="dialEleve">Algébrique ?</p>
+<p class="dialEcho">Oui. Cela signifie que $h$ tient compte du signe de la différence, et c'est bien ce qui nous importe.</p>
+<p class="dialEleve">Ah ok. Parce que suivant qu'au point diamétralement opposé l'avion est plus bas ou plus haut, on aura une valeur positive ou négative.</p>
+<p class="dialEcho">Voilà.</p>
+<p class="dialEleve">Euh... Mais attendez, c'est évident alors que $h$ va prendre des valeurs dès fois positives, dès fois négatives !</p>
+<p class="dialEcho">Et oui ! Une fois qu'on a trouvé le bon niveau d'abstraction pour un problème, il arrive souvent que le simple fait de réinterpréter concrètement les objets abstraits qu'on a introduit face tomber le problème, et le rende finalement évident. C'est la grande leçon des mathématiques. Pour résoudre un problème, il faut savoir lui donner une représentation abstraite simple et élégante, et surtout ne jamais perdre de vu le problème qu'on voulait résoudre au départ.</p>
+<p class="dialEleve">Et je présume que vous allez me dire que ce qui fait que la plupart du temps on arrive pas à résoudre un problème, c'est soit qu'on a pas été assez abstrait, soit qu'on a pas pris la peine de regardez ce que signifiait vraiment les objets qu'on manipulait.</p>
+<p class="dialEcho">Je ne l'aurais pas dit mieux. C'est pour ça que les matheux sont souvent très doués pour résoudre des problèmes. Parce qu'ils n'ont pas peur de l'abstraction. Mais ils peuvent parfois avoir les défauts de leurs qualités. En recherchant tellement l'abstraction et la généralité, ils risquent de se retrouver trop loin du problème à résoudre. Comme on dit chez nous : il ne s'agit pas de trouver la généralité maximale, il s'agit de trouver le bon niveau de généralité.</p>
+<p class="dialEleve">Bon. Eh bien je suis content que nous ayons résolu ce problème. Il ne me paraît plus si compliqué que ça maintenant.</p>
+<p class="dialEcho">Résolu ? Mais nous sommes loin d'avoir fini notre discussion. Il faut que je te montre comment transformer ce raisonnement en une démonstration inattaquable, et j'en profiterai pour te montrer la démonstration qui m'est venu quand j'ai réfléchi à ce problème. Et enfin, on discutera de comment généraliser le problème. D'ailleurs, d'une certaine façon, il y a une erreur dans notre raisonnement.</p>
+<p class="dialEleve">Oh non ! Sérieusement ? On s'est trompé ?</p>
+<p class="dialEcho">Rien de grave je te rassure. Mais les choses seront plus clair quand on aura établi notre démonstration de façon rigoureuse.</p>
+<p class="dialEleve">Ok. Je vous écoute.</p>
+<p class="dialEcho">D'abord, pour montrer l'existence de $t_1$ et $t_2$, il suffit de prendre $c_1$ et $c_2$ deux points diamétralement opposés de $\mathscr C$, autrement dit tels que $c_2=d\left(c_1\right)$, et de définir $t_1:=s\left(c_1\right)$ et $t_2 :=s\left(c_2\right)$ (on met usuellement deux points avant le signe égal pour préciser que c'est une definition). Partant de là, notre démonstration se résume au petit calcul suivant: \[\begin{eqnarray}h\left(t_2\right) &amp;= &amp; h\circ s\left(c_2\right)\\ &amp;=&amp; h\circ s\circ d\left(c_1\right)\\ &amp;=&amp;a\circ s\circ d\left(c_1\right)\ -\ a\circ s\circ d\circ p\circ s\circ d\left(c_1\right)\\&amp;=&amp;a\circ s\circ d\circ p\left(t_1\right)\ -\ a\circ s\circ d\circ d\left(c_1\right)\\&amp;=&amp;a\circ s\circ d\circ p\left(t_1\right)\ -\ a\circ s\left(c_1\right)\\&amp;=&amp;a\circ s\circ d\circ p\left(t_1\right)\ -\ a\left(t_1\right)\\ &amp;=&amp; -\left(a\left(t_1\right)\,-\,a\circ s\circ d\circ p\left(t_1\right)\right)\\&amp;=&amp;-h(t1)\end{eqnarray}\].</p>
+<p class="dialEleve">Ok. On a donc bien que $h$ change de signe, et donc passe par 0.</p>
+<p class="dialEcho">Oui, justement. Rappelle-moi pourquoi le fait que $\mathscr T$ soit connexe assure que 0 est dans l'image de $\mathscr T$ par $h$ ?</p>
+<p class="dialEleve">Bah dans le cas contraire, ça signifierait que l'application $h$ déchire $\mathscr T$ en au moins deux morceaux.</p>
+<p class="dialEcho">Absolument. Tu te rappelles comment on appelle une application qui ne déchire pas l'espace qu'elle applique sur un autre ?</p>
+<p class="dialEleve">Une application continue, non ?</p>
+<p class="dialEcho">C'est bien ça. Mais qu'est-ce qui dans l'énoncé nous prémunit de l'éventualité d'avoir une application $h$ discontinue, d'après toi ?</p>
+<p class="dialEleve">J'ai envi de dire que c'est clair vu le problème.</p>
+<p class="dialEcho">Oui, ça se défend. Mais justement, dans l'énoncé du problème, on nous dit que l'avion revient exactement à son point de départ. Tu ne vois pas en quoi ce serait un problème dans le cas contraire ?</p>
+<p class="dialEleve">Bah déjà je ne vois pas comment il pourrait ne pas revenir à son point de départ. Partant de là...</p>
+<p class="dialEcho">Comme ça, par exemple.</p>
+<a href="http://echologie.org/wp-content/uploads/2016/03/Avion2.png" rel="attachment wp-att-357"><img class="size-medium wp-image-357 aligncenter" src="http://echologie.org/wp-content/uploads/2016/03/Avion2-274x300.png" alt="Avion2" width="274" height="300" /></a>
+<p class="dialEleve">Mais là, il n'atterrit pas.</p>
+<p class="dialEcho">Certes, mais on voit bien sur ce dessin qu'il n'y a jamais deux points diamétralement opposés du circuit au dessus desquels l'avion est à la même altitude, puisqu'il ne cesse de monter. Donc, concrètement, qu'est-ce que l'hypothèse de retour au point de départ assure ?</p>
+<p class="dialEleve">Que la trajectoire soit une courbe fermée ?</p>
+<p class="dialEcho">Certes. Mais même si la courbe était ouverte, elle serait connexe, et nous avons vu que c'était ça qui permettait d'affirmer que l'image de $\mathscr T$ par $h$ était connexe, et donc que c'était un intervalle. Pourvu bien sûr que $h$ soit continue.</p>
+<p class="dialEleve">Ouais, ok. Je vois ce qui se passe. Si on ne revient pas au point de départ, l'altitude fait un bon. Et c'est ça qui déchire $\mathscr T$.</p>
+<p class="dialEcho">C'est ça. Cela a pour conséquence que la fonction $s$ se retrouve avec une discontinuité. Et c'est la continuité de la fonction $s$, et des autres fonctions entrant dans la définition de $h$, qui assure que $h$ soit continue, et donc qu'elle envoie des espaces connexes sur des parties connexes de l'espace d'arrivée.</p>
+<p class="dialEleve">Il y a quand même un truc qui me chagrine. Même si $s$ a un point de discontinuité, elle n'en a qu'un. Donc $\mathscr T$ se fait déchirer une seule fois. Pourtant il faudrait déchirer $\mathscr T$ à deux reprises pour qu'il finisse en deux morceaux.</p>
+<p class="dialEcho">Ce n'est pas idiot comme remarque. Mais tu oublies que ce n'est pas $s$ qui nous intéresse, c'est $h$. Et $s$ ne déchire pas $\mathscr T$ mais $\mathscr C$.</p>
+<p class="dialEleve">Ouais... Et comme $s$ apparaît dans la définition de $h$, cette dernière récupère la discontinuité.</p>
+<p class="dialEcho">Voilà ! Et comme dans cette situation $\mathscr T$ n'est pas fermée, son image peut se retrouver en deux morceaux, et donc rien n'empêche $h$ d'éviter le point 0.</p>
+<p class="dialEleve">Piouhhhh ! Là je crois que j'ai vraiment bien compris le problème. Mais j'ai plus la force de réfléchir !</p>
+<p class="dialEcho">Alors laisse moi te montrer la démonstration que j'ai faite quand j'ai vu le tweet. Voilà déjà les données du problème que j'ai conservées.</p>
+<a href="http://echologie.org/wp-content/uploads/2016/03/AvionDem1.jpeg" rel="attachment wp-att-362"><img class="wp-image-367 size-medium aligncenter" src="http://echologie.org/wp-content/uploads/2016/03/AvionDem1-300x229.jpeg" alt="" width="300" height="229" /></a>
+<p class="dialEleve">Et la trajectoire ?</p>
+<p class="dialEcho">Je ne m'en sert pas. Si on y réfléchi un instant, si on connaît la projection de la position de l'avion sur le cercle et son altitude, on n'a nul besoin de la trajectoire. Tout le problème peut être directement modélisé à l'aide de $\mathscr C$ et des deux fonctions $a$ et $d$.</p>
+<p class="dialEleve">Sauf que dans votre raisonnement, $a$ est définie directement sur le circuit plutôt que sur la trajectoire.</p>
+<p class="dialEcho">Oui. Pour rendre nos deux démonstrations compatibles en terme de notations, je devrais plutôt l'appeler $\tilde a$ (prononcé <em>a tilde</em>). Car c'est essentiellement la même fonction, mais "tirées" sur le cercle. Voilà.</p>
+<a href="http://echologie.org/wp-content/uploads/2016/03/AvionDem2.png" rel="attachment wp-att-364"><img class="size-medium wp-image-364 aligncenter" src="http://echologie.org/wp-content/uploads/2016/03/AvionDem2-300x229.png" alt="AvionDem2" width="300" height="229" /></a>
+<p class="dialEleve">Ok. Et du coup, il faudra tirer aussi la fonction $h$ en une fonction $\tilde h$.</p>
+<p class="dialEcho">Tout à fait. Et donc voilà.</p>
+<a href="http://echologie.org/wp-content/uploads/2016/03/AvionDem3.png" rel="attachment wp-att-365"><img class="size-medium wp-image-365 aligncenter" src="http://echologie.org/wp-content/uploads/2016/03/AvionDem3-300x240.png" alt="AvionDem3" width="300" height="240" /></a>
+<p class="dialEleve">Les calculs sont vraiment beaucoup plus limpide quand on supprime $\mathscr T$.</p>
+<p class="dialEcho">Oui. Il n'apportait rien au raisonnement. Cependant, on aurait pu garder $\mathscr T$ et supprimer $\mathscr C$. En introduisant la fonction $\tilde d$.</p>
+<p class="dialEleve">Oui, ça paraît logique.</p>
+<p class="dialEcho">Voilà la fin du raisonnement.</p>
+<a href="http://echologie.org/wp-content/uploads/2016/03/AvionDem4.png" rel="attachment wp-att-366"><img class="size-medium wp-image-366 aligncenter" src="http://echologie.org/wp-content/uploads/2016/03/AvionDem4-300x179.png" alt="AvionDem4" width="300" height="179" /></a>
+<p class="dialEleve">Ça paraît incroyable la facilité avec laquelle on a démontrer ça, alors que ça paraissait totalement inaccessible. Vous auriez pu dès le début me dire qu'on avait pas besoin de $\mathscr T$.</p>
+<p class="dialEcho">Oui. Mais comme je te l'ai dit. Il y a un petit souci, et on a besoin de $\mathscr T$ pour le régler. En effet, qui a dit que l'avion ne faisait qu'un tour avant d'atterrir ?</p>
+<p class="dialEleve">J'imagine que ça ne change rien.</p>
+<p class="dialEcho">Eh bien si. Parce qu'alors on a un souci avec la fonction $s$, et donc avec la fonction $\tilde a.$ Regarde ce dessin, tu vois le problème ?</p>
+<a href="http://echologie.org/wp-content/uploads/2016/03/Avion3.png" rel="attachment wp-att-358"><img class="size-medium wp-image-358 aligncenter" src="http://echologie.org/wp-content/uploads/2016/03/Avion3-274x300.png" alt="Avion3" width="274" height="300" /></a>
+<p class="dialEleve">Ouais, il peut y avoir plusieurs points de la trajectoire qui se projettent sur le même point du cercle, et donc différentes altitudes de l'avion en ce point.</p>
+<p class="dialEcho">Oui, il y a plusieurs fonctions $s$ de $\mathscr C$ dans $\mathscr T$ telles que pour tout point $c$ dans $\mathscr C$, $p\circ s\left(c\right) = c$, mais aucune vérifiant en même temps la condition réciproque que pour tout $t$ dans $\mathscr T$, $s\circ p\left(t\right)=t$.</p>
+<a href="http://echologie.org/wp-content/uploads/2016/03/Avion4.png" rel="attachment wp-att-359"><img class="size-medium wp-image-359 aligncenter" src="http://echologie.org/wp-content/uploads/2016/03/Avion4-274x300.png" alt="Avion4" width="274" height="300" /></a>
+<p class="dialEleve">Hum. Ça ne marche qu'avec les points verts.</p>
+<p class="dialEcho">C'est ça. La fonction $s$ doit sélectionner une branche. On dit que la fonction $p$ réalise une fibration de $\mathscr T$ au-dessus de $\mathscr C$, dont $s$ est <em>une</em> section.</p>
+<p class="dialEleve">Et donc le résultat n'est pas vrai dans ce cas ?</p>
+<p class="dialEcho">Si, mais il faut ruser pour introduire une fonction $\tilde d$ sur $\mathscr T$ sans utiliser une fonction $s$ particulière. Comment associerais-tu à chaque point de $\mathscr T$ un point de la trajectoire dont la projection est diamétralement opposé à la sienne ?</p>
+<p class="dialEleve">A part prendre une section au hasard, je ne vois pas.</p>
+<p class="dialEcho">Justement, ça ne marche pas. On perd la continuité de $\tilde d$.</p>
+<p class="dialEleve">Et l'involutivité aussi d'ailleurs. Non ?</p>
+<p class="dialEcho">Oui, mais de toute façon il va falloir adapter ça...</p>
+<p class="dialEleve">Je croyais que c'était le cœur de la démonstration ?</p>
+<p class="dialEcho">Oui. J'ai d'y adapter, pas qu'on devait y renoncer complètement. Mais on ne va pas chercher à faire une démonstration complète du cas général, même si ce n'est pas surhumain non plus. On va simplement chercher une façon naturelle de définir $\tilde d$. Imagine l'avion sur sa trajectoire dans ta tête. Tu ne vois vraiment pas comment définir un $\tilde d$ plus sympathique ?</p>
+<p class="dialEleve">Hum... En prenant pour chaque point de la trajectoire le premier point diamétralement opposé atteint par l'avion pendant son trajet.</p>
+<p class="dialEcho">Naturellement ! Quitte à considérer que l'avion repart pour un tour.</p>
+<p class="dialEleve">Ça permet de garder $\tilde d$ continue ?</p>
+<p class="dialEcho">Oui, et à défaut de vérifier $\tilde d\circ\tilde d\left(t\right)=t$ pour tout $t$ de $\mathscr T$, elle vérifie $\tilde d\circ\cdots\circ\tilde d\left(t\right)=t$, où il y a deux fois plus de $d$ qu'il y a de nombre de tours. On dit qu'elle est idempotente d'ordre $2n$, ce qu'on note, en appelant $n$ le nombre de tours : $\tilde d^{2n}=Id_T$</p>
+<p class="dialEleve">J'imagine que cette notation n'a rien à voir avec les puissances.</p>
+<p class="dialEcho">En effet, elle dit juste qu'on applique la fonction $\tilde d$ $2n$ fois de suite. Et la fonction $Id_T$ désigne la fonction qui envoie tout $t$ de $\mathscr T$ sur lui même, c'est la fonction identité de $\mathscr T$.</p>
+<p class="dialEleve">Oui, c'est ce que j'avais compris. Ainsi, l'important c'est que la fonction $\tilde d$ finisse par revenir à son point de départ ?</p>
+<p class="dialEcho">En tout cas, ça simplifie pas mal le problème. Ce qui se passe, c'est que les itérés d'un point $t$ de $\mathscr T$ par $\tilde d$, c'est-à-dire les points de la forme $\tilde d^k\left(t\right)$ pour un certain $k$ entier positif, ne peuvent avoir tous une image de même signe par $h$. C'est évident si on y réfléchit quelques instants.</p>
+<p class="dialEleve">Et ce n'est pas vrai si la fonction $\tilde d$ n'est pas idempotente ?</p>
+<p class="dialEcho">Si ! Comme je te l'ai dit, le résultât reste valable quand on prend des points distants de cinq mètres et un circuit dont la longueur n'est pas un multiple entier de cinq mètres. Ce qu'il faut comprendre, c'est que dans le fond le problème n'a rien à voir avec la géométrie du cercle ou de la trajectoire, c'est-à-dire de leurs mesures. Il a à voir avec ce qu'on appelle les propriétés topologiques de ces espaces. Si $\tilde d:\mathscr T\longrightarrow\mathscr T$ est une fonction continue idempotente et que $a:\mathscr T\longrightarrow\mathbb R$ est continue, il suffit de supposer que $\mathscr T$ est un espace <em>topologique </em>connexe non-vide. Par contre, si on supprime l'hypothèse d'idempotence de $\tilde d$, il suffira de rajouter l'hypothèse que $\mathscr T$ est compact, ce qui est le cas ici. Mais là, on aborde des sujets que tu verras pas avant un certain temps !</p>
+<p class="dialEleve">Ouais. Je suis sûr que tout est ça est vraiment fascinant, mais il faut vraiment qu'on arrête. Ma tête va exploser !</p>
+<p class="dialEcho">Naturellement ! Je ne doute pas que tu préfères continuer à méditer tout ça tout seul...</p>
+<p class="dialEleve">Oui. On va dire ça. En tout cas je ne suis pas contre l'idée que vous me montriez une stratégie globale dans ce genre là pour résoudre les exercices que j'ai vraiment en cours !</p>
+<p class="dialEcho">La prochaine fois c'est promis.</p>
