@@ -13,10 +13,57 @@
 \usepackage{mathabx}
 \usepackage{txfonts}
 \usepackage{pxfonts}
+\usepackage{titling}
+\usepackage{array}
 %\usepackage{yhmath}
+
+\newdimen\un \un=1mm
+\def\bordure{
+\begin{tikzpicture}[overlay,remember picture]
+\node(Triskell) at ($(current page.north west)+(21*\un,-20*\un)$){};
+\def\p{.75}
+\def\ang{45}
+\def\alp{160.2}
+\def\bet{72.42}
+\def\gam{-13.2}
+\draw [very thick, line width = 8pt, color = red!25!blue!33.333!green!50]
+($(current page.north west)+(20*\un,-20*\un)$)
+-- ($(current page.north east)+(-24*\un,-20*\un)$)
+node [draw, ellipse, fill, text=white, pos=.5] {\thetitle}
+arc (90 : 0 : 4*\un)
+-- ($(current page.south east)+(-20*\un,24*\un)$)
+node[text=white,pos=.5 , rotate=90]
+{\tiny Ce document, à l'exclusion du logo, est sous licence GNU FDL,
+ il est librement modifiable et distribuable.
+ Copyright 2010, 2016, Jean-Christophe Jameux}
+arc (0 : -90 : 4*\un)
+-- ($(current page.south west)+(24*\un,20*\un)$)
+node[draw, ellipse, fill, text=white, pos=.15] {Echologie.org}
+arc (-90 : -180 : 4*\un)
+-- ($(current page.north west)+(20*\un,-20*\un)$);
+\draw [fill = white, color = red!25!blue!33.333!green!50]
+(Triskell) + (1.2*\un,-6*\un) circle (15*\un);
+\draw [fill = white, color = white] (Triskell) circle (2*\un);
+\draw [fill = white, color = white]
+(Triskell) + ({120*(1+\p)} : 3*\un)
+arc ({120*(1+\p)} : 120 : 3*\un)
+arc (180+\ang : 180-\ang :3*\un)
+arc (\alp-\ang : \alp+\ang+24.8 : 5*\un);
+\draw [fill = white, color = white]
+(Triskell) + (120*\p : 3*\un)
+arc (120*\p : 0 : 3*\un)
+arc (90+\ang : 90-\ang : 6*\un)
+arc (\bet-\ang : \bet+\ang+5.9 : 8*\un);
+\draw [fill = white, color = white]
+(Triskell) + ({120*(2+\p)} : 3*\un)
+arc ({120*(2+\p)} : 240 : 3*\un)
+arc (\ang : -\ang : 12*\un)
+arc (\gam-\ang : \gam+\ang+.85 : 13*\un);
+\end{tikzpicture}}
 \end_preamble
 \options 12pt
 \use_default_options true
+\master DocumentMaitre.lyx
 \maintain_unincluded_children false
 \language english
 \language_package default
@@ -65,9 +112,9 @@
 \shortcut idx
 \color #008000
 \end_index
-\leftmargin 30mm
-\topmargin 28mm
-\rightmargin 30mm
+\leftmargin 0mm
+\topmargin 0mm
+\rightmargin 0mm
 \bottommargin 0mm
 \secnumdepth 3
 \tocdepth 3
@@ -87,386 +134,6 @@
 \begin_body
 
 \begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-bf
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\lang french
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-newdimen
-\backslash
-un 
-\backslash
-un=1mm
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-def
-\backslash
-bordure{
-\end_layout
-
-\begin_layout Plain Layout
-
-	
-\backslash
-begin{tikzpicture}[overlay,remember picture]
-\end_layout
-
-\begin_layout Plain Layout
-
-		
-\backslash
-node(Triskell) at ($(current page.north west)+(21*
-\backslash
-un,-20*
-\backslash
-un)$){};
-\end_layout
-
-\begin_layout Plain Layout
-
-		
-\backslash
-def
-\backslash
-p{.75}
-\end_layout
-
-\begin_layout Plain Layout
-
-		
-\backslash
-def
-\backslash
-ang{45}
-\end_layout
-
-\begin_layout Plain Layout
-
-		
-\backslash
-def
-\backslash
-alp{160.2}
-\end_layout
-
-\begin_layout Plain Layout
-
-		
-\backslash
-def
-\backslash
-bet{72.42}
-\end_layout
-
-\begin_layout Plain Layout
-
-		
-\backslash
-def
-\backslash
-gam{-13.2}
-\end_layout
-
-\begin_layout Plain Layout
-
-		
-\backslash
-draw[very thick, line width = 7pt, color=red!25!blue!33.333!green!50]
-\end_layout
-
-\begin_layout Plain Layout
-
-			($(current page.north west)+(20*
-\backslash
-un,-20*
-\backslash
-un)$)
-\end_layout
-
-\begin_layout Plain Layout
-
-			-- ($(current page.north east)+(-24*
-\backslash
-un,-20*
-\backslash
-un)$)
-\end_layout
-
-\begin_layout Plain Layout
-
-			node [draw, ellipse, fill, text=white, pos=.5] {
-\backslash
-titre}
-\end_layout
-
-\begin_layout Plain Layout
-
-			arc (90 : 0 : 4*
-\backslash
-un)
-\end_layout
-
-\begin_layout Plain Layout
-
-			-- ($(current page.south east)+(-20*
-\backslash
-un,24*
-\backslash
-un)$)
-\end_layout
-
-\begin_layout Plain Layout
-
-			node[text=white, near end, rotate=90]
-\end_layout
-
-\begin_layout Plain Layout
-
-				{
-\backslash
-tiny Document sous licence GNU FDL.
- Copyright 2016, Jean-Christophe Jameux}
-\end_layout
-
-\begin_layout Plain Layout
-
-			arc (0 : -90 : 4*
-\backslash
-un)
-\end_layout
-
-\begin_layout Plain Layout
-
-			-- ($(current page.south west)+(24*
-\backslash
-un,20*
-\backslash
-un)$)
-\end_layout
-
-\begin_layout Plain Layout
-
-			node[draw, ellipse, fill, text=white, pos=.15] {Echologie.org}
-\end_layout
-
-\begin_layout Plain Layout
-
-			arc (-90 : -180 : 4*
-\backslash
-un)
-\end_layout
-
-\begin_layout Plain Layout
-
-			-- ($(current page.north west)+(20*
-\backslash
-un,-20*
-\backslash
-un)$);
-\end_layout
-
-\begin_layout Plain Layout
-
-		
-\backslash
-draw[fill=white,color=red!25!blue!33.333!green!50]
-\end_layout
-
-\begin_layout Plain Layout
-
-			(Triskell) + (1.2*
-\backslash
-un,-6*
-\backslash
-un) circle (15*
-\backslash
-un);
-\end_layout
-
-\begin_layout Plain Layout
-
-		
-\backslash
-draw[fill=white,color=white] (Triskell) circle (2*
-\backslash
-un);
-\end_layout
-
-\begin_layout Plain Layout
-
-		
-\backslash
-draw[fill=white,color=white] (Triskell) + ({120*(1+
-\backslash
-p)} : 3*
-\backslash
-un)
-\end_layout
-
-\begin_layout Plain Layout
-
-			arc ({120*(1+
-\backslash
-p)} : 120 : 3*
-\backslash
-un)
-\end_layout
-
-\begin_layout Plain Layout
-
-			arc (180+
-\backslash
-ang : 180-
-\backslash
-ang :3*
-\backslash
-un)
-\end_layout
-
-\begin_layout Plain Layout
-
-			arc (
-\backslash
-alp-
-\backslash
-ang : 
-\backslash
-alp+
-\backslash
-ang+24.8 : 5*
-\backslash
-un);
-\end_layout
-
-\begin_layout Plain Layout
-
-		
-\backslash
-draw[fill=white,color=white] (Triskell) + (120*
-\backslash
-p : 3*
-\backslash
-un)
-\end_layout
-
-\begin_layout Plain Layout
-
-			arc (120*
-\backslash
-p : 0 : 3*
-\backslash
-un)
-\end_layout
-
-\begin_layout Plain Layout
-
-			arc (90+
-\backslash
-ang : 90-
-\backslash
-ang : 6*
-\backslash
-un)
-\end_layout
-
-\begin_layout Plain Layout
-
-			arc (
-\backslash
-bet-
-\backslash
-ang : 
-\backslash
-bet+
-\backslash
-ang+5.9 : 8*
-\backslash
-un);
-\end_layout
-
-\begin_layout Plain Layout
-
-		
-\backslash
-draw[fill=white,color=white] (Triskell) + ({120*(2+
-\backslash
-p)} : 3*
-\backslash
-un)
-\end_layout
-
-\begin_layout Plain Layout
-
-			arc ({120*(2+
-\backslash
-p)} : 240 : 3*
-\backslash
-un)
-\end_layout
-
-\begin_layout Plain Layout
-
-			arc (
-\backslash
-ang : -
-\backslash
-ang : 12*
-\backslash
-un)
-\end_layout
-
-\begin_layout Plain Layout
-
-			arc (
-\backslash
-gam-
-\backslash
-ang : 
-\backslash
-gam+
-\backslash
-ang+.85 : 13*
-\backslash
-un);
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{tikzpicture}}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 
 \lang french
 \begin_inset ERT
@@ -476,9 +143,7 @@ status open
 
 
 \backslash
-def
-\backslash
-titre{
+title{
 \backslash
 large
 \backslash
@@ -491,59 +156,84 @@ bf Développements limités usuels}
 \end_layout
 
 \begin_layout Standard
-A
+\noindent
+\align center
+
+\series bold
+\size large
+\begin_inset VSpace vfill
+\end_inset
+
+
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "245mm"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+
+\series bold
 \begin_inset Phantom HPhantom
 status open
 
 \begin_layout Plain Layout
-D
+Decale
 \end_layout
 
 \end_inset
 
- On trouvera ci-dessous des approximations utiles au voisinage de 0.
+On trouvera ci-dessous des approximations utiles au voisinage de 0.
  Ces approximations permettent d'obtenir des 
 \begin_inset Phantom HPhantom
 status open
 
 \begin_layout Plain Layout
-De
+Decal
 \end_layout
 
 \end_inset
 
 équivalents simples dans de nombreuses situations.
- Les graphiques en regard de certaines fonctions permettent de se rendre
- compte de la qualité de l'approximation suivant l'ordre auquel on pousse
- le développement limité.
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
+ Les graphiques en regard de certaines fonctions permettent de se 
+\begin_inset Phantom HPhantom
 status open
 
 \begin_layout Plain Layout
-
-
-\backslash
-large
+Dec
 \end_layout
 
 \end_inset
 
-
+rendre compte de la qualité de l'approximation suivant l'ordre auquel on
+ pousse le développement limité.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset VSpace medskip
 \end_inset
 
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
+
+\series bold
+\size large
 \begin_inset space \hspace{}
-\length -14mm
+\length -10mm
 \end_inset
 
 
@@ -559,6 +249,9 @@ large
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
+\size large
 \begin_inset Phantom Phantom
 status open
 
@@ -580,10 +273,16 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
+\size large
 \begin_inset Phantom HPhantom
 status open
 
 \begin_layout Plain Layout
+
+\series bold
+\size large
 Fonctions
 \end_layout
 
@@ -598,6 +297,9 @@ Fonctions
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
+\size large
 Approximation affine
 \end_layout
 
@@ -607,6 +309,9 @@ Approximation affine
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
+\size large
 \begin_inset space \hfill{}
 \end_inset
 
@@ -620,7 +325,7 @@ Développement limité d'ordre
 
 
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -642,6 +347,9 @@ null
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
+\size large
 \begin_inset Phantom VPhantom
 status open
 
@@ -663,6 +371,9 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
+\size large
 \begin_inset Formula $f(x)$
 \end_inset
 
@@ -675,6 +386,9 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
+\size large
 \begin_inset Formula $=f(0)+f'(0)\cdot x+o\left(x\right)$
 \end_inset
 
@@ -692,6 +406,9 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
+\size large
 \begin_inset Formula $=f(0)+f'(0)\cdot x+f''(0)\cdot\frac{x^{2}}{2!}+f'''(0)\cdot\frac{x^{3}}{3!}+\cdots+f^{\left(n\right)}\left(0\right)\cdot\frac{x^{n}}{n!}+o\left(x^{n}\right)$
 \end_inset
 
@@ -706,6 +423,9 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
+\size large
 \begin_inset Phantom VPhantom
 status open
 
@@ -822,6 +542,9 @@ end{tikzpicture}
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
+\size large
 \begin_inset Formula $e^{x}$
 \end_inset
 
@@ -834,6 +557,9 @@ end{tikzpicture}
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
+\size large
 \begin_inset Formula $=1+x+o\left(x\right)$
 \end_inset
 
@@ -846,6 +572,9 @@ end{tikzpicture}
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
+\size large
 \begin_inset Formula $=1+x+\frac{x^{2}}{2!}+\frac{x^{3}}{3!}-\cdots+\frac{x^{n}}{n!}+o\left(x^{n}\right)$
 \end_inset
 
@@ -860,6 +589,9 @@ end{tikzpicture}
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
+\size large
 \begin_inset Phantom VPhantom
 status open
 
@@ -976,6 +708,9 @@ end{tikzpicture}
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
+\size large
 \begin_inset Formula $\ln\left(1+x\right)$
 \end_inset
 
@@ -988,6 +723,9 @@ end{tikzpicture}
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
+\size large
 \begin_inset Formula $=x+o\left(x\right)$
 \end_inset
 
@@ -1000,6 +738,9 @@ end{tikzpicture}
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
+\size large
 \begin_inset Formula $=x-\frac{x^{2}}{2}+\frac{x^{3}}{3}-\cdots+\left(-1\right)^{n+1}\cdot\frac{x^{n}}{n}+o\left(x^{n}\right)$
 \end_inset
 
@@ -1014,6 +755,9 @@ end{tikzpicture}
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
+\size large
 \begin_inset Phantom VPhantom
 status open
 
@@ -1130,6 +874,9 @@ end{tikzpicture}
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
+\size large
 \begin_inset Formula ${\displaystyle \frac{1}{1-x}}$
 \end_inset
 
@@ -1142,6 +889,9 @@ end{tikzpicture}
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
+\size large
 \begin_inset Formula $=1+x+o\left(x\right)$
 \end_inset
 
@@ -1154,6 +904,9 @@ end{tikzpicture}
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
+\size large
 \begin_inset Formula $=1+x+x^{2}+x^{3}+\cdots+x^{n}+o\left(x^{n}\right)$
 \end_inset
 
@@ -1168,6 +921,9 @@ end{tikzpicture}
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
+\size large
 \begin_inset Phantom VPhantom
 status open
 
@@ -1284,6 +1040,9 @@ end{tikzpicture}
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
+\size large
 \begin_inset Formula ${\displaystyle \frac{1}{1+x}}$
 \end_inset
 
@@ -1296,6 +1055,9 @@ end{tikzpicture}
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
+\size large
 \begin_inset Formula $=1-x+o\left(x\right)$
 \end_inset
 
@@ -1308,6 +1070,9 @@ end{tikzpicture}
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
+\size large
 \begin_inset Formula $=1-x+x^{2}-x^{3}+\cdots+\left(-1\right)^{n}\cdot x^{n}+o\left(x^{n}\right)$
 \end_inset
 
@@ -1322,6 +1087,9 @@ end{tikzpicture}
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
+\size large
 \begin_inset Phantom VPhantom
 status open
 
@@ -1342,14 +1110,15 @@ status collapsed
 
 
 \backslash
-begin{tikzpicture}[overlay, scale=.1, rotate=-20, xshift=400, yshift=240]
+begin{tikzpicture}[overlay, xshift=55, yshift=11, scale=.07, rotate=20]
 \end_layout
 
 \begin_layout Plain Layout
 
 	
 \backslash
-draw [opacity=.5, fill, color=red!25!blue!33.333!green!50] (0,0)
+draw [opacity=.4, fill, color = white, ball color=red!25!blue!33.333!green!50]
+ (0,0)
 \end_layout
 
 \begin_layout Plain Layout
@@ -1418,6 +1187,9 @@ end{tikzpicture}
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
+\size large
 \begin_inset Formula $\left(1+x\right)^{\alpha}$
 \end_inset
 
@@ -1430,6 +1202,9 @@ end{tikzpicture}
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
+\size large
 \begin_inset Formula $=1+\alpha x+o\left(x\right)$
 \end_inset
 
@@ -1442,6 +1217,9 @@ end{tikzpicture}
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
+\size large
 \begin_inset Formula $={\displaystyle 1+}\alpha x+\frac{\alpha\left(\alpha-1\right)}{2!}\cdot x^{2}+\frac{\alpha\left(\alpha-1\right)\left(\alpha-2\right)}{3!}\cdot x^{3}+\cdots+\frac{\alpha\cdots\left(\alpha-n+1\right)}{n!}\cdot x^{n}+o\left(x^{n}\right)$
 \end_inset
 
@@ -1450,23 +1228,11 @@ end{tikzpicture}
 status collapsed
 
 \begin_layout Plain Layout
-Formule compliquée 1+
-\backslash
-sum_{k=1}^{n}
-\backslash
-frac{{
-\backslash
-displaystyle 
-\backslash
-prod_{i=0}^{k-1}
-\backslash
-left(
-\backslash
-alpha-i
-\backslash
-right)}}{k!}
-\backslash
-cdot x^{k}
+Formule compliquée 
+\begin_inset Formula $1+\sum_{k=1}^{n}\frac{{\displaystyle \prod_{i=0}^{k-1}\left(\alpha-i\right)}}{k!}\cdot x^{k}$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -1482,6 +1248,9 @@ cdot x^{k}
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
+\size large
 \begin_inset Phantom VPhantom
 status open
 
@@ -1598,6 +1367,9 @@ end{tikzpicture}
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
+\size large
 \begin_inset Formula $\sqrt{1+x}$
 \end_inset
 
@@ -1610,6 +1382,9 @@ end{tikzpicture}
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
+\size large
 \begin_inset Formula $=1+\frac{1}{2}x+o\left(x\right)$
 \end_inset
 
@@ -1622,6 +1397,9 @@ end{tikzpicture}
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
+\size large
 \begin_inset Formula $=1+\frac{1}{2}x-\frac{1}{8}x^{2}+\frac{1}{16}x^{3}+\cdots+\left(-1\right)^{n+1}\cdot\frac{1\times3\times\cdots\times\left(2n-3\right)}{2\times4\times\cdots\times2n}\cdot x^{n}+o\left(x^{n}\right)$
 \end_inset
 
@@ -1636,6 +1414,9 @@ end{tikzpicture}
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
+\size large
 \begin_inset Phantom VPhantom
 status open
 
@@ -1657,6 +1438,9 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
+\size large
 \begin_inset Formula $\sqrt[3]{1+x}$
 \end_inset
 
@@ -1669,6 +1453,9 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
+\size large
 \begin_inset Formula $=1+\frac{1}{3}x+o\left(x\right)$
 \end_inset
 
@@ -1681,6 +1468,9 @@ status open
 \begin_inset Text
 
 \begin_layout Plain Layout
+
+\series bold
+\size large
 \begin_inset Formula $=1+\frac{1}{3}x-\frac{1}{9}x^{2}+\frac{5}{81}x^{3}+\cdots+\left(-1\right)^{n+1}\cdot\frac{2\times5\times8\times\cdots\times\left(3n-4\right)}{3^{n}\cdot n!}\cdot x^{n}+o\left(x^{n}\right)$
 \end_inset
 
@@ -1697,9 +1487,19 @@ status open
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
+\noindent
 
 \lang french
+\begin_inset VSpace vfill
+\end_inset
+
+
 \begin_inset ERT
 status open
 

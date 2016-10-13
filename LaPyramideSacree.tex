@@ -1,0 +1,138 @@
+%% LyX 2.2.1 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[french,english,10pt]{paper}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage[landscape,a4paper]{geometry}
+\geometry{verbose,tmargin=0mm,bmargin=0mm,lmargin=0mm,rmargin=0mm}
+\pagestyle{empty}
+\setlength{\parskip}{\bigskipamount}
+\setlength{\parindent}{0pt}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usetikzlibrary{shapes}
+\usepackage{mathrsfs}
+\usepackage{mathabx}
+\usepackage{txfonts}
+\usepackage{pxfonts}
+\usepackage{titling}
+\usepackage{array}
+%\usepackage{yhmath}
+
+\makeatother
+
+\usepackage{babel}
+\makeatletter
+\addto\extrasfrench{%
+   \providecommand{\og}{\leavevmode\flqq~}%
+   \providecommand{\fg}{\ifdim\lastskip>\z@\unskip\fi~\frqq}%
+}
+
+\makeatother
+\begin{document}
+\selectlanguage{french}%
+\title{\large\bf La Pyramide Sacrée}
+
+\selectlanguage{english}%
+\setlength\extrarowheight{0mm}
+\parindent0mm
+\parskip0.6mm
+
+\def\ks#1{\raise-1.5mm\hbox{\begin{tikzpicture}\draw[dashed] (0,0)circle(0.25);\node at (0,0){$#1$};\end{tikzpicture}}}
+
+\def\coeur[#1]{ 		\draw [#1] (0,0) 		 .. controls +(0,2)  and +(0,2)  .. (3,0) 		 .. controls +(0,-2) and +(0,2)  .. (0,-4) 		 .. controls +(0,2)  and +(0,-2) .. (-3,0) 		 .. controls +(0,2)  and +(0,2)  .. (0,0); }
+
+		  \null\vfill\hfill
+
+\begin{tikzpicture}[scale=11,remember picture]
+
+\shorthandoff{:}
+
+\draw[line width=3mm](0,0)--++(60:1.5)--+(-60:1.5)--cycle;
+\draw[line width=3mm](60:0.5)--++(60:0.5)--++(0:0.5)--++(-60:0.5)--cycle;
+
+\node[scale=10](A) at (0.75,0.2){$+$};
+\node[scale=10](M) at (0.75,0.65){$\times$};
+\node[scale=10](P) at (0.75,1.02){$\wedge$};
+
+\node[above left] at ($(A)+(-.02,.02)$){$a+b=b+a$};
+\node[above right] at ($(A)+(.02,-.02)$) {$ 		\arraycolsep0mm 		\begin{array}{rl} 			(a+b)+c	&	=a+(b+c)\\ 					&	=a+b+c 		\end{array} 	$}; 
+\node[below right] at ($(A)+(.02,-.02)$){$a+0=a$};
+\node[below left] at ($(A)+(-.02,-.02)$){$a+(-a)=0$};
+
+\node at ($(A)+(0,-.12)$){$\ks x+a=b\Longleftrightarrow x=\ks b-a\Longleftrightarrow x=\ks b+(-a)$}; 
+
+\node (a1) at ($(60:0.5)+(180:.3)$){$k\left(a+b\right)=ka+kb$};
+\node (a2) at ($(60:0.5)+(180:.3)+(-120:0.2)$){$k\left(a-b\right)=ka-kb$};
+\node (a3) at ($(60:0.5)+(0:1.3)$){$\left(a+b\right)k=ak+bk$}; 
+\draw[->,>=latex] (a1) to[out=-10,in=10] node[left]{ 		\hsize4cm 		\vbox{ 			\begin{center} 				en remplaçant l'addition				 				par une soustraction 			\end{center} 		} 	} (a2);
+\coeur[shift={($(60:0.5)+(0:1.3)+(0,.03)$)},ball color=lightgray,scale=0.05,rotate=-16,opacity=.2]
+\node (a4) at ($(60:0.5)+(0:1.2)+(-50:0.25)$){$\displaystyle\frac ak+\frac bk=\frac{a+b}k$};
+\draw[->,>=latex] (a3) to[out=-170,in=170] node[right]{ 		\hsize5cm 		\vbox{ 			\begin{center} 				en remplaçant la multiplication				 				par une division 			\end{center} 		} 	} (a4);
+
+\node at ($(M)+(-.1,0)$){$a\cdot b=b\cdot a$};
+\node at ($(M)+(0,.11)$)
+	{ \vbox{
+		\begin{center}
+			$(a\cdot b)\cdot c$\par
+			\kern-2mm 			=\par		
+			\kern-1.8mm 			$a\cdot (b\cdot c)$\par		
+			\kern-2mm 			=\par
+			\kern-1.8mm 			$abc$
+		\end{center} 	}};
+	\node at ($(M)+(.1,0)$){$a\cdot1=a$}; 	\node at ($(M)+(0,-.08)$){$\displaystyle a\cdot\frac1a=1$}; 	\coordinate(Om)at($(M)+(-.2,-.08)$); 	\node at ($(M)+(0,-.15)$){$\displaystyle\ks x\cdot a=b\Longleftrightarrow x=\frac{\ks b}a\Longleftrightarrow x=\ks b\cdot\frac1a$}; 	\node (m1) at ($(60:0.5)+(60:0.5)+(180:0.3)$){$k^{a+b}=k^a\cdot k^b$}; 	\node (m3) at ($(60:0.5)+(60:0.5)+(0:0.8)$){$\left(ab\right)^k=a^k\cdot b^k$}; 	\node (m2) at ($(60:0.5)+(60:0.5)+(180:0.3)+(-120:0.2)$){$k^{a-b}=\displaystyle\frac{k^a}{k^b}$}; 	\node (m4) at ($(60:0.5)+(60:0.5)+(0:0.8)+(-60:0.2)$){$\displaystyle\left(\frac ab\right)^k=\frac{a^k}{b^k}$}; 	\draw[->,>=latex] (m1) to[out=-10,in=10] node[left]{ 		\hsize4cm 		\vbox{ 			\begin{center} 				en remplaçant l'addition				 				par une soustraction 			\end{center} 		} 	} (m2); 	\draw[->,>=latex] (m3) to[out=-170,in=170] node[right]{ 		\hsize5cm 		\vbox{ 			\begin{center} 				en remplaçant la multiplication				 				par une division 			\end{center} 		} 	} (m4);
+	\node at ($(P)+(-.1,-.1)$){$a^b\neq b^a$}; 	\node at ($(P)+(.1,-.1)$){$a^1=a$}; 	\node at ($(P)+(0,.1)$){$\left(a^b\right)^c\neq a^{\left(b^c\right)}$}; \end{tikzpicture} \hfill\null
+\vfill
+
+\selectlanguage{french}%
+% Logo, bordures et Copyleft
+\newdimen\un \un=1mm
+\def\bordure{
+	\begin{tikzpicture}[overlay,remember picture]
+		\node(Triskell) at ($(current page.north west)+(21*\un,-20*\un)$){};
+		\def\p{.75}
+		\def\ang{45}
+		\def\alp{160.2}
+		\def\bet{72.42}
+		\def\gam{-13.2}
+		\draw[very thick, line width = 7pt, color=red!25!blue!33.333!green!50]
+			($(current page.north west)+(20*\un,-20*\un)$)
+			-- ($(current page.north east)+(-24*\un,-20*\un)$)
+			node [draw, ellipse, fill, text=white, pos=.5] {\thetitle}
+			arc (90 : 0 : 4*\un)
+			-- ($(current page.south east)+(-20*\un,24*\un)$)
+			node[text=white, pos=.5, rotate=90]
+				{\tiny Document sous licence GNU FDL.
+					Vous pouvez le distribuer et le modifier librement.
+					Sources et licence complète disponibles sur le site Echologie.org.
+					Copyright 2016, Jean-Christophe Jameux}
+			arc (0 : -90 : 4*\un)
+			-- ($(current page.south west)+(24*\un,20*\un)$)
+			node[draw, ellipse, fill, text=white, pos=.15] {Echologie.org}
+			arc (-90 : -180 : 4*\un)
+			-- ($(current page.north west)+(20*\un,-20*\un)$);
+		\draw[fill=white,color=red!25!blue!33.333!green!50]
+			(Triskell) + (1.2*\un,-6*\un) circle (15*\un);
+		\draw[fill=white,color=white] (Triskell) circle (2*\un);
+		\draw[fill=white,color=white] (Triskell) + ({120*(1+\p)} : 3*\un)
+			arc ({120*(1+\p)} : 120 : 3*\un)
+			arc (180+\ang : 180-\ang :3*\un)
+			arc (\alp-\ang : \alp+\ang+24.8 : 5*\un);
+		\draw[fill=white,color=white] (Triskell) + (120*\p : 3*\un)
+			arc (120*\p : 0 : 3*\un)
+			arc (90+\ang : 90-\ang : 6*\un)
+			arc (\bet-\ang : \bet+\ang+5.9 : 8*\un);
+		\draw[fill=white,color=white] (Triskell) + ({120*(2+\p)} : 3*\un)
+			arc ({120*(2+\p)} : 240 : 3*\un)
+			arc (\ang : -\ang : 12*\un)
+			arc (\gam-\ang : \gam+\ang+.85 : 13*\un);
+\end{tikzpicture}}
+
+\bordure\selectlanguage{english}%
+
+\end{document}

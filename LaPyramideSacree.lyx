@@ -16,9 +16,48 @@
 \usepackage{titling}
 \usepackage{array}
 %\usepackage{yhmath}
+\newdimen\un \un=1mm
+\def\bordure{
+\begin{tikzpicture}[overlay,remember picture]
+\node(Triskell) at ($(current page.north west)+(21*\un,-20*\un)$){};
+\def\p{.75}
+\def\ang{45}
+\def\alp{160.2}
+\def\bet{72.42}
+\def\gam{-13.2}
+\draw[very thick, line width = 8pt, color=red!25!blue!33.333!green!50]
+($(current page.north west)+(20*\un,-20*\un)$)
+-- ($(current page.north east)+(-24*\un,-20*\un)$)
+node [draw, ellipse, fill, text=white, pos=.5] {\thetitle}
+arc (90 : 0 : 4*\un)
+-- ($(current page.south east)+(-20*\un,24*\un)$)
+node[text=white,pos=.5 , rotate=90]
+{\tiny Ce document, à l'exclusion du logo, est sous licence GNU FDL, il est librement modifiable et distribuable. Copyright 2010, 2016, Jean-Christophe Jameux}
+arc (0 : -90 : 4*\un)
+-- ($(current page.south west)+(24*\un,20*\un)$)
+node[draw, ellipse, fill, text=white, pos=.15] {Echologie.org}
+arc (-90 : -180 : 4*\un)
+-- ($(current page.north west)+(20*\un,-20*\un)$);
+\draw[fill=white,color=red!25!blue!33.333!green!50]
+(Triskell) + (1.2*\un,-6*\un) circle (15*\un);
+\draw[fill=white,color=white] (Triskell) circle (2*\un);
+\draw[fill=white,color=white] (Triskell) + ({120*(1+\p)} : 3*\un)
+arc ({120*(1+\p)} : 120 : 3*\un)
+arc (180+\ang : 180-\ang :3*\un)
+arc (\alp-\ang : \alp+\ang+24.8 : 5*\un);
+\draw[fill=white,color=white] (Triskell) + (120*\p : 3*\un)
+arc (120*\p : 0 : 3*\un)
+arc (90+\ang : 90-\ang : 6*\un)
+arc (\bet-\ang : \bet+\ang+5.9 : 8*\un);
+\draw[fill=white,color=white] (Triskell) + ({120*(2+\p)} : 3*\un)
+arc ({120*(2+\p)} : 240 : 3*\un)
+arc (\ang : -\ang : 12*\un)
+arc (\gam-\ang : \gam+\ang+.85 : 13*\un);
+\end{tikzpicture}}
 \end_preamble
-\options 10pt
+\options 12pt
 \use_default_options true
+\master DocumentMaitre.lyx
 \maintain_unincluded_children false
 \language english
 \language_package default
@@ -111,6 +150,8 @@ bf La Pyramide Sacrée}
 \end_layout
 
 \begin_layout Standard
+
+\size footnotesize
 \begin_inset ERT
 status collapsed
 
@@ -643,389 +684,6 @@ null
 
 \backslash
 vfill
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\lang french
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-% Logo, bordures et Copyleft
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-newdimen
-\backslash
-un 
-\backslash
-un=1mm
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-def
-\backslash
-bordure{
-\end_layout
-
-\begin_layout Plain Layout
-
-	
-\backslash
-begin{tikzpicture}[overlay,remember picture]
-\end_layout
-
-\begin_layout Plain Layout
-
-		
-\backslash
-node(Triskell) at ($(current page.north west)+(21*
-\backslash
-un,-20*
-\backslash
-un)$){};
-\end_layout
-
-\begin_layout Plain Layout
-
-		
-\backslash
-def
-\backslash
-p{.75}
-\end_layout
-
-\begin_layout Plain Layout
-
-		
-\backslash
-def
-\backslash
-ang{45}
-\end_layout
-
-\begin_layout Plain Layout
-
-		
-\backslash
-def
-\backslash
-alp{160.2}
-\end_layout
-
-\begin_layout Plain Layout
-
-		
-\backslash
-def
-\backslash
-bet{72.42}
-\end_layout
-
-\begin_layout Plain Layout
-
-		
-\backslash
-def
-\backslash
-gam{-13.2}
-\end_layout
-
-\begin_layout Plain Layout
-
-		
-\backslash
-draw[very thick, line width = 7pt, color=red!25!blue!33.333!green!50]
-\end_layout
-
-\begin_layout Plain Layout
-
-			($(current page.north west)+(20*
-\backslash
-un,-20*
-\backslash
-un)$)
-\end_layout
-
-\begin_layout Plain Layout
-
-			-- ($(current page.north east)+(-24*
-\backslash
-un,-20*
-\backslash
-un)$)
-\end_layout
-
-\begin_layout Plain Layout
-
-			node [draw, ellipse, fill, text=white, pos=.5] {
-\backslash
-thetitle}
-\end_layout
-
-\begin_layout Plain Layout
-
-			arc (90 : 0 : 4*
-\backslash
-un)
-\end_layout
-
-\begin_layout Plain Layout
-
-			-- ($(current page.south east)+(-20*
-\backslash
-un,24*
-\backslash
-un)$)
-\end_layout
-
-\begin_layout Plain Layout
-
-			node[text=white, pos=.5, rotate=90]
-\end_layout
-
-\begin_layout Plain Layout
-
-				{
-\backslash
-tiny Document sous licence GNU FDL.
-\end_layout
-
-\begin_layout Plain Layout
-
-					Vous pouvez le distribuer et le modifier librement.
-\end_layout
-
-\begin_layout Plain Layout
-
-					Sources et licence complète disponibles sur le site Echologie.org.
-\end_layout
-
-\begin_layout Plain Layout
-
-					Copyright 2016, Jean-Christophe Jameux}
-\end_layout
-
-\begin_layout Plain Layout
-
-			arc (0 : -90 : 4*
-\backslash
-un)
-\end_layout
-
-\begin_layout Plain Layout
-
-			-- ($(current page.south west)+(24*
-\backslash
-un,20*
-\backslash
-un)$)
-\end_layout
-
-\begin_layout Plain Layout
-
-			node[draw, ellipse, fill, text=white, pos=.15] {Echologie.org}
-\end_layout
-
-\begin_layout Plain Layout
-
-			arc (-90 : -180 : 4*
-\backslash
-un)
-\end_layout
-
-\begin_layout Plain Layout
-
-			-- ($(current page.north west)+(20*
-\backslash
-un,-20*
-\backslash
-un)$);
-\end_layout
-
-\begin_layout Plain Layout
-
-		
-\backslash
-draw[fill=white,color=red!25!blue!33.333!green!50]
-\end_layout
-
-\begin_layout Plain Layout
-
-			(Triskell) + (1.2*
-\backslash
-un,-6*
-\backslash
-un) circle (15*
-\backslash
-un);
-\end_layout
-
-\begin_layout Plain Layout
-
-		
-\backslash
-draw[fill=white,color=white] (Triskell) circle (2*
-\backslash
-un);
-\end_layout
-
-\begin_layout Plain Layout
-
-		
-\backslash
-draw[fill=white,color=white] (Triskell) + ({120*(1+
-\backslash
-p)} : 3*
-\backslash
-un)
-\end_layout
-
-\begin_layout Plain Layout
-
-			arc ({120*(1+
-\backslash
-p)} : 120 : 3*
-\backslash
-un)
-\end_layout
-
-\begin_layout Plain Layout
-
-			arc (180+
-\backslash
-ang : 180-
-\backslash
-ang :3*
-\backslash
-un)
-\end_layout
-
-\begin_layout Plain Layout
-
-			arc (
-\backslash
-alp-
-\backslash
-ang : 
-\backslash
-alp+
-\backslash
-ang+24.8 : 5*
-\backslash
-un);
-\end_layout
-
-\begin_layout Plain Layout
-
-		
-\backslash
-draw[fill=white,color=white] (Triskell) + (120*
-\backslash
-p : 3*
-\backslash
-un)
-\end_layout
-
-\begin_layout Plain Layout
-
-			arc (120*
-\backslash
-p : 0 : 3*
-\backslash
-un)
-\end_layout
-
-\begin_layout Plain Layout
-
-			arc (90+
-\backslash
-ang : 90-
-\backslash
-ang : 6*
-\backslash
-un)
-\end_layout
-
-\begin_layout Plain Layout
-
-			arc (
-\backslash
-bet-
-\backslash
-ang : 
-\backslash
-bet+
-\backslash
-ang+5.9 : 8*
-\backslash
-un);
-\end_layout
-
-\begin_layout Plain Layout
-
-		
-\backslash
-draw[fill=white,color=white] (Triskell) + ({120*(2+
-\backslash
-p)} : 3*
-\backslash
-un)
-\end_layout
-
-\begin_layout Plain Layout
-
-			arc ({120*(2+
-\backslash
-p)} : 240 : 3*
-\backslash
-un)
-\end_layout
-
-\begin_layout Plain Layout
-
-			arc (
-\backslash
-ang : -
-\backslash
-ang : 12*
-\backslash
-un)
-\end_layout
-
-\begin_layout Plain Layout
-
-			arc (
-\backslash
-gam-
-\backslash
-ang : 
-\backslash
-gam+
-\backslash
-ang+.85 : 13*
-\backslash
-un);
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{tikzpicture}}
 \end_layout
 
 \end_inset
