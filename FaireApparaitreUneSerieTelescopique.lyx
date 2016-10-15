@@ -33,12 +33,13 @@ node [draw, ellipse, fill, text=white, pos=.5] {\thetitle}
 arc (90 : 0 : 4*\un)
 -- ($(current page.south east)+(-20*\un,24*\un)$)
 node[text=white,pos=.5 , rotate=90]
-{\tiny Ce document, à l'exclusion du logo, est sous licence GNU FDL,
+{\tiny Ce document est sous licence GNU FDL,
  il est librement modifiable et distribuable.
- Copyright 2010, 2016, Jean-Christophe Jameux}
+ Sources et licence complètes disponible sur le site.
+ Copyright 2015, Jean-Christophe Jameux}
 arc (0 : -90 : 4*\un)
 -- ($(current page.south west)+(24*\un,20*\un)$)
-node[draw, ellipse, fill, text=white, pos=.15] {Echologie.org}
+node[draw, ellipse, fill, text=white, pos=.15] {\bf Echologie.org}
 arc (-90 : -180 : 4*\un)
 -- ($(current page.north west)+(20*\un,-20*\un)$);
 \draw [fill = white, color = red!25!blue!33.333!green!50]
@@ -63,7 +64,6 @@ arc (\gam-\ang : \gam+\ang+.85 : 13*\un);
 \end_preamble
 \options 12pt
 \use_default_options true
-\master DocumentMaitre.lyx
 \maintain_unincluded_children false
 \language english
 \language_package default
@@ -112,9 +112,9 @@ arc (\gam-\ang : \gam+\ang+.85 : 13*\un);
 \shortcut idx
 \color #008000
 \end_index
-\leftmargin 0mm
-\topmargin 0mm
-\rightmargin 0mm
+\leftmargin 28mm
+\topmargin 29mm
+\rightmargin 28mm
 \bottommargin 0mm
 \secnumdepth 3
 \tocdepth 3
@@ -134,6 +134,7 @@ arc (\gam-\ang : \gam+\ang+.85 : 13*\un);
 \begin_body
 
 \begin_layout Standard
+\noindent
 
 \lang french
 \begin_inset ERT
@@ -157,37 +158,6 @@ bf Faire apparaître une série télescopique}
 
 \begin_layout Standard
 \noindent
-\align center
-
-\series bold
-\size large
-\begin_inset VSpace vfill
-\end_inset
-
-
-\begin_inset VSpace smallskip
-\end_inset
-
-
-\begin_inset Box Frameless
-position "c"
-hor_pos "c"
-has_inner_box 1
-inner_pos "c"
-use_parbox 0
-use_makebox 0
-width "245mm"
-special "none"
-height "1in"
-height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
-status open
-
-\begin_layout Plain Layout
 
 \series bold
 \begin_inset Phantom HPhantom
@@ -205,7 +175,7 @@ Dans certaines situations, il est possible de grandement simplifier le calcul
 status open
 
 \begin_layout Plain Layout
-Decal
+Deca.
 \end_layout
 
 \end_inset
@@ -253,19 +223,10 @@ résume par la formule
 
 \end_layout
 
-\end_inset
-
-
-\end_layout
-
 \begin_layout Standard
 \noindent
 
 \lang french
-\begin_inset VSpace vfill
-\end_inset
-
-
 \begin_inset ERT
 status open
 

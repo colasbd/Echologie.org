@@ -32,10 +32,13 @@ node [draw, ellipse, fill, text=white, pos=.5] {\thetitle}
 arc (90 : 0 : 4*\un)
 -- ($(current page.south east)+(-20*\un,24*\un)$)
 node[text=white,pos=.5 , rotate=90]
-{\tiny Ce document, à l'exclusion du logo, est sous licence GNU FDL, il est librement modifiable et distribuable. Copyright 2010, 2016, Jean-Christophe Jameux}
+{\tiny Ce document est sous licence GNU FDL,
+ il est librement modifiable et distribuable.
+ Sources et licence complètes disponible sur le site.
+ Copyright 2010, Jean-Christophe Jameux}
 arc (0 : -90 : 4*\un)
 -- ($(current page.south west)+(24*\un,20*\un)$)
-node[draw, ellipse, fill, text=white, pos=.15] {Echologie.org}
+node[draw, ellipse, fill, text=white, pos=.15] {\bf Echologie.org}
 arc (-90 : -180 : 4*\un)
 -- ($(current page.north west)+(20*\un,-20*\un)$);
 \draw[fill=white,color=red!25!blue!33.333!green!50]
@@ -57,7 +60,6 @@ arc (\gam-\ang : \gam+\ang+.85 : 13*\un);
 \end_preamble
 \options 12pt
 \use_default_options true
-\master DocumentMaitre.lyx
 \maintain_unincluded_children false
 \language english
 \language_package default

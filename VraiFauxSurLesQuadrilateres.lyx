@@ -26,31 +26,37 @@
 \def\alp{160.2}
 \def\bet{72.42}
 \def\gam{-13.2}
-\draw[very thick, line width = 7pt, color=red!25!blue!33.333!green!50]
+\draw [very thick, line width = 8pt, color = red!25!blue!33.333!green!50]
 ($(current page.north west)+(20*\un,-20*\un)$)
 -- ($(current page.north east)+(-24*\un,-20*\un)$)
 node [draw, ellipse, fill, text=white, pos=.5] {\thetitle}
 arc (90 : 0 : 4*\un)
 -- ($(current page.south east)+(-20*\un,24*\un)$)
-node[text=white, near end, rotate=90]
-{\tiny Document sous licence GNU FDL. Copyright 2016, Jean-Christophe Jameux}
+node[text=white,pos=.5 , rotate=90]
+{\tiny Ce document est sous licence GNU FDL,
+ il est librement modifiable et distribuable.
+ Sources et licence complètes disponible sur le site.
+ Copyright 2012, Jean-Christophe Jameux}
 arc (0 : -90 : 4*\un)
 -- ($(current page.south west)+(24*\un,20*\un)$)
-node[draw, ellipse, fill, text=white, pos=.15] {Echologie.org}
+node[draw, ellipse, fill, text=white, pos=.15] {\bf Echologie.org}
 arc (-90 : -180 : 4*\un)
 -- ($(current page.north west)+(20*\un,-20*\un)$);
-\draw[fill=white,color=red!25!blue!33.333!green!50]
+\draw [fill = white, color = red!25!blue!33.333!green!50]
 (Triskell) + (1.2*\un,-6*\un) circle (15*\un);
-\draw[fill=white,color=white] (Triskell) circle (2*\un);
-\draw[fill=white,color=white] (Triskell) + ({120*(1+\p)} : 3*\un)
+\draw [fill = white, color = white] (Triskell) circle (2*\un);
+\draw [fill = white, color = white]
+(Triskell) + ({120*(1+\p)} : 3*\un)
 arc ({120*(1+\p)} : 120 : 3*\un)
 arc (180+\ang : 180-\ang :3*\un)
 arc (\alp-\ang : \alp+\ang+24.8 : 5*\un);
-\draw[fill=white,color=white] (Triskell) + (120*\p : 3*\un)
+\draw [fill = white, color = white]
+(Triskell) + (120*\p : 3*\un)
 arc (120*\p : 0 : 3*\un)
 arc (90+\ang : 90-\ang : 6*\un)
 arc (\bet-\ang : \bet+\ang+5.9 : 8*\un);
-\draw[fill=white,color=white] (Triskell) + ({120*(2+\p)} : 3*\un)
+\draw [fill = white, color = white]
+(Triskell) + ({120*(2+\p)} : 3*\un)
 arc ({120*(2+\p)} : 240 : 3*\un)
 arc (\ang : -\ang : 12*\un)
 arc (\gam-\ang : \gam+\ang+.85 : 13*\un);
@@ -106,10 +112,10 @@ arc (\gam-\ang : \gam+\ang+.85 : 13*\un);
 \shortcut idx
 \color #008000
 \end_index
-\leftmargin 0mm
-\topmargin 0mm
-\rightmargin 0mm
-\bottommargin 0mm
+\leftmargin 40mm
+\topmargin 27mm
+\rightmargin 40mm
+\bottommargin 20mm
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation skip
@@ -128,6 +134,9 @@ arc (\gam-\ang : \gam+\ang+.85 : 13*\un);
 \begin_body
 
 \begin_layout Standard
+\noindent
+
+\lang french
 \begin_inset ERT
 status open
 
@@ -137,9 +146,7 @@ status open
 \backslash
 title{
 \backslash
-LARGE
-\backslash
-bf Echantillon de documents}
+bf Vrai/Faux sur les quadrilatères}
 \end_layout
 
 \end_inset
@@ -148,15 +155,120 @@ bf Echantillon de documents}
 \end_layout
 
 \begin_layout Standard
-\noindent
-\align center
 
-\series bold
-\size giant
+\lang french
+Un quadrilatère symétrique par rapport aux médiatrices des côtés est un
+ carré.
+ 
 \begin_inset VSpace vfill
 \end_inset
 
-Collège
+Un quadrilatère ayant deux côtés opposés parallèles est un parallélogramme.
+ 
+\begin_inset VSpace vfill
+\end_inset
+
+Un quadrilatère ayant ses côtés opposés deux à deux de même longueur est
+ un parallélogramme.
+ 
+\begin_inset VSpace vfill
+\end_inset
+
+Un quadrilatère ayant ses diagonales de même longueur est un rectangle.
+ 
+\begin_inset VSpace vfill
+\end_inset
+
+Un quadrilatère ayant quatre côtés de même longueur est un carré.
+ 
+\begin_inset VSpace vfill
+\end_inset
+
+Un quadrilatère dont les diagonales se coupent en leur milieux est un parallélog
+ramme.
+ 
+\begin_inset VSpace vfill
+\end_inset
+
+Un parallélogramme ayant deux côtés consécutifs de même longueur est un
+ losange.
+ 
+\begin_inset VSpace vfill
+\end_inset
+
+Un quadrilatère symétrique par rapport à ses diagonales est un carré.
+ 
+\begin_inset VSpace vfill
+\end_inset
+
+Un quadrilatère ayant trois angles droits est un rectangle.
+ 
+\begin_inset VSpace vfill
+\end_inset
+
+Un parallélogramme ayant un angle droit est un rectangle.
+ 
+\begin_inset VSpace vfill
+\end_inset
+
+Un quadrilatère dont les angles sont deux à deux de même mesure est un parallélo
+gramme.
+ 
+\begin_inset VSpace vfill
+\end_inset
+
+Un quadrilatère dont les angles opposés sont deux à deux de même mesure
+ est un parallélogramme.
+ 
+\begin_inset VSpace vfill
+\end_inset
+
+Un quadrilatère dans lequel il existe deux angles consécutifs supplémentaires
+ est un parallélogramme.
+ 
+\begin_inset VSpace vfill
+\end_inset
+
+Un quadrilatère dont les sommets sont symétriques par rapport a l'intersection
+ des diagonales est un losange.
+ 
+\begin_inset VSpace vfill
+\end_inset
+
+Un parallélogramme dont les diagonales se coupent à angle droit est un losange.
+ 
+\begin_inset VSpace vfill
+\end_inset
+
+Un parallélogramme ayant deux côtés consécutifs de même longueur est un
+ losange.
+ 
+\begin_inset VSpace vfill
+\end_inset
+
+Un quadrilatère symétrique par rapport aux médiatrices des côtés est un
+ carré.
+ 
+\begin_inset VSpace vfill
+\end_inset
+
+Un quadrilatère inscriptible dans un cercle est un rectangle.
+ 
+\begin_inset VSpace vfill
+\end_inset
+
+Un quadrilatère ayant deux côtés opposés parallèles est un parallélogramme.
+ 
+\begin_inset VSpace vfill
+\end_inset
+
+Un quadrilatère ayant ses côtés opposés deux à deux de même longueur est
+ un parallélogramme.
+\end_layout
+
+\begin_layout Standard
+
+\lang french
 \begin_inset VSpace vfill
 \end_inset
 
@@ -165,7 +277,8 @@ Collège
 
 \begin_layout Standard
 \noindent
-\align block
+
+\lang french
 \begin_inset ERT
 status open
 
@@ -175,147 +288,6 @@ status open
 \backslash
 bordure
 \end_layout
-
-\end_inset
-
-
-\begin_inset CommandInset include
-LatexCommand include
-filename "LaPyramideSacree.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-title{
-\backslash
-LARGE
-\backslash
-bf Echantillon de documents}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\noindent
-\align center
-
-\series bold
-\size giant
-\begin_inset VSpace vfill
-\end_inset
-
-Lycee
-\begin_inset VSpace vfill
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\noindent
-\align block
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-bordure
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\noindent
-\align block
-\begin_inset CommandInset include
-LatexCommand include
-filename "RechercheDunEquivalent.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-title{
-\backslash
-LARGE
-\backslash
-bf Echantillon de documents}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\noindent
-\align center
-
-\series bold
-\size giant
-\begin_inset VSpace vfill
-\end_inset
-
-Supérieur
-\begin_inset VSpace vfill
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\noindent
-\align block
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-bordure
-\end_layout
-
-\end_inset
-
-
-\begin_inset CommandInset include
-LatexCommand include
-filename "DeveloppementsLimitesUsuels.lyx"
-
-\end_inset
-
-
-\begin_inset CommandInset include
-LatexCommand include
-filename "RechercheDunEquivalent.lyx"
 
 \end_inset
 

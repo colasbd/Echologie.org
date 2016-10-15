@@ -1,0 +1,129 @@
+%% LyX 2.2.1 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[french,english,12pt]{paper}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage[landscape,a4paper]{geometry}
+\geometry{verbose,tmargin=40mm,bmargin=0mm,lmargin=30mm,rmargin=30mm}
+\pagestyle{empty}
+\setlength{\parskip}{\bigskipamount}
+\setlength{\parindent}{0pt}
+\usepackage{fancybox}
+\usepackage{calc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usetikzlibrary{shapes}
+\usepackage{mathrsfs}
+\usepackage{mathabx}
+\usepackage{txfonts}
+\usepackage{pxfonts}
+\usepackage{titling}
+\usepackage{array}
+%\usepackage{yhmath}
+
+\newdimen\un \un=1mm
+\def\bordure{
+\begin{tikzpicture}[overlay,remember picture]
+\node(Triskell) at ($(current page.north west)+(21*\un,-20*\un)$){};
+\def\p{.75}
+\def\ang{45}
+\def\alp{160.2}
+\def\bet{72.42}
+\def\gam{-13.2}
+\draw [very thick, line width = 8pt, color = red!25!blue!33.333!green!50]
+($(current page.north west)+(20*\un,-20*\un)$)
+-- ($(current page.north east)+(-24*\un,-20*\un)$)
+node [draw, ellipse, fill, text=white, pos=.5] {\thetitle}
+arc (90 : 0 : 4*\un)
+-- ($(current page.south east)+(-20*\un,24*\un)$)
+node[text=white,pos=.5 , rotate=90]
+{\tiny Ce document est sous licence GNU FDL,
+ il est librement modifiable et distribuable.
+ Sources et licence complètes disponible sur le site.
+ Copyright 2015, Jean-Christophe Jameux}
+arc (0 : -90 : 4*\un)
+-- ($(current page.south west)+(24*\un,20*\un)$)
+node[draw, ellipse, fill, text=white, pos=.15] {\bf Echologie.org}
+arc (-90 : -180 : 4*\un)
+-- ($(current page.north west)+(20*\un,-20*\un)$);
+\draw [fill = white, color = red!25!blue!33.333!green!50]
+(Triskell) + (1.2*\un,-6*\un) circle (15*\un);
+\draw [fill = white, color = white] (Triskell) circle (2*\un);
+\draw [fill = white, color = white]
+(Triskell) + ({120*(1+\p)} : 3*\un)
+arc ({120*(1+\p)} : 120 : 3*\un)
+arc (180+\ang : 180-\ang :3*\un)
+arc (\alp-\ang : \alp+\ang+24.8 : 5*\un);
+\draw [fill = white, color = white]
+(Triskell) + (120*\p : 3*\un)
+arc (120*\p : 0 : 3*\un)
+arc (90+\ang : 90-\ang : 6*\un)
+arc (\bet-\ang : \bet+\ang+5.9 : 8*\un);
+\draw [fill = white, color = white]
+(Triskell) + ({120*(2+\p)} : 3*\un)
+arc ({120*(2+\p)} : 240 : 3*\un)
+arc (\ang : -\ang : 12*\un)
+arc (\gam-\ang : \gam+\ang+.85 : 13*\un);
+\end{tikzpicture}}
+
+\makeatother
+
+\usepackage{babel}
+\makeatletter
+\addto\extrasfrench{%
+   \providecommand{\og}{\leavevmode\flqq~}%
+   \providecommand{\fg}{\ifdim\lastskip>\z@\unskip\fi~\frqq}%
+}
+
+\makeatother
+\begin{document}
+\selectlanguage{french}%
+\title{\LARGE\bf Le lemme de Cesàro}
+
+\textbf{\large{}Soit $(u_{n})_{n\in\mathbb{N}^{*}}$ une suite réelle
+convergeant vers 0. On se propose de démontrer que la suite ${\displaystyle \left(\frac{\sum_{k=1}^{n}u_{k}}{n}\right)_{n\in\mathbb{N}^{*}}}$
+converge également vers 0. Il s'agit donc de démontrer $\forall\varepsilon>0,\exists N\in\mathbb{N}^{*},\forall n\geq N,\left|\frac{\sum_{k=1}^{n}u_{k}}{n}\right|<\varepsilon$}{\large \par}
+
+\bigskip{}
+
+\textbf{\large{}}%
+{\fboxsep 3mm\Ovalbox{\begin{minipage}[t]{1\columnwidth - 2\fboxsep - 1.6pt}%
+\textbf{\large{}Soit $\varepsilon>0$, puisque ${\displaystyle \lim_{n\longrightarrow+\infty}u_{n}=0}$,
+on sait qu'il existe $N_{1}\in\mathbb{N}^{*}$ vérifiant $\forall n\geq N_{1},|u_{n}|<\frac{\varepsilon}{2}$}{\large \par}
+
+\textbf{\large{}Montrons alors $\forall n\geq N_{1},\left|\frac{\sum_{k=N_{1}}^{n}u_{k}}{n}\right|<\frac{\varepsilon}{2}$}{\large \par}
+
+\bigskip{}
+
+\textbf{\large{}}%
+{\fboxsep 3mm\Ovalbox{\begin{minipage}[t]{1\columnwidth - 2\fboxsep - 1.6pt}%
+\textbf{\large{}Soit donc $n\geq N_{1}$, on peut dès lors affirmer
+:
+\[
+{\displaystyle \left|\frac{\sum_{k=N_{1}}^{n}u_{k}}{n}\right|\leq\frac{\sum_{k=N_{1}}^{n}|u_{k}|}{n}<\frac{(n-N_{1}+1)\cdot\frac{\varepsilon}{2}}{n}\leq\frac{n\cdot\frac{\varepsilon}{2}}{n}=\frac{\varepsilon}{2}}
+\]
+}%
+\end{minipage}}}{\large \par}
+
+\bigskip{}
+\textbf{\large{}De même, puisque ${\displaystyle \lim_{n\longrightarrow+\infty}\frac{\sum_{k=1}^{N_{1}-1}u_{k}}{n}=0}$,
+on sait qu'il existe $N_{2}\in\mathbb{N}^{*}$ vérifiant $\forall n\geq N_{2},\left|\frac{\sum_{k=1}^{N_{1}-1}u_{k}}{n}\right|<\frac{\varepsilon}{2}$.}{\large \par}
+
+\textbf{\large{}En posant $N=\max(N_{1},N_{2})$, on déduit de ce
+qui précède que pour tout $n\geq N$ on a la majoration} :
+
+\textbf{\large{}
+\[
+{\displaystyle \left|\frac{\sum_{k=1}^{n}u_{k}}{n}\right|=\left|\frac{\sum_{k=1}^{N_{1}-1}u_{k}}{n}+\frac{\sum_{k=N_{1}}^{n}u_{k}}{n}\right|\leq\left|\frac{\sum_{k=1}^{N_{1}-1}u_{k}}{n}\right|+\left|\frac{\sum_{k=N_{1}}^{n}u_{k}}{n}\right|<\frac{\varepsilon}{2}+\frac{\varepsilon}{2}=\varepsilon}
+\]
+}{\large \par}%
+\end{minipage}}}{\large \par}
+
+\bordure\selectlanguage{english}%
+
+\end{document}

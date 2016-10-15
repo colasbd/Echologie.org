@@ -33,12 +33,13 @@ node [draw, ellipse, fill, text=white, pos=.5] {\thetitle}
 arc (90 : 0 : 4*\un)
 -- ($(current page.south east)+(-20*\un,24*\un)$)
 node[text=white,pos=.5 , rotate=90]
-{\tiny Ce document, à l'exclusion du logo, est sous licence GNU FDL,
+{\tiny Ce document est sous licence GNU FDL,
  il est librement modifiable et distribuable.
- Copyright 2010, 2016, Jean-Christophe Jameux}
+ Sources et licence complètes disponible sur le site.
+ Copyright 2015, Jean-Christophe Jameux}
 arc (0 : -90 : 4*\un)
 -- ($(current page.south west)+(24*\un,20*\un)$)
-node[draw, ellipse, fill, text=white, pos=.15] {Echologie.org}
+node[draw, ellipse, fill, text=white, pos=.15] {\bf Echologie.org}
 arc (-90 : -180 : 4*\un)
 -- ($(current page.north west)+(20*\un,-20*\un)$);
 \draw [fill = white, color = red!25!blue!33.333!green!50]
@@ -63,7 +64,6 @@ arc (\gam-\ang : \gam+\ang+.85 : 13*\un);
 \end_preamble
 \options 12pt
 \use_default_options true
-\master DocumentMaitre.lyx
 \maintain_unincluded_children false
 \language english
 \language_package default
@@ -112,9 +112,9 @@ arc (\gam-\ang : \gam+\ang+.85 : 13*\un);
 \shortcut idx
 \color #008000
 \end_index
-\leftmargin 0mm
-\topmargin 0mm
-\rightmargin 0mm
+\leftmargin 30mm
+\topmargin 40mm
+\rightmargin 30mm
 \bottommargin 0mm
 \secnumdepth 3
 \tocdepth 3
@@ -145,9 +145,9 @@ status open
 \backslash
 title{
 \backslash
-large
+LARGE
 \backslash
-bf Titre}
+bf Le lemme de Cesàro}
 \end_layout
 
 \end_inset
@@ -156,28 +156,54 @@ bf Titre}
 \end_layout
 
 \begin_layout Standard
-\noindent
-\align center
 
 \series bold
 \size large
-\begin_inset VSpace vfill
+\lang french
+Soit 
+\begin_inset Formula $(u_{n})_{n\in\mathbb{N}^{*}}$
+\end_inset
+
+ une suite réelle convergeant vers 0.
+ On se propose de démontrer que la suite 
+\begin_inset Formula ${\displaystyle \left(\frac{\sum_{k=1}^{n}u_{k}}{n}\right)_{n\in\mathbb{N}^{*}}}$
+\end_inset
+
+ converge également vers 0.
+ Il s'agit donc de démontrer 
+\begin_inset Formula $\forall\varepsilon>0,\exists N\in\mathbb{N}^{*},\forall n\geq N,\left|\frac{\sum_{k=1}^{n}u_{k}}{n}\right|<\varepsilon$
 \end_inset
 
 
-\begin_inset Box Frameless
-position "c"
+\end_layout
+
+\begin_layout Standard
+
+\lang french
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\size large
+\lang french
+\begin_inset Box Ovalbox
+position "t"
 hor_pos "c"
 has_inner_box 1
-inner_pos "c"
+inner_pos "t"
 use_parbox 0
 use_makebox 0
-width "245mm"
+width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
 thickness "0.4pt"
-separation "3pt"
+separation "3mm"
 shadowsize "4pt"
 framecolor "black"
 backgroundcolor "none"
@@ -186,12 +212,148 @@ status open
 \begin_layout Plain Layout
 
 \series bold
-\begin_inset Phantom HPhantom
+\size large
+\lang french
+Soit 
+\begin_inset Formula $\varepsilon>0$
+\end_inset
+
+, puisque 
+\begin_inset Formula ${\displaystyle \lim_{n\longrightarrow+\infty}u_{n}=0}$
+\end_inset
+
+, on sait qu'il existe 
+\begin_inset Formula $N_{1}\in\mathbb{N}^{*}$
+\end_inset
+
+ vérifiant 
+\begin_inset Formula $\forall n\geq N_{1},|u_{n}|<\frac{\varepsilon}{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+\size large
+\lang french
+Montrons alors 
+\begin_inset Formula $\forall n\geq N_{1},\left|\frac{\sum_{k=N_{1}}^{n}u_{k}}{n}\right|<\frac{\varepsilon}{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang french
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+\size large
+\lang french
+\begin_inset Box Ovalbox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3mm"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
 status open
 
 \begin_layout Plain Layout
-Decale
+
+\series bold
+\size large
+\lang french
+Soit donc 
+\begin_inset Formula $n\geq N_{1}$
+\end_inset
+
+, on peut dès lors affirmer :
+\begin_inset Formula 
+\[
+{\displaystyle \left|\frac{\sum_{k=N_{1}}^{n}u_{k}}{n}\right|\leq\frac{\sum_{k=N_{1}}^{n}|u_{k}|}{n}<\frac{(n-N_{1}+1)\cdot\frac{\varepsilon}{2}}{n}\leq\frac{n\cdot\frac{\varepsilon}{2}}{n}=\frac{\varepsilon}{2}}
+\]
+
+\end_inset
+
+
 \end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang french
+\begin_inset VSpace defskip
+\end_inset
+
+
+\series bold
+\size large
+De même, puisque 
+\begin_inset Formula ${\displaystyle \lim_{n\longrightarrow+\infty}\frac{\sum_{k=1}^{N_{1}-1}u_{k}}{n}=0}$
+\end_inset
+
+, on sait qu'il existe 
+\begin_inset Formula $N_{2}\in\mathbb{N}^{*}$
+\end_inset
+
+ vérifiant 
+\begin_inset Formula $\forall n\geq N_{2},\left|\frac{\sum_{k=1}^{N_{1}-1}u_{k}}{n}\right|<\frac{\varepsilon}{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+\size large
+\lang french
+En posant 
+\begin_inset Formula $N=\max(N_{1},N_{2})$
+\end_inset
+
+, on déduit de ce qui précède que pour tout 
+\begin_inset Formula $n\geq N$
+\end_inset
+
+ on a la majoration
+\series default
+\size default
+ :
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+\size large
+\lang french
+\begin_inset Formula 
+\[
+{\displaystyle \left|\frac{\sum_{k=1}^{n}u_{k}}{n}\right|=\left|\frac{\sum_{k=1}^{N_{1}-1}u_{k}}{n}+\frac{\sum_{k=N_{1}}^{n}u_{k}}{n}\right|\leq\left|\frac{\sum_{k=1}^{N_{1}-1}u_{k}}{n}\right|+\left|\frac{\sum_{k=N_{1}}^{n}u_{k}}{n}\right|<\frac{\varepsilon}{2}+\frac{\varepsilon}{2}=\varepsilon}
+\]
 
 \end_inset
 
@@ -207,10 +369,6 @@ Decale
 \noindent
 
 \lang french
-\begin_inset VSpace vfill
-\end_inset
-
-
 \begin_inset ERT
 status open
 

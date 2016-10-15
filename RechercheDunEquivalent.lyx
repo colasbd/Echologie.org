@@ -32,7 +32,10 @@ node [draw, ellipse, fill, text=white, pos=.5] {\thetitle}
 arc (90 : 0 : 4*\un)
 -- ($(current page.south east)+(-20*\un,24*\un)$)
 node[text=white,pos=.5 , rotate=90]
-{\tiny Ce document, à l'exclusion du logo, est sous licence GNU FDL, il est librement modifiable et distribuable. Copyright 2010, 2016, Jean-Christophe Jameux}
+{\tiny Ce document est sous licence GNU FDL,
+ il est librement modifiable et distribuable.
+ Sources et licence complètes disponible sur le site.
+ Copyright 2016, Jean-Christophe Jameux}
 arc (0 : -90 : 4*\un)
 -- ($(current page.south west)+(24*\un,20*\un)$)
 node[draw, ellipse, fill, text=white, pos=.15] {Echologie.org}
@@ -57,7 +60,6 @@ arc (\gam-\ang : \gam+\ang+.85 : 13*\un);
 \end_preamble
 \options 12pt
 \use_default_options true
-\master DocumentMaitre.lyx
 \maintain_unincluded_children false
 \language english
 \language_package default
@@ -106,9 +108,9 @@ arc (\gam-\ang : \gam+\ang+.85 : 13*\un);
 \shortcut idx
 \color #008000
 \end_index
-\leftmargin 0mm
-\topmargin 0mm
-\rightmargin 0mm
+\leftmargin 28mm
+\topmargin 27mm
+\rightmargin 28mm
 \bottommargin 0mm
 \secnumdepth 3
 \tocdepth 3
@@ -150,57 +152,6 @@ bf Recherche d'un équivalent}
 \end_layout
 
 \begin_layout Standard
-\begin_inset Phantom Phantom
-status open
-
-\begin_layout Plain Layout
-
-\size large
-Bord haut
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\lang french
-\begin_inset VSpace vfill
-\end_inset
-
-
-\begin_inset VSpace 3mm
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\noindent
-\align center
-
-\lang french
-\begin_inset Box Frameless
-position "c"
-hor_pos "c"
-has_inner_box 1
-inner_pos "c"
-use_parbox 0
-use_makebox 0
-width "245mm"
-special "none"
-height "1in"
-height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
-status open
-
-\begin_layout Plain Layout
 \begin_inset ERT
 status collapsed
 
@@ -400,13 +351,13 @@ et à une multiplication par une constante près, n'est autre que la fonction
 
 .
  Le graphique ci-dessous permet de voir la qualité de l'approximation !
-\begin_inset VSpace -11mm
+\begin_inset VSpace -15mm
 \end_inset
 
 
 \end_layout
 
-\begin_layout Plain Layout
+\begin_layout Standard
 
 \series bold
 \size small
@@ -430,19 +381,10 @@ et à une multiplication par une constante près, n'est autre que la fonction
 
 \end_layout
 
-\end_inset
-
-
-\end_layout
-
 \begin_layout Standard
 \noindent
 
 \lang french
-\begin_inset VSpace vfill
-\end_inset
-
-
 \begin_inset ERT
 status open
 

@@ -1,6 +1,6 @@
 %% LyX 2.2.1 created this file.  For more info, see http://www.lyx.org/.
 %% Do not edit unless you really know what you are doing.
-\documentclass[french,english,10pt]{paper}
+\documentclass[french,english,12pt]{paper}
 \usepackage[T1]{fontenc}
 \usepackage[latin9]{inputenc}
 \usepackage[landscape,a4paper]{geometry}
@@ -23,6 +23,47 @@
 \usepackage{titling}
 \usepackage{array}
 %\usepackage{yhmath}
+\newdimen\un \un=1mm
+\def\bordure{
+\begin{tikzpicture}[overlay,remember picture]
+\node(Triskell) at ($(current page.north west)+(21*\un,-20*\un)$){};
+\def\p{.75}
+\def\ang{45}
+\def\alp{160.2}
+\def\bet{72.42}
+\def\gam{-13.2}
+\draw[very thick, line width = 8pt, color=red!25!blue!33.333!green!50]
+($(current page.north west)+(20*\un,-20*\un)$)
+-- ($(current page.north east)+(-24*\un,-20*\un)$)
+node [draw, ellipse, fill, text=white, pos=.5] {\thetitle}
+arc (90 : 0 : 4*\un)
+-- ($(current page.south east)+(-20*\un,24*\un)$)
+node[text=white,pos=.5 , rotate=90]
+{\tiny Ce document est sous licence GNU FDL,
+ il est librement modifiable et distribuable.
+ Sources et licence complètes disponible sur le site.
+ Copyright 2010, Jean-Christophe Jameux}
+arc (0 : -90 : 4*\un)
+-- ($(current page.south west)+(24*\un,20*\un)$)
+node[draw, ellipse, fill, text=white, pos=.15] {\bf Echologie.org}
+arc (-90 : -180 : 4*\un)
+-- ($(current page.north west)+(20*\un,-20*\un)$);
+\draw[fill=white,color=red!25!blue!33.333!green!50]
+(Triskell) + (1.2*\un,-6*\un) circle (15*\un);
+\draw[fill=white,color=white] (Triskell) circle (2*\un);
+\draw[fill=white,color=white] (Triskell) + ({120*(1+\p)} : 3*\un)
+arc ({120*(1+\p)} : 120 : 3*\un)
+arc (180+\ang : 180-\ang :3*\un)
+arc (\alp-\ang : \alp+\ang+24.8 : 5*\un);
+\draw[fill=white,color=white] (Triskell) + (120*\p : 3*\un)
+arc (120*\p : 0 : 3*\un)
+arc (90+\ang : 90-\ang : 6*\un)
+arc (\bet-\ang : \bet+\ang+5.9 : 8*\un);
+\draw[fill=white,color=white] (Triskell) + ({120*(2+\p)} : 3*\un)
+arc ({120*(2+\p)} : 240 : 3*\un)
+arc (\ang : -\ang : 12*\un)
+arc (\gam-\ang : \gam+\ang+.85 : 13*\un);
+\end{tikzpicture}}
 
 \makeatother
 
@@ -39,7 +80,7 @@
 \title{\large\bf La Pyramide Sacrée}
 
 \selectlanguage{english}%
-\setlength\extrarowheight{0mm}
+{\footnotesize{}\setlength\extrarowheight{0mm}
 \parindent0mm
 \parskip0.6mm
 
@@ -87,52 +128,9 @@
 		\end{center} 	}};
 	\node at ($(M)+(.1,0)$){$a\cdot1=a$}; 	\node at ($(M)+(0,-.08)$){$\displaystyle a\cdot\frac1a=1$}; 	\coordinate(Om)at($(M)+(-.2,-.08)$); 	\node at ($(M)+(0,-.15)$){$\displaystyle\ks x\cdot a=b\Longleftrightarrow x=\frac{\ks b}a\Longleftrightarrow x=\ks b\cdot\frac1a$}; 	\node (m1) at ($(60:0.5)+(60:0.5)+(180:0.3)$){$k^{a+b}=k^a\cdot k^b$}; 	\node (m3) at ($(60:0.5)+(60:0.5)+(0:0.8)$){$\left(ab\right)^k=a^k\cdot b^k$}; 	\node (m2) at ($(60:0.5)+(60:0.5)+(180:0.3)+(-120:0.2)$){$k^{a-b}=\displaystyle\frac{k^a}{k^b}$}; 	\node (m4) at ($(60:0.5)+(60:0.5)+(0:0.8)+(-60:0.2)$){$\displaystyle\left(\frac ab\right)^k=\frac{a^k}{b^k}$}; 	\draw[->,>=latex] (m1) to[out=-10,in=10] node[left]{ 		\hsize4cm 		\vbox{ 			\begin{center} 				en remplaçant l'addition				 				par une soustraction 			\end{center} 		} 	} (m2); 	\draw[->,>=latex] (m3) to[out=-170,in=170] node[right]{ 		\hsize5cm 		\vbox{ 			\begin{center} 				en remplaçant la multiplication				 				par une division 			\end{center} 		} 	} (m4);
 	\node at ($(P)+(-.1,-.1)$){$a^b\neq b^a$}; 	\node at ($(P)+(.1,-.1)$){$a^1=a$}; 	\node at ($(P)+(0,.1)$){$\left(a^b\right)^c\neq a^{\left(b^c\right)}$}; \end{tikzpicture} \hfill\null
-\vfill
+\vfill}{\footnotesize \par}
 
 \selectlanguage{french}%
-% Logo, bordures et Copyleft
-\newdimen\un \un=1mm
-\def\bordure{
-	\begin{tikzpicture}[overlay,remember picture]
-		\node(Triskell) at ($(current page.north west)+(21*\un,-20*\un)$){};
-		\def\p{.75}
-		\def\ang{45}
-		\def\alp{160.2}
-		\def\bet{72.42}
-		\def\gam{-13.2}
-		\draw[very thick, line width = 7pt, color=red!25!blue!33.333!green!50]
-			($(current page.north west)+(20*\un,-20*\un)$)
-			-- ($(current page.north east)+(-24*\un,-20*\un)$)
-			node [draw, ellipse, fill, text=white, pos=.5] {\thetitle}
-			arc (90 : 0 : 4*\un)
-			-- ($(current page.south east)+(-20*\un,24*\un)$)
-			node[text=white, pos=.5, rotate=90]
-				{\tiny Document sous licence GNU FDL.
-					Vous pouvez le distribuer et le modifier librement.
-					Sources et licence complète disponibles sur le site Echologie.org.
-					Copyright 2016, Jean-Christophe Jameux}
-			arc (0 : -90 : 4*\un)
-			-- ($(current page.south west)+(24*\un,20*\un)$)
-			node[draw, ellipse, fill, text=white, pos=.15] {Echologie.org}
-			arc (-90 : -180 : 4*\un)
-			-- ($(current page.north west)+(20*\un,-20*\un)$);
-		\draw[fill=white,color=red!25!blue!33.333!green!50]
-			(Triskell) + (1.2*\un,-6*\un) circle (15*\un);
-		\draw[fill=white,color=white] (Triskell) circle (2*\un);
-		\draw[fill=white,color=white] (Triskell) + ({120*(1+\p)} : 3*\un)
-			arc ({120*(1+\p)} : 120 : 3*\un)
-			arc (180+\ang : 180-\ang :3*\un)
-			arc (\alp-\ang : \alp+\ang+24.8 : 5*\un);
-		\draw[fill=white,color=white] (Triskell) + (120*\p : 3*\un)
-			arc (120*\p : 0 : 3*\un)
-			arc (90+\ang : 90-\ang : 6*\un)
-			arc (\bet-\ang : \bet+\ang+5.9 : 8*\un);
-		\draw[fill=white,color=white] (Triskell) + ({120*(2+\p)} : 3*\un)
-			arc ({120*(2+\p)} : 240 : 3*\un)
-			arc (\ang : -\ang : 12*\un)
-			arc (\gam-\ang : \gam+\ang+.85 : 13*\un);
-\end{tikzpicture}}
-
 \bordure\selectlanguage{english}%
 
 \end{document}

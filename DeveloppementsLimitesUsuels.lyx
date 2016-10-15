@@ -15,12 +15,11 @@
 \usepackage{pxfonts}
 \usepackage{titling}
 \usepackage{array}
-%\usepackage{yhmath}
 
-\newdimen\un \un=1mm
+\newdimen\un
+\un=.6mm
 \def\bordure{
 \begin{tikzpicture}[overlay,remember picture]
-\node(Triskell) at ($(current page.north west)+(21*\un,-20*\un)$){};
 \def\p{.75}
 \def\ang{45}
 \def\alp{160.2}
@@ -33,14 +32,19 @@ node [draw, ellipse, fill, text=white, pos=.5] {\thetitle}
 arc (90 : 0 : 4*\un)
 -- ($(current page.south east)+(-20*\un,24*\un)$)
 node[text=white,pos=.5 , rotate=90]
-{\tiny Ce document, à l'exclusion du logo, est sous licence GNU FDL,
+{\tiny Ce document est sous licence GNU FDL,
  il est librement modifiable et distribuable.
- Copyright 2010, 2016, Jean-Christophe Jameux}
+ Sources et licence complètes disponible sur le site.
+ Copyright 2016, Jean-Christophe Jameux}
 arc (0 : -90 : 4*\un)
 -- ($(current page.south west)+(24*\un,20*\un)$)
-node[draw, ellipse, fill, text=white, pos=.15] {Echologie.org}
+node[draw, ellipse, fill, text=white, pos=.15] {\bf Echologie.org}
 arc (-90 : -180 : 4*\un)
 -- ($(current page.north west)+(20*\un,-20*\un)$);
+
+\un=1.2mm
+
+\node(Triskell) at ($(current page.north west)+(15.6*\un,-11*\un)$){};
 \draw [fill = white, color = red!25!blue!33.333!green!50]
 (Triskell) + (1.2*\un,-6*\un) circle (15*\un);
 \draw [fill = white, color = white] (Triskell) circle (2*\un);
@@ -63,7 +67,6 @@ arc (\gam-\ang : \gam+\ang+.85 : 13*\un);
 \end_preamble
 \options 12pt
 \use_default_options true
-\master DocumentMaitre.lyx
 \maintain_unincluded_children false
 \language english
 \language_package default
@@ -112,9 +115,9 @@ arc (\gam-\ang : \gam+\ang+.85 : 13*\un);
 \shortcut idx
 \color #008000
 \end_index
-\leftmargin 0mm
-\topmargin 0mm
-\rightmargin 0mm
+\leftmargin 23mm
+\topmargin 22mm
+\rightmargin 23mm
 \bottommargin 0mm
 \secnumdepth 3
 \tocdepth 3
@@ -156,41 +159,13 @@ bf Développements limités usuels}
 \end_layout
 
 \begin_layout Standard
-\noindent
-\align center
-
-\series bold
-\size large
-\begin_inset VSpace vfill
-\end_inset
-
-
-\begin_inset Box Frameless
-position "c"
-hor_pos "c"
-has_inner_box 1
-inner_pos "c"
-use_parbox 0
-use_makebox 0
-width "245mm"
-special "none"
-height "1in"
-height_special "totalheight"
-thickness "0.4pt"
-separation "3pt"
-shadowsize "4pt"
-framecolor "black"
-backgroundcolor "none"
-status open
-
-\begin_layout Plain Layout
 
 \series bold
 \begin_inset Phantom HPhantom
 status open
 
 \begin_layout Plain Layout
-Decale
+Decalage
 \end_layout
 
 \end_inset
@@ -201,7 +176,7 @@ On trouvera ci-dessous des approximations utiles au voisinage de 0.
 status open
 
 \begin_layout Plain Layout
-Decal
+Decala..
 \end_layout
 
 \end_inset
@@ -212,7 +187,7 @@ Decal
 status open
 
 \begin_layout Plain Layout
-Dec
+Decal
 \end_layout
 
 \end_inset
@@ -221,14 +196,46 @@ rendre compte de la qualité de l'approximation suivant l'ordre auquel on
  pousse le développement limité.
 \end_layout
 
-\begin_layout Plain Layout
+\begin_layout Standard
 \begin_inset VSpace medskip
 \end_inset
 
 
 \end_layout
 
+\begin_layout Standard
+ 
+\begin_inset ERT
+status open
+
 \begin_layout Plain Layout
+
+
+\backslash
+setlength{
+\backslash
+extrarowheight}{3mm}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tabcolsep3mm
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
 
 \series bold
 \size large
@@ -393,11 +400,6 @@ status open
 \end_inset
 
 
-\begin_inset space \hspace{}
-\length -2mm
-\end_inset
-
-
 \end_layout
 
 \end_inset
@@ -446,7 +448,7 @@ status collapsed
 
 
 \backslash
-begin{tikzpicture}[yscale=.5, overlay, xshift=15, yshift=-40]
+begin{tikzpicture}[xshift=5, yshift=-20, yscale=.5, overlay]
 \end_layout
 
 \begin_layout Plain Layout
@@ -612,7 +614,7 @@ status collapsed
 
 
 \backslash
-begin{tikzpicture}[xscale=2, yscale=1, overlay, xshift=290, yshift=20]
+begin{tikzpicture}[xshift=610, yshift=25, xscale=2, yscale=1, overlay]
 \end_layout
 
 \begin_layout Plain Layout
@@ -778,7 +780,7 @@ status collapsed
 
 
 \backslash
-begin{tikzpicture}[xscale=1.5, yscale=1, overlay, xshift=20, yshift=-70]
+begin{tikzpicture}[xshift=15, yshift=-70, xscale=1.5, yscale=1, overlay]
 \end_layout
 
 \begin_layout Plain Layout
@@ -944,7 +946,7 @@ status collapsed
 
 
 \backslash
-begin{tikzpicture}[xscale=2, yscale=1, overlay, xshift=290, yshift=-10]
+begin{tikzpicture}[xshift=610, yshift=-10, xscale=2, yscale=1, overlay]
 \end_layout
 
 \begin_layout Plain Layout
@@ -1265,13 +1267,13 @@ status open
 
 
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
 
 \backslash
-begin{tikzpicture}[xscale=1.5, yscale=2, overlay, xshift=20, yshift=-30]
+begin{tikzpicture}[xshift=14, yshift=-60, xscale=1.5, yscale=2, overlay]
 \end_layout
 
 \begin_layout Plain Layout
@@ -1487,19 +1489,10 @@ status open
 
 \end_layout
 
-\end_inset
-
-
-\end_layout
-
 \begin_layout Standard
 \noindent
 
 \lang french
-\begin_inset VSpace vfill
-\end_inset
-
-
 \begin_inset ERT
 status open
 

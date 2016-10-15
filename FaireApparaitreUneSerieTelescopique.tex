@@ -1,0 +1,111 @@
+%% LyX 2.2.1 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[french,english,12pt]{paper}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage[landscape,a4paper]{geometry}
+\geometry{verbose,tmargin=29mm,bmargin=0mm,lmargin=28mm,rmargin=28mm}
+\pagestyle{empty}
+\setlength{\parskip}{\bigskipamount}
+\setlength{\parindent}{0pt}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usetikzlibrary{shapes}
+\usepackage{mathrsfs}
+\usepackage{mathabx}
+\usepackage{txfonts}
+\usepackage{pxfonts}
+\usepackage{titling}
+\usepackage{array}
+%\usepackage{yhmath}
+
+\newdimen\un \un=1mm
+\def\bordure{
+\begin{tikzpicture}[overlay,remember picture]
+\node(Triskell) at ($(current page.north west)+(21*\un,-20*\un)$){};
+\def\p{.75}
+\def\ang{45}
+\def\alp{160.2}
+\def\bet{72.42}
+\def\gam{-13.2}
+\draw [very thick, line width = 8pt, color = red!25!blue!33.333!green!50]
+($(current page.north west)+(20*\un,-20*\un)$)
+-- ($(current page.north east)+(-24*\un,-20*\un)$)
+node [draw, ellipse, fill, text=white, pos=.5] {\thetitle}
+arc (90 : 0 : 4*\un)
+-- ($(current page.south east)+(-20*\un,24*\un)$)
+node[text=white,pos=.5 , rotate=90]
+{\tiny Ce document est sous licence GNU FDL,
+ il est librement modifiable et distribuable.
+ Sources et licence complètes disponible sur le site.
+ Copyright 2015, Jean-Christophe Jameux}
+arc (0 : -90 : 4*\un)
+-- ($(current page.south west)+(24*\un,20*\un)$)
+node[draw, ellipse, fill, text=white, pos=.15] {\bf Echologie.org}
+arc (-90 : -180 : 4*\un)
+-- ($(current page.north west)+(20*\un,-20*\un)$);
+\draw [fill = white, color = red!25!blue!33.333!green!50]
+(Triskell) + (1.2*\un,-6*\un) circle (15*\un);
+\draw [fill = white, color = white] (Triskell) circle (2*\un);
+\draw [fill = white, color = white]
+(Triskell) + ({120*(1+\p)} : 3*\un)
+arc ({120*(1+\p)} : 120 : 3*\un)
+arc (180+\ang : 180-\ang :3*\un)
+arc (\alp-\ang : \alp+\ang+24.8 : 5*\un);
+\draw [fill = white, color = white]
+(Triskell) + (120*\p : 3*\un)
+arc (120*\p : 0 : 3*\un)
+arc (90+\ang : 90-\ang : 6*\un)
+arc (\bet-\ang : \bet+\ang+5.9 : 8*\un);
+\draw [fill = white, color = white]
+(Triskell) + ({120*(2+\p)} : 3*\un)
+arc ({120*(2+\p)} : 240 : 3*\un)
+arc (\ang : -\ang : 12*\un)
+arc (\gam-\ang : \gam+\ang+.85 : 13*\un);
+\end{tikzpicture}}
+
+\makeatother
+
+\usepackage{babel}
+\makeatletter
+\addto\extrasfrench{%
+   \providecommand{\og}{\leavevmode\flqq~}%
+   \providecommand{\fg}{\ifdim\lastskip>\z@\unskip\fi~\frqq}%
+}
+
+\makeatother
+\begin{document}
+\selectlanguage{french}%
+\title{\large\bf Faire apparaître une série télescopique}
+
+\selectlanguage{english}%
+\textbf{\hphantom{Decale}Dans certaines situations, il est possible
+de grandement simplifier le calcul d'une somme en mettant son terme
+général \hphantom{Deca.}sous une forme qui permet la simplification
+de la presque totalité des termes. C'est le principe du télescopage,
+que l'on \hphantom{De}résume par la formule ${\displaystyle \sum_{k=0}^{n}\left(a_{k}-a_{k+1}\right)}=a_{\text{0}}-a_{n+1}$
+où $a$ désigne une suite absolument quelconque. Le calcul ci-dessous
+montre un exemple de la mise en ½uvre de cette technique :}\textbf{\large{}
+\[
+\begin{aligned}\sum_{p=0}^{n}p\cdot p! & =\sum_{p=1}^{n}p\cdot p! & \text{car quand }p=0,\ p\cdot p!=0\\
+ & =\sum_{p=1}^{n}(p+1-1)\cdot p!\\
+ & =\sum_{p=1}^{n}\big((p+1)\cdot p!-p!\big)\\
+ & =\sum_{p=1}^{n}\big((p+1)\cdot p!-p\cdot(p-1)!\big)\\
+ & =\sum_{p=1}^{n}(a_{p}-a_{p-1}) & \text{en posant, pour tout }p\in\mathbb{N},\ a_{p}=(p+1)\cdot p!\\
+ & =-\sum_{k=0}^{n-1}(a_{k}-a_{k+1}) & \text{par le changement d'indice }k=p-1\\
+ & =-(a_{0}-a_{n}) & \text{d'après la formule de télescopage}\\
+ & =(n+1)\cdot n!-1\\
+ & =(n+1)!-1
+\end{aligned}
+\]
+}{\large \par}
+
+\selectlanguage{french}%
+\bordure\selectlanguage{english}%
+
+\end{document}

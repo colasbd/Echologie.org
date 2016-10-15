@@ -1,0 +1,140 @@
+\documentclass[a4paper, landscape, 10pt]{article}
+\usepackage[top=20mm,left=24mm,right=24mm,bottom=15mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[francais]{babel}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usetikzlibrary{shapes}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\usepackage{mathabx}
+%\usepackage{ulsy}
+\usepackage{txfonts}
+\usepackage{pxfonts}
+
+\begin{document}
+\pagestyle{empty}
+\parskip1mm
+\parindent0mm
+\centering
+\def\titre{\LARGE Propriétés des quadrilatères}
+
+Les propositions en gras sont des définitions.
+
+Deux propositions faces à faces sont réciproques l'une de l'autre.
+
+A gauche se trouvent les propriétés des quadrilatères particuliers. On les utilise quand on sait qu'un quadrilatère est un parallélogramme\\
+et qu'on veut en déduire des propriétés sur la figure.
+
+Leurs réciproques, à droite, sont les théorèmes permettant de démontrer qu'un quadrilatère particulier est\\
+un parallélogramme, un rectangle, un losange, ou encore un carré.
+
+\vfill
+
+\catcode`|13
+\long\def|#1|#2|{
+    \vskip1.5mm
+    \hbox to\hsize{
+        \vtop{
+            \raggedleft
+            \hsize108mm#1
+        }
+        \hfill
+        \vtop{
+            \raggedright
+            \hsize128mm#2
+        }
+    }
+}
+
+|Dans un parallélogramme, les côtés opposés\\ sont deux à deux parallèles.|{\bf Un quadrilatère ayant ses côtés opposés deux à deux\\ parallèles est un parallélogramme.}|
+
+|Dans un parallélogramme, les côtés opposés\\ sont deux à deux de même longueur.|Un quadrilatère ayant ses côtés opposés deux à deux\\ de même longueur est un parallélogramme.|
+
+|Les diagonales d'un parallélogramme\\se coupent en leur milieux.|Un quadrilatère dont les diagonales se coupent\\ en leur milieux est un parallélogramme.|
+
+|Dans un parallélogramme, deux angles consécutifs\\sont toujours supplémentaires.|Un quadrilatère dans lequel deux angles consécutifs\\ sont toujours supplémentaires est un parallélogramme.|
+
+|Dans un parallélogramme, les angles opposés\\ sont deux à deux de même mesure.|Un quadrilatère dont les angles opposés sont deux\\ à deux de même mesure est un parallélogramme.|
+
+|Les parallélogrammes sont symétriques par\\ rapport au centre de leurs diagonales.|Un quadrilatère dont les sommets sont symétriques\\ par rapport au centre de ses diagonales est un parallélogramme.|
+
+|Un rectangle a quatre angles droits.|{\bf Un quadrilatère ayant quatre angles droits est un rectangle.} (trois suffisent)|
+
+|Tous les angles d'un rectangle sont droits.|Un {\it parallélogramme} ayant un angle droit est un rectangle.|
+
+|Un rectangle a ses diagonales de même longueur.|Un {\it parallélogramme} ayant ses diagonales de même longueur est un rectangle.|
+
+|Un rectangle est symétrique par rapport\\ aux médiatrices de ses côtés.|Un quadrilatère symétrique par rapport aux\\ médiatrices de ses côtés est un rectangle.|
+
+|Un rectangle est inscriptible dans un cercle.|Un {\it parallélogramme} inscriptible dans un cercle est un rectangle.|
+
+|Un losange a ses quatre côtés de même longueur.|{\bf Un quadrilatère ayant quatre côtés de même longueur est un losange.}|
+
+|Deux côtés consécutifs d'un losange\\ sont toujours de même longueur.|Un {\it parallélogramme} ayant deux côtés consécutifs\\ de même longueur est un losange.|
+
+|Les diagonales d'un losange se coupent à angle droit.|Un {\it parallélogramme} dont les diagonales se coupent à angle droit est un losange.|
+
+|Les losanges sont symétriques par rapport\\ aux axes portés par leurs diagonales.|Un quadrilatère symétrique par rapport aux axes\\ portés par ses diagonales est un losange.|
+
+|Les rectangles et les losanges sont des parallélogrammes.\\Ils héritent donc de toutes leurs propriétés.|Un quadrilatère qui est un rectangle ou un losange\\ est aussi un parallélogramme.|
+
+\vfill
+
+On rappelle qu'un carré est un quadrilatère qui est à la fois un rectangle et un losange. Il a donc l'intégralité des propriétés énoncées sur cette page.\\
+Si l'on souhaite démontrer qu'un quadrilatère est un carré, il faut démontrer à la fois que c'est un rectangle et un losange.
+
+\newdimen\un
+\un=1.2mm
+\newdimen\deux
+\deux=.45mm
+
+\begin{tikzpicture}[overlay,remember picture]
+
+\def\p{.75}
+\def\ang{45}
+\def\alp{160.2}
+\def\bet{72.42}
+\def\gam{-13.2}
+
+\node(Triskell) at ($(current page.north west)+(15*\un,-10*\un)$){};
+
+\draw[very thick, line width = 10pt, color=red!25!blue!33.333!green!50]
+    ($(current page.north west)+(20*\deux,-20*\deux)$) --
+	($(current page.north east)+(-24*\deux,-20*\deux)$)
+	node [draw, ellipse, fill, text=white, pos=.5]
+	{\Large\titre} arc 
+	(90 : 0 : 4*\deux) -- ($(current page.south east)+(-20*\deux,24*\deux)$)
+	node[text=white,pos=.5 , rotate=90]
+		{\scriptsize Ce document est sous licence GNU FDL,
+		 il est librement modifiable et distribuable.
+		 Sources et licence complètes disponible sur le site.
+		 Copyright 2012, Jean-Christophe Jameux}
+	arc (0 : -90 : 4*\deux) -- ($(current page.south west)+(24*\deux,20*\deux)$)
+	node[draw, ellipse, fill, text=white, pos=.15]
+	{\Large\bf Echologie.org} arc 
+	(-90 : -180 : 4*\deux) -- ($(current page.north west)+(20*\deux,-20*\deux)$);
+\draw[fill=white,color=red!25!blue!33.333!green!50]
+    (Triskell) + (1.2*\un,-6*\un) circle (15*\un);
+\draw[fill=white,color=white]	(Triskell) circle (2*\un);
+\draw[fill=white,color=white]
+    (Triskell) + ({120*(1+\p)} : 3*\un) arc
+				 ({120*(1+\p)} : 120 : 3*\un) arc
+				 (180+\ang : 180-\ang :3*\un) arc
+				 (\alp-\ang : \alp+\ang+24.8 : 5*\un);
+\draw[fill=white,color=white]
+    (Triskell) + (120*\p : 3*\un) arc
+				 (120*\p : 0 : 3*\un) arc
+				 (90+\ang : 90-\ang : 6*\un) arc
+				 (\bet-\ang : \bet+\ang+5.9 : 8*\un);
+\draw[fill=white,color=white]	(Triskell)+
+				({120*(2+\p)} : 3*\un) arc
+				({120*(2+\p)} : 240 : 3*\un) arc
+				(\ang : -\ang : 12*\un) arc
+				(\gam-\ang : \gam+\ang+.85 : 13*\un);
+
+\end{tikzpicture}
+
+\end{document}
