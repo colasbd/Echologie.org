@@ -1,6 +1,6 @@
 # Echologie.org
 
-![Slogan](https://github.com/Echologie/Echologie.org/raw/master/Media/Titre.png)
+![Slogan](https://github.com/Echologie/Echologie.org/raw/master/Media/Slogan.gif)
 
 Ce dépôt contient le code source des documents présents sur la page [Echologie.org/Documents](http://Echologie.org/Documents).
 
