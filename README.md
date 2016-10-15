@@ -4,7 +4,7 @@
 
 Ce dépôt contient le code source des documents présents sur la page [Echologie.org/Documents](http://Echologie.org/Documents).
 
-Beaucoup de mes documents sont très anciens, et je m'efforce de les rendre disponible le plus promptement possible, tout en en créant de nouveaux. J'ai récemment pris la décision d'utiliser [LyX](www.lyx.org) pour des raisons de productivité. J'essaie néanmoins de tenir à jour une version LaTeX de chaque document sur la plateforme [ShareLaTeX](https://fr.sharelatex.com) afin que les personnes ne disposant pas d'une distribution LyX puissent facilement adapter les documents à leurs besoins (qu'il soit entendu qu'installer LyX est un acte noble que chacun devrait accomplir).
+Beaucoup de mes documents sont très anciens, et je m'efforce de les rendre disponible le plus promptement possible, tout en en créant de nouveaux. J'ai récemment pris la décision d'utiliser [LyX](www.lyx.org) pour des raisons de productivité. J'essaie néanmoins de tenir à jour une version LaTeX de chaque document sur la plateforme [ShareLaTeX](https://fr.sharelatex.com/project/58024c7f05ce96966cde4697) afin que les personnes ne disposant pas d'une distribution LyX puissent facilement adapter les documents à leurs besoins (qu'il soit entendu qu'installer LyX est un acte noble que chacun devrait accomplir).
 
 ## Licence, droits d'auteur, tout ça, tout ça...
 
