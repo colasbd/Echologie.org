@@ -32,7 +32,7 @@
 node [draw, ellipse, fill, text=white, pos=.5] {\thetitle}
 arc (90 : 0 : 4*\un)
 -- ($(current page.south east)+(-20*\un,24*\un)$)
-node[text=white,pos=.65 , rotate=90]
+node[text=white,pos=.5 , rotate=90]
 {\tiny Ce document est sous licence GNU FDL,
  il est librement modifiable et distribuable.
  Licence et sources complètes disponibles sur le site.
@@ -104,7 +104,7 @@ arc (\gam-\ang : \gam+\ang+.85 : 13*\un);
 \biblio_style plain
 \use_bibtopic false
 \use_indices false
-\paperorientation portrait
+\paperorientation landscape
 \suppress_date false
 \justification true
 \use_refstyle 0
@@ -113,7 +113,7 @@ arc (\gam-\ang : \gam+\ang+.85 : 13*\un);
 \color #008000
 \end_index
 \leftmargin 30mm
-\topmargin 34mm
+\topmargin 29mm
 \rightmargin 30mm
 \bottommargin 0mm
 \secnumdepth 3
@@ -145,9 +145,9 @@ status open
 \backslash
 title{
 \backslash
-LARGE
+large
 \backslash
-bf Calcul de limite}
+bf Inégalité avec une valeur absolu}
 \end_layout
 
 \end_inset
@@ -169,84 +169,82 @@ Dec
 
 \end_inset
 
-Quand on souhaite réaliser un calcul de limite et que l'on est face à une
- forme indéterminée, il est judicieux de commencer par faire les calculs
- 
-\begin_inset Quotes eld
-\end_inset
-
-à la louche
-\begin_inset Quotes erd
-\end_inset
-
- afin d'avoir une idée de la limite.
- Il devient dés lors plus simple de voir comment lever l'indétermination.
- Par exemple, quand 
-\begin_inset Formula $x$
-\end_inset
-
- est proche de 
-\begin_inset Formula $-\infty$
-\end_inset
-
- :
-\end_layout
-
-\begin_layout Standard
-\noindent
-
-\series bold
+Voici un exemple assez technique de résolution d'inéquation faisant intervenir
+ une valeur absolue :
 \begin_inset Formula 
 \begin{align*}
-\frac{\sqrt{x^{2}+1}-2x}{x^{2}} & \approx\frac{\sqrt{x^{2}}-2x}{x^{2}} & \textrm{Car \ensuremath{1} est négligeable devant \ensuremath{x^{2}}}\\
- & \approx\frac{-x-2x}{x^{2}} & \textrm{Car quand \ensuremath{x} est négatif, }\sqrt{x^{2}}=\left|x\right|=-x\\
- & \approx\frac{-3x}{x^{2}} & \textrm{On a toujours une forme indéterminée : \ensuremath{\frac{+\infty}{+\infty}}}\\
- & \approx\frac{-3}{x} & \textrm{(ce nombre est positif par la règle des signes)}\\
- & \approx0 & \textrm{(et même \ensuremath{0^{+}})}
+\left|x^{2}+2x\right|\leq4 & \Longleftrightarrow-4\leq x^{2}+2x\leq4 & \textrm{On se débarasse de la valeur absolue}\\
+ & \Longleftrightarrow-3\leq x^{2}+2x+1\leq5 & \textrm{On cherche à faire apparaître}\\
+ & \Longleftrightarrow-3\leq x^{2}+2x+1^{2}\leq5 & \textrm{l'identité remarquable }a^{2}+2ab+b^{2}\\
+ & \Longleftrightarrow-3\leq\left(x+1\right)^{2}\leq5 & \textrm{(ce qui revient à mettre sous forme canonique)}\\
+ & \Longleftrightarrow0\leq\left(x+1\right)^{2}\leq5 & \textrm{Un carré est toujours positif}\\
+ & \Longleftrightarrow-\sqrt{5}\leq x+1\leq\sqrt{5} & \textrm{Comme à la première ligne}\\
+ & \Longleftrightarrow-1-\sqrt{5}\leq x\leq-1+\sqrt{5} & \textrm{Et on trouve rapidement les solutions !}
 \end{align*}
 
 \end_inset
 
+Une telle démonstration n'est pas toujours facile à voir, c'est pourquoi
+ on lui préfère souvent la technique suivante, qui consiste à séparer les
+ inégalités et à ramener chacune d'elles à une étude de signe en faisant
+ apparaître un 0 d'un côté de l'inégalité.
+\begin_inset Formula 
+\begin{align*}
+\left|x^{2}+2x\right|\leq4 & \Longleftrightarrow-4\leq x^{2}+2x\leq4\\
+ & \Longleftrightarrow-4\leq x^{2}+2x\textrm{ et }x^{2}+2x\leq4\\
+ & \Longleftrightarrow0\leq x^{2}+2x+4\textrm{ et }x^{2}+2x-4\leq0
+\end{align*}
 
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\size large
-Nos calculs à la louche nous incitent à faire apparaître un 
-\begin_inset Formula $-x$
 \end_inset
 
- dans l'écriture de 
-\begin_inset Formula $\sqrt{x^{2}+1}$
+Chacune de ces inégalités peu se résoudre en utilisant un tableau de signe.
+ Un rapide calcul de discriminant montre que le polynôme 
+\begin_inset Formula $x^{2}+2x+4$
+\end_inset
+
+ n'a pas de racines réelles et que les racines réelles du polynôme 
+\begin_inset Formula $x^{2}+2x-4$
+\end_inset
+
+ sont 
+\begin_inset Formula $x_{1}=\frac{-2-2\sqrt{5}}{2}=-1-\sqrt{5}$
+\end_inset
+
+ et 
+\begin_inset Formula $x_{2}=\frac{-2+2\sqrt{5}}{2}=-1+\sqrt{5}$
+\end_inset
+
+ .
+ On a donc 
+\begin_inset Formula $0\leq x^{2}+2x+4$
+\end_inset
+
+ pour tout 
+\begin_inset Formula $x\in\mathbb{R}$
+\end_inset
+
+ et 
+\begin_inset Formula $x^{2}+2x-4\leq0$
+\end_inset
+
+ pour tout 
+\begin_inset Formula $x\in\left[x_{1}\ ;\,x_{2}\right]$
 \end_inset
 
 .
- Voyons ce que cela donne :
-\size default
-
+ On trouve bien au total pour ensemble de solutions :
 \begin_inset Formula 
-\begin{align*}
- & \phantom{=.}\lim_{x\to-\infty}\frac{\sqrt{x^{2}+1}-2x}{x^{2}}\\
- & =\lim_{x\to-\infty}\frac{\sqrt{x^{2}\cdot\left(1+\frac{1}{x^{2}}\right)}-2x}{x^{2}} & \textrm{On met le \ensuremath{x^{2}} en facteur sous la racine}\\
- & =\lim_{x\to-\infty}\frac{\sqrt{x^{2}}\cdot\sqrt{1+\frac{1}{x^{2}}}-2x}{x^{2}} & \textrm{(il domine le polynôme \ensuremath{x^{2}+1} en \ensuremath{+\infty})}\\
- & =\lim_{x\to-\infty}\frac{\left|x\right|\cdot\sqrt{1+\frac{1}{x^{2}}}-2x}{x^{2}} & \textrm{afin de le séparer du \ensuremath{1+\frac{1}{x^{2}}}}\\
- & =\lim_{x\to-\infty}\frac{-x\cdot\sqrt{1+\frac{1}{x^{2}}}-2x}{x^{2}} & \textrm{(qui tend vers \ensuremath{1} quand \ensuremath{x} tend vers \ensuremath{-\infty})}\\
- & =\lim_{x\to-\infty}\frac{x\cdot\left(-\sqrt{1+\frac{1}{x^{2}}}-2\right)}{x^{2}} & {\scriptscriptstyle \left(-\sqrt{1+\frac{1}{x^{2}}}-2\right)}\textrm{ joue le rôle du -3 du dessus}\\
- & =\lim_{x\to-\infty}\frac{\left(-\sqrt{1+\frac{1}{x^{2}}}-2\right)}{x} & \textrm{On simplifie les infinis "de même taille"}\\
- & =0 & \textrm{Car }\lim_{x\to-\infty}-\sqrt{1+\frac{1}{x^{2}}}-2=-3
-\end{align*}
+\[
+\left[-1-\sqrt{5}\ ;\,-1+\sqrt{5}\right]
+\]
 
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-\noindent
-
+\series default
+\size default
 \lang french
+
 \begin_inset ERT
 status open
 

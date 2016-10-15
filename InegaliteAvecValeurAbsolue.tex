@@ -1,0 +1,118 @@
+%% LyX 2.2.1 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[french,english,12pt]{paper}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage[landscape,a4paper]{geometry}
+\geometry{verbose,tmargin=29mm,bmargin=0mm,lmargin=30mm,rmargin=30mm}
+\pagestyle{empty}
+\setlength{\parskip}{\bigskipamount}
+\setlength{\parindent}{0pt}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usetikzlibrary{shapes}
+\usepackage{mathrsfs}
+\usepackage{mathabx}
+\usepackage{txfonts}
+\usepackage{pxfonts}
+\usepackage{titling}
+\usepackage{array}
+%\usepackage{yhmath}
+
+\newdimen\un \un=1mm
+\def\bordure{
+\begin{tikzpicture}[overlay,remember picture]
+\node(Triskell) at ($(current page.north west)+(21*\un,-20*\un)$){};
+\def\p{.75}
+\def\ang{45}
+\def\alp{160.2}
+\def\bet{72.42}
+\def\gam{-13.2}
+\draw [very thick, line width = 8pt, color = red!25!blue!33.333!green!50]
+($(current page.north west)+(20*\un,-20*\un)$)
+-- ($(current page.north east)+(-24*\un,-20*\un)$)
+node [draw, ellipse, fill, text=white, pos=.5] {\thetitle}
+arc (90 : 0 : 4*\un)
+-- ($(current page.south east)+(-20*\un,24*\un)$)
+node[text=white,pos=.5 , rotate=90]
+{\tiny Ce document est sous licence GNU FDL,
+ il est librement modifiable et distribuable.
+ Licence et sources complètes disponibles sur le site.
+ Copyright 2016, Jean-Christophe Jameux}
+arc (0 : -90 : 4*\un)
+-- ($(current page.south west)+(24*\un,20*\un)$)
+node[draw, ellipse, fill, text=white, pos=.2] {\bf\large Echologie.org}
+arc (-90 : -180 : 4*\un)
+-- ($(current page.north west)+(20*\un,-20*\un)$);
+\draw [fill = white, color = red!25!blue!33.333!green!50]
+(Triskell) + (1.2*\un,-6*\un) circle (15*\un);
+\draw [fill = white, color = white] (Triskell) circle (2*\un);
+\draw [fill = white, color = white]
+(Triskell) + ({120*(1+\p)} : 3*\un)
+arc ({120*(1+\p)} : 120 : 3*\un)
+arc (180+\ang : 180-\ang :3*\un)
+arc (\alp-\ang : \alp+\ang+24.8 : 5*\un);
+\draw [fill = white, color = white]
+(Triskell) + (120*\p : 3*\un)
+arc (120*\p : 0 : 3*\un)
+arc (90+\ang : 90-\ang : 6*\un)
+arc (\bet-\ang : \bet+\ang+5.9 : 8*\un);
+\draw [fill = white, color = white]
+(Triskell) + ({120*(2+\p)} : 3*\un)
+arc ({120*(2+\p)} : 240 : 3*\un)
+arc (\ang : -\ang : 12*\un)
+arc (\gam-\ang : \gam+\ang+.85 : 13*\un);
+\end{tikzpicture}}
+
+\makeatother
+
+\usepackage{babel}
+\makeatletter
+\addto\extrasfrench{%
+   \providecommand{\og}{\leavevmode\flqq~}%
+   \providecommand{\fg}{\ifdim\lastskip>\z@\unskip\fi~\frqq}%
+}
+
+\makeatother
+\begin{document}
+\selectlanguage{french}%
+\title{\large\bf Inégalité avec une valeur absolu}
+
+\selectlanguage{english}%
+\textbf{\large{}\hphantom{Dec}Voici un exemple assez technique de
+résolution d'inéquation faisant intervenir une valeur absolue :
+\begin{align*}
+\left|x^{2}+2x\right|\leq4 & \Longleftrightarrow-4\leq x^{2}+2x\leq4 & \textrm{On se débarasse de la valeur absolue}\\
+ & \Longleftrightarrow-3\leq x^{2}+2x+1\leq5 & \textrm{On cherche à faire apparaître}\\
+ & \Longleftrightarrow-3\leq x^{2}+2x+1^{2}\leq5 & \textrm{l'identité remarquable }a^{2}+2ab+b^{2}\\
+ & \Longleftrightarrow-3\leq\left(x+1\right)^{2}\leq5 & \textrm{(ce qui revient à mettre sous forme canonique)}\\
+ & \Longleftrightarrow0\leq\left(x+1\right)^{2}\leq5 & \textrm{Un carré est toujours positif}\\
+ & \Longleftrightarrow-\sqrt{5}\leq x+1\leq\sqrt{5} & \textrm{Comme à la première ligne}\\
+ & \Longleftrightarrow-1-\sqrt{5}\leq x\leq-1+\sqrt{5} & \textrm{Et on trouve rapidement les solutions !}
+\end{align*}
+Une telle démonstration n'est pas toujours facile à voir, c'est pourquoi
+on lui préfère souvent la technique suivante, qui consiste à séparer
+les inégalités et à ramener chacune d'elles à une étude de signe en
+faisant apparaître un 0 d'un côté de l'inégalité.
+\begin{align*}
+\left|x^{2}+2x\right|\leq4 & \Longleftrightarrow-4\leq x^{2}+2x\leq4\\
+ & \Longleftrightarrow-4\leq x^{2}+2x\textrm{ et }x^{2}+2x\leq4\\
+ & \Longleftrightarrow0\leq x^{2}+2x+4\textrm{ et }x^{2}+2x-4\leq0
+\end{align*}
+Chacune de ces inégalités peu se résoudre en utilisant un tableau
+de signe. Un rapide calcul de discriminant montre que le polynôme
+$x^{2}+2x+4$ n'a pas de racines réelles et que les racines réelles
+du polynôme $x^{2}+2x-4$ sont $x_{1}=\frac{-2-2\sqrt{5}}{2}=-1-\sqrt{5}$
+et $x_{2}=\frac{-2+2\sqrt{5}}{2}=-1+\sqrt{5}$ . On a donc $0\leq x^{2}+2x+4$
+pour tout $x\in\mathbb{R}$ et $x^{2}+2x-4\leq0$ pour tout $x\in\left[x_{1}\ ;\,x_{2}\right]$.
+On trouve bien au total pour ensemble de solutions :
+\[
+\left[-1-\sqrt{5}\ ;\,-1+\sqrt{5}\right]
+\]
+}\foreignlanguage{french}{\bordure}
+\end{document}
