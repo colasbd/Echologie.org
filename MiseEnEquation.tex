@@ -1,0 +1,118 @@
+%% LyX 2.2.1 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[english,12pt]{paper}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage[landscape,a4paper]{geometry}
+\geometry{verbose,tmargin=30mm,bmargin=20mm,lmargin=35mm,rmargin=35mm}
+\pagestyle{empty}
+\setlength{\parskip}{\bigskipamount}
+\setlength{\parindent}{0pt}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usetikzlibrary{shapes}
+\usepackage{mathrsfs}
+\usepackage{mathabx}
+\usepackage{txfonts}
+\usepackage{pxfonts}
+\usepackage{titling}
+\usepackage{array}
+
+\newdimen\un \un=1mm
+\def\bordure{
+\begin{tikzpicture}[overlay,remember picture]
+\node(Triskell) at ($(current page.north west)+(21*\un,-20*\un)$){};
+\def\p{.75}
+\def\ang{45}
+\def\alp{160.2}
+\def\bet{72.42}
+\def\gam{-13.2}
+\draw [very thick, line width = 8pt, color = red!25!blue!33.333!green!50]
+($(current page.north west)+(20*\un,-20*\un)$)
+-- ($(current page.north east)+(-24*\un,-20*\un)$)
+node [draw, ellipse, fill, text=white, pos=.5] {\thetitle}
+arc (90 : 0 : 4*\un)
+-- ($(current page.south east)+(-20*\un,24*\un)$)
+node[text=white,pos=.5 , rotate=90]
+{\tiny Ce document est sous licence GNU FDL,
+ il est librement modifiable et distribuable.
+ Sources et licence complètes disponible sur le site.
+ Copyright 2016, Jean-Christophe Jameux}
+arc (0 : -90 : 4*\un)
+-- ($(current page.south west)+(24*\un,20*\un)$)
+node[draw, ellipse, fill, text=white, pos=.15] {\bf Echologie.org}
+arc (-90 : -180 : 4*\un)
+-- ($(current page.north west)+(20*\un,-20*\un)$);
+\draw [fill = white, color = red!25!blue!33.333!green!50]
+(Triskell) + (1.2*\un,-6*\un) circle (15*\un);
+\draw [fill = white, color = white] (Triskell) circle (2*\un);
+\draw [fill = white, color = white]
+(Triskell) + ({120*(1+\p)} : 3*\un)
+arc ({120*(1+\p)} : 120 : 3*\un)
+arc (180+\ang : 180-\ang :3*\un)
+arc (\alp-\ang : \alp+\ang+24.8 : 5*\un);
+\draw [fill = white, color = white]
+(Triskell) + (120*\p : 3*\un)
+arc (120*\p : 0 : 3*\un)
+arc (90+\ang : 90-\ang : 6*\un)
+arc (\bet-\ang : \bet+\ang+5.9 : 8*\un);
+\draw [fill = white, color = white]
+(Triskell) + ({120*(2+\p)} : 3*\un)
+arc ({120*(2+\p)} : 240 : 3*\un)
+arc (\ang : -\ang : 12*\un)
+arc (\gam-\ang : \gam+\ang+.85 : 13*\un);
+\end{tikzpicture}}
+
+\makeatother
+
+\usepackage{babel}
+\begin{document}
+\title{Mettre en équations}
+
+\textbf{\large{}\hphantom{\textbf{\large{}D}}Dans la boîte à outil
+du mathématicien, la mise en équation est l'arme la plus destructrice...
+De difficultés ! Donnons-en un exemple : }{\large \par}
+\begin{center}
+\textbf{\large{}}%
+\begin{minipage}[t]{0.8\columnwidth}%
+\begin{center}
+\textbf{\large{}Un nombre entier a pour reste 35 dans la division
+euclidienne par 69, et dans la division par 75, il a même quotient
+et pour reste 17. Quel est ce nombre ?}
+\par\end{center}%
+\end{minipage}
+\par\end{center}{\large \par}
+
+\textbf{\large{}On peut tout à fait trouver la solution de ce problème
+en tatonant, mais rien ne garantit qu'on aboutira, et pire, face à
+un autre problème, on repart de zéro. La clef de la mise en équation,
+c'est de nomer les éléments du problème, afin de pouvoir formuler
+le problème comme si l'on connaissait la solution. Dans notre exemple,
+on peut appeler $n$ le nombre entier recherché, et $q$ le quotient
+commun. La résolution du problème arrive très vite après la mise en
+équation :
+\begin{align*}
+\begin{cases}
+n=69q+35\\
+n=75q+17
+\end{cases} & \Longrightarrow0=-6q+18 & \textrm{En soustrayant les deux lignes}\\
+ & \Longrightarrow q=3 & \textrm{On trouve ainsi le quotient commun}\\
+ & \Longrightarrow n=69\times3+35 & \textrm{On substitue dans la première équation}\\
+ & \Longrightarrow n=242 & \textrm{(ou la deuxième : \ensuremath{n=75\times3+17=242})}
+\end{align*}
+En faisant ainsi, on ne démontre pas que 242 est une solution de notre
+problème, puisque nous avons des implications et non des équivalences.
+Ce que nous avons montré, c'est que seul 242 peut être solution, mais
+c'est un jeu d'enfant de vérifier que ce nombre répond bien aux conditions
+du problème. On a ainsi fait mieux que trouver une solution du problème,
+on a prouvé qu'il n'y en avait pas d'autres, et on a surtout, en prenant
+un peu de recul, mis en pratique une technique de résolution de problème
+très puissante et très générale.}{\large \par}
+
+\bordure
+\end{document}
