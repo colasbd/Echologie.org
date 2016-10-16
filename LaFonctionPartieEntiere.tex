@@ -1,0 +1,142 @@
+%% LyX 2.2.1 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[french,english,12pt]{paper}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage[landscape,a4paper]{geometry}
+\geometry{verbose,tmargin=31mm,bmargin=28mm,lmargin=27mm,rmargin=27mm}
+\pagestyle{empty}
+\setlength{\parskip}{0bp}
+\setlength{\parindent}{0pt}
+\usepackage{fancybox}
+\usepackage{calc}
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{setspace}
+\onehalfspacing
+
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usetikzlibrary{shapes}
+\usepackage{mathrsfs}
+\usepackage{mathabx}
+\usepackage{txfonts}
+\usepackage{pxfonts}
+\usepackage{titling}
+\usepackage{array}
+%\usepackage{yhmath}
+
+\newdimen\un \un=1mm
+\def\bordure{
+\begin{tikzpicture}[overlay,remember picture]
+\node(Triskell) at ($(current page.north west)+(21*\un,-20*\un)$){};
+\def\p{.75}
+\def\ang{45}
+\def\alp{160.2}
+\def\bet{72.42}
+\def\gam{-13.2}
+\draw [very thick, line width = 8pt, color = red!25!blue!33.333!green!50]
+($(current page.north west)+(20*\un,-20*\un)$)
+-- ($(current page.north east)+(-24*\un,-20*\un)$)
+node [draw, ellipse, fill, text=white, pos=.5] {\thetitle}
+arc (90 : 0 : 4*\un)
+-- ($(current page.south east)+(-20*\un,24*\un)$)
+node[text=white,pos=.5 , rotate=90]
+{\tiny Ce document est sous licence GNU FDL,
+ il est librement modifiable et distribuable.
+ Sources et licence complètes disponible sur le site.
+ Copyright 2015, Jean-Christophe Jameux}
+arc (0 : -90 : 4*\un)
+-- ($(current page.south west)+(24*\un,20*\un)$)
+node[draw, ellipse, fill, text=white, pos=.15] {\bf Echologie.org}
+arc (-90 : -180 : 4*\un)
+-- ($(current page.north west)+(20*\un,-20*\un)$);
+\draw [fill = white, color = red!25!blue!33.333!green!50]
+(Triskell) + (1.2*\un,-6*\un) circle (15*\un);
+\draw [fill = white, color = white] (Triskell) circle (2*\un);
+\draw [fill = white, color = white]
+(Triskell) + ({120*(1+\p)} : 3*\un)
+arc ({120*(1+\p)} : 120 : 3*\un)
+arc (180+\ang : 180-\ang :3*\un)
+arc (\alp-\ang : \alp+\ang+24.8 : 5*\un);
+\draw [fill = white, color = white]
+(Triskell) + (120*\p : 3*\un)
+arc (120*\p : 0 : 3*\un)
+arc (90+\ang : 90-\ang : 6*\un)
+arc (\bet-\ang : \bet+\ang+5.9 : 8*\un);
+\draw [fill = white, color = white]
+(Triskell) + ({120*(2+\p)} : 3*\un)
+arc ({120*(2+\p)} : 240 : 3*\un)
+arc (\ang : -\ang : 12*\un)
+arc (\gam-\ang : \gam+\ang+.85 : 13*\un);
+\end{tikzpicture}}
+
+\AtBeginDocument{
+  \def\labelitemi{\Large\(\bullet\)}
+}
+
+\makeatother
+
+\usepackage{babel}
+\makeatletter
+\addto\extrasfrench{%
+   \providecommand{\og}{\leavevmode\flqq~}%
+   \providecommand{\fg}{\ifdim\lastskip>\z@\unskip\fi~\frqq}%
+}
+
+\makeatother
+\begin{document}
+\selectlanguage{french}%
+\title{\large\bf La fonction Partie Entière}
+
+\textbf{\large{}\hphantom{\textbf{\large{}Deca.}}On se propose de
+démontrer la proposition $\forall x\in\mathbb{R},\exists!n\in\mathbb{Z},n\leq x<n+1$}\\
+\textbf{\large{}\hphantom{\textbf{\large{}De..}}L'unique $n$ dont
+on affirme l'existence pour tout réel $x$ sera appelé la partie entière
+de $x$ et sera noté $E\left(x\right)$}\\
+\textbf{\large{}\hphantom{\textbf{\large{}D}}Comme $\mathbb{R}=\mathbb{R}_{+}\cup\mathbb{R}_{-}$,
+cela revient a montré les trois propositions suivantes :\vspace{-2mm}
+}{\large \par}
+\begin{itemize}
+\item \textbf{\large{}$\forall x\in\mathbb{R}_{+},\exists n\in\mathbb{Z},n\leq x<n+1$}{\large \par}
+\item \textbf{\large{}$\forall x\in\mathbb{R}_{-},\exists n\in\mathbb{Z},n\leq x<n+1$}{\large \par}
+\item \textbf{\large{}$\forall x\in\mathbb{R},\forall n_{1},n_{2}\in\mathbb{Z},(n_{1}\leq x<n_{1}+1\text{ et }n_{2}\leq x<n_{2}+1)\Longrightarrow n_{1}=n_{2}$
+\quad{}(c'est la condition d'unicité)}{\large \par}
+\end{itemize}
+\textbf{\large{}}%
+{\fboxsep 3mm\Ovalbox{\begin{minipage}[t]{1\columnwidth - 2\fboxsep - 1.6pt}%
+\textbf{\large{}Soit $x\in\mathbb{R}_{+}$, on sait par la propriété
+d'Archimède que l'ensemble $A=\{r\in\mathbb{N}|r>x\}$ est non vide.
+Il admet donc un plus petit élément $r$ vérifiant $r>x$ et tel que
+$r-1\leq x$. En posant $n:=r-1$, on a montré l'existence d'un $n\in\mathbb{Z}$
+vérifiant $n\leq x<n+1$}%
+\end{minipage}}}{\large \par}
+
+\textbf{\large{}\vfill{}
+}%
+{\fboxsep 3mm\Ovalbox{\begin{minipage}[t]{1\columnwidth - 2\fboxsep - 1.6pt}%
+\textbf{\large{}Soit maintenant $x\in\mathbb{R_{-}}$, on a de même
+par la propriété d'Archimède que l'ensemble $A=\{r\in\mathbb{N}|r\geq-x\}$
+est non vide. Il admet donc aussi un plus petit élément $r$ vérifiant
+$r\geq-x$ et tel que $r-1<-x$. En posant $n\coloneqq-r$, on a montré
+l'existence d'un $n\in\mathbb{Z}$ vérifiant $n\leq x<n+1$}%
+\end{minipage}}}{\large \par}
+
+\textbf{\large{}\vfill{}
+}%
+{\fboxsep 3mm\Ovalbox{\begin{minipage}[t]{1\columnwidth - 2\fboxsep - 1.6pt}%
+\textbf{\large{}Enfin, soient $x\in\mathbb{R}$ et $n_{1},n_{2}\in\mathbb{Z}$
+tels que $n_{1}\leq x<n_{1}+1$ et $n_{2}\leq x<n_{2}+1$. En réécrivant
+la deuxième inégalité sous la forme $-n_{2}-1<x\leq-n_{2}$ et en
+l'additionnant à la première, on obtient l'inégalité $(n_{1}-n_{2})-1<0<(n_{1}-n_{2})+1$
+qui affirme que l'entier $(n_{1}-n_{2})$ est à une distance strictement
+inférieure à $1$ de $0$, il est donc nul. Ainsi $n_{1}=n_{2}$}%
+\end{minipage}}}{\large \par}
+
+\bordure\selectlanguage{english}%
+
+
+\end{document}

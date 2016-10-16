@@ -31,7 +31,7 @@
 node [draw, ellipse, fill, text=white, pos=.5] {\thetitle}
 arc (90 : 0 : 4*\un)
 -- ($(current page.south east)+(-20*\un,24*\un)$)
-node[text=white,pos=.5 , rotate=90]
+node[text=white,pos=.63 , rotate=90]
 {\tiny Ce document est sous licence GNU FDL,
  il est librement modifiable et distribuable.
  Sources et licence complètes disponible sur le site.
