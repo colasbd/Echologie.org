@@ -14,7 +14,7 @@ La rédaction de ces documents prends du temps, et j'y laisse irrémédiablement
 
 Néanmoins, si vous souhaitez inclure un ou plusieurs de ces documents dans un document propre, et pourvu que ce document soit lui même distribué sous licence GNU FDL ou toute autre licence compatible, vous pouvez simplement indiquer la provenance des documents dans un paragraphe bien lisible. Vous êtes évidement encouragé à me contacter si vous souhaitez que nous collaborions sur la production d'un document.
 
-Le logo et son code source, ainsi que le slogan du site [Echologie.org](http://Echologie.org), bien que présents dans ce dépot, ne sont pas libres de droits, bien qu'ils puissent apparaître sur des versions modifiés de mes documents. Vous pouvez vous en inspirer librement pour d'autres travaux, mais il ne peuvent en aucun cas être utilisés pour décorer les travaux d'un autre (#MonPrécieux), ou être utilisés à des fins promotionelles ou commerciales.
+Le nom "Echologie", le logo et son code source, ainsi que le slogan du site [Echologie.org](http://Echologie.org), "Cours de Mathématiques 100% Durables", bien que présents dans ce dépot, ne sont pas libres de droits, bien que vous soyez libre de distribuer les documents, modifiés ou non, les contenants. Vous pouvez vous en inspirer librement pour d'autres travaux, mais il ne peuvent en aucun cas être utilisés pour décorer les travaux d'un autre (#MonPrécieux), ou être utilisés à des fins promotionelles ou commerciales.
 
 Copyright (C) 2015, 2016
 Jean-Christophe Jameux
