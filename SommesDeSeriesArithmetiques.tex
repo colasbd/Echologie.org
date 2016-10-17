@@ -1,0 +1,152 @@
+%% LyX 2.2.1 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[french,english,12pt]{paper}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage[a4paper]{geometry}
+\geometry{verbose,tmargin=31mm,bmargin=0mm,lmargin=27mm,rmargin=27mm}
+\pagestyle{empty}
+\setlength{\parskip}{\smallskipamount}
+\setlength{\parindent}{0pt}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{stmaryrd}
+\usepackage{setspace}
+
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usetikzlibrary{shapes}
+\usepackage{mathrsfs}
+\usepackage{mathabx}
+\usepackage{txfonts}
+\usepackage{pxfonts}
+\usepackage{titling}
+\usepackage{array}
+%\usepackage{yhmath}
+
+\newdimen\un \un=.8mm
+\def\bordure{
+\begin{tikzpicture}[overlay,remember picture]
+\def\p{.75}
+\def\ang{45}
+\def\alp{160.2}
+\def\bet{72.42}
+\def\gam{-13.2}
+\draw [very thick, line width = 8pt, color = red!25!blue!33.333!green!50]
+($(current page.north west)+(20*\un,-20*\un)$)
+-- ($(current page.north east)+(-24*\un,-20*\un)$)
+node [draw, ellipse, fill, text=white, pos=.53] {\thetitle}
+arc (90 : 0 : 4*\un)
+-- ($(current page.south east)+(-20*\un,24*\un)$)
+node[text=white,pos=.65 , rotate=90]
+{\tiny Ce document est sous licence GNU FDL,
+ il est librement modifiable et distribuable.
+ Licence et sources complètes disponibles sur le site.
+ Copyright 2015, Jean-Christophe Jameux}
+arc (0 : -90 : 4*\un)
+-- ($(current page.south west)+(24*\un,20*\un)$)
+node[draw, ellipse, fill, text=white, pos=.2] {\bf\large Echologie.org}
+arc (-90 : -180 : 4*\un)
+-- ($(current page.north west)+(20*\un,-20*\un)$);
+
+\un=1mm
+\node(Triskell) at ($(current page.north west)+(18*\un,-14*\un)$){};
+\draw [fill = white, color = red!25!blue!33.333!green!50]
+(Triskell) + (1.2*\un,-6*\un) circle (15*\un);
+\draw [fill = white, color = white] (Triskell) circle (2*\un);
+\draw [fill = white, color = white]
+(Triskell) + ({120*(1+\p)} : 3*\un)
+arc ({120*(1+\p)} : 120 : 3*\un)
+arc (180+\ang : 180-\ang :3*\un)
+arc (\alp-\ang : \alp+\ang+24.8 : 5*\un);
+\draw [fill = white, color = white]
+(Triskell) + (120*\p : 3*\un)
+arc (120*\p : 0 : 3*\un)
+arc (90+\ang : 90-\ang : 6*\un)
+arc (\bet-\ang : \bet+\ang+5.9 : 8*\un);
+\draw [fill = white, color = white]
+(Triskell) + ({120*(2+\p)} : 3*\un)
+arc ({120*(2+\p)} : 240 : 3*\un)
+arc (\ang : -\ang : 12*\un)
+arc (\gam-\ang : \gam+\ang+.85 : 13*\un);
+\end{tikzpicture}}
+
+\makeatother
+
+\usepackage{babel}
+\makeatletter
+\addto\extrasfrench{%
+   \providecommand{\og}{\leavevmode\flqq~}%
+   \providecommand{\fg}{\ifdim\lastskip>\z@\unskip\fi~\frqq}%
+}
+
+\makeatother
+\begin{document}
+\selectlanguage{french}%
+\begin{onehalfspace}
+\title{\Large\bf Sommes de séries arithmétiques}
+
+\selectlanguage{english}%
+\textbf{\Large{}$\bullet$ Soient $r\in\mathbb{R}$ et $u$ une suite
+arithmétique de raison $r$ définie sur $\mathbb{N}$, i.e. vérifiant
+$\forall n\in\mathbb{N},\ u_{n+1}=u_{n}+r$}{\Large \par}
+
+\selectlanguage{french}%
+\textbf{\Large{}$\bullet$ Soit $U$ la série associée, i.e. la suite
+définie sur $\mathbb{N}$ par : 
+\[
+\begin{cases}
+U_{0}=u_{0}\\
+\forall n\in\mathbb{N},\ U_{n+1}=U_{n}+u_{n+1}
+\end{cases}
+\]
+}{\Large \par}
+\end{onehalfspace}
+
+\textbf{\Large{}\vspace{-10mm}
+}{\Large \par}
+
+\textbf{\Large{}Ce qu'on note usuellement sous la forme : ${\displaystyle U_{n}=\sum_{k=0}^{n}u_{k}}$}{\Large \par}
+
+\begin{onehalfspace}
+\textbf{\Large{}$\bullet$ On cherche a exprimer $U_{n}$ }\textbf{\textit{\Large{}en
+fonction}}\textbf{\Large{} de $n\in\mathbb{N}$.}{\Large \par}
+
+\textbf{\Large{}$\bullet$ Puisque l'application $\varphi\colon\left\llbracket 0,n\right\rrbracket \longrightarrow\left\llbracket 0,n\right\rrbracket ,\ k\mapsto n-k$
+est bijective pour tout $n\in\mathbb{N}$, on a l'égalité suivante
+pour tout $n\in\mathbb{N}$ :}{\Large \par}
+\end{onehalfspace}
+
+\textbf{\Large{}\vspace{-15mm}
+\[
+\sum_{k=0}^{n}u_{k}=\sum_{k=0}^{n}u_{n-k}
+\]
+\vspace{-5mm}
+}{\Large \par}
+
+\textbf{\Large{}$\bullet$ On en déduit, pour tout $n\in\mathbb{N}$,
+la suite d'égalités :
+\[
+\begin{aligned}2U_{n} & =\sum_{k=0}^{n}u_{k}+\sum_{k=0}^{n}u_{n-k}\\
+ & =\sum_{k=0}^{n}u_{k}+u_{n-k}\\
+ & =\sum_{k=0}^{n}(u_{0}+kr)+(u_{0}+(n-k)r)\\
+ & =\sum_{k=0}^{n}u_{0}+(u_{0}+nr)\\
+ & =(n+1)(u_{0}+(u_{0}+nr))\\
+ & =(n+1)(u_{0}+u_{n})
+\end{aligned}
+\]
+}{\Large \par}
+
+\textbf{\Large{}\vspace{-5mm}
+}{\Large \par}
+
+\textbf{\Large{}$\bullet$ En définitive, on obtient ${\displaystyle \forall n\in\mathbb{N},\ U_{n}=(n+1)\cdot\frac{u_{0}+u_{n}}{2}}$}{\Large \par}
+
+\begin{onehalfspace}
+\textbf{\Large{}\bordure}{\Large \par}
+\end{onehalfspace}
+\selectlanguage{english}%
+
+\end{document}

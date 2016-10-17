@@ -1,0 +1,140 @@
+%% LyX 2.2.1 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[french,english,12pt]{paper}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage[a4paper]{geometry}
+\geometry{verbose,tmargin=37mm,bmargin=0mm,lmargin=27mm,rmargin=27mm}
+\pagestyle{empty}
+\setlength{\parskip}{\medskipamount}
+\setlength{\parindent}{0pt}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{setspace}
+
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usetikzlibrary{shapes}
+\usepackage{mathrsfs}
+\usepackage{mathabx}
+\usepackage{txfonts}
+\usepackage{pxfonts}
+\usepackage{titling}
+\usepackage{array}
+%\usepackage{yhmath}
+
+\newdimen\un \un=.94mm
+\def\bordure{
+\begin{tikzpicture}[overlay,remember picture]
+\def\p{.75}
+\def\ang{45}
+\def\alp{160.2}
+\def\bet{72.42}
+\def\gam{-13.2}
+\draw [very thick, line width = 8pt, color = red!25!blue!33.333!green!50]
+($(current page.north west)+(20*\un,-20*\un)$)
+-- ($(current page.north east)+(-24*\un,-20*\un)$)
+node [draw, ellipse, fill, text=white, pos=.53] {\thetitle}
+arc (90 : 0 : 4*\un)
+-- ($(current page.south east)+(-20*\un,24*\un)$)
+node[text=white,pos=.65 , rotate=90]
+{\tiny Ce document est sous licence GNU FDL,
+ il est librement modifiable et distribuable.
+ Licence et sources complètes disponibles sur le site.
+ Copyright 2015, Jean-Christophe Jameux}
+arc (0 : -90 : 4*\un)
+-- ($(current page.south west)+(24*\un,20*\un)$)
+node[draw, ellipse, fill, text=white, pos=.23] {\bf\large Echologie.org}
+arc (-90 : -180 : 4*\un)
+-- ($(current page.north west)+(20*\un,-20*\un)$);
+
+\un=1mm
+\node(Triskell) at ($(current page.north west)+(19*\un,-18*\un)$){};
+\draw [fill = white, color = red!25!blue!33.333!green!50]
+(Triskell) + (1.2*\un,-6*\un) circle (15*\un);
+\draw [fill = white, color = white] (Triskell) circle (2*\un);
+\draw [fill = white, color = white]
+(Triskell) + ({120*(1+\p)} : 3*\un)
+arc ({120*(1+\p)} : 120 : 3*\un)
+arc (180+\ang : 180-\ang :3*\un)
+arc (\alp-\ang : \alp+\ang+24.8 : 5*\un);
+\draw [fill = white, color = white]
+(Triskell) + (120*\p : 3*\un)
+arc (120*\p : 0 : 3*\un)
+arc (90+\ang : 90-\ang : 6*\un)
+arc (\bet-\ang : \bet+\ang+5.9 : 8*\un);
+\draw [fill = white, color = white]
+(Triskell) + ({120*(2+\p)} : 3*\un)
+arc ({120*(2+\p)} : 240 : 3*\un)
+arc (\ang : -\ang : 12*\un)
+arc (\gam-\ang : \gam+\ang+.85 : 13*\un);
+\end{tikzpicture}}
+
+\makeatother
+
+\usepackage{babel}
+\makeatletter
+\addto\extrasfrench{%
+   \providecommand{\og}{\leavevmode\flqq~}%
+   \providecommand{\fg}{\ifdim\lastskip>\z@\unskip\fi~\frqq}%
+}
+
+\makeatother
+\begin{document}
+\selectlanguage{french}%
+\begin{onehalfspace}
+\title{\Large\bf Sommes de séries géométriques}
+\end{onehalfspace}
+
+\selectlanguage{english}%
+\textbf{\Large{}$\bullet$ Soient $q\in\mathbb{R}$ et $v$ une suite
+géométrique de raison $q$ définie sur $\mathbb{N}$, i.e. vérifiant
+$\forall n\in\mathbb{N},\ v_{n+1}=q\cdot v_{n}$}{\Large \par}
+
+\selectlanguage{french}%
+\textbf{\Large{}$\bullet$ Soit $V$ la série associée, i.e. la suite
+définie sur $\mathbb{N}$ par : 
+\[
+\begin{cases}
+V_{0}=v_{0}\\
+\forall n\in\mathbb{N},\ V_{n+1}=V_{n}+v_{n+1}
+\end{cases}
+\]
+}{\Large \par}
+
+\textbf{\Large{}\vspace{-10mm}
+}{\Large \par}
+
+\textbf{\Large{}Ce qu'on note usuellement sous la forme : ${\displaystyle V_{n}=\sum_{k=0}^{n}v_{k}}$\vspace{2mm}
+}{\Large \par}
+
+\textbf{\Large{}$\bullet$ On cherche a exprimer $V_{n}$ }\textbf{\textit{\Large{}en
+fonction}}\textbf{\Large{} de $n\in\mathbb{N}$.}{\Large \par}
+
+\textbf{\Large{}$\bullet$ Par distributivité du produit sur les sommes,
+on a, pour tout $n\in\mathbb{N}$, la suite d'égalités suivante :
+\[
+\begin{aligned}(1-q)V_{n} & =V_{n}-q\cdot V_{n}\\
+ & =\sum_{k=0}^{n}v_{k}-q\cdot\sum_{k=0}^{n}v_{k}\\
+ & =\sum_{k=0}^{n}v_{k}-\sum_{k=0}^{n}q\cdot v_{k}\\
+ & =\sum_{k=0}^{n}v_{k}-\sum_{k=0}^{n}v_{k+1}\\
+ & =\sum_{k=0}^{n}v_{k}-\sum_{k=1}^{n+1}v_{k}\\
+ & =\left(\sum_{k=0}^{n}v_{k}-\sum_{k=0}^{n}v_{k}\right)+\left(v_{0}-v_{n+1}\right)\\
+ & =v_{0}-v_{n+1}
+\end{aligned}
+\]
+}{\Large \par}
+
+\textbf{\Large{}\vspace{-4mm}
+}{\Large \par}
+
+\textbf{\Large{}$\bullet$ En définitive, nous avons ${\displaystyle \forall n\in\mathbb{N},\ V_{n}=\frac{v_{0}-v_{n+1}}{1-q}}$}{\Large \par}
+
+\begin{onehalfspace}
+\bordure
+\end{onehalfspace}
+\selectlanguage{english}%
+
+\end{document}
