@@ -1,0 +1,1626 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass paper
+\begin_preamble
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usetikzlibrary{shapes}
+\usepackage{mathrsfs}
+\usepackage{mathabx}
+\usepackage{txfonts}
+\usepackage{pxfonts}
+\usepackage{titling}
+\usepackage{array}
+\usepackage{bbold}
+%\usepackage{yhmath}
+
+\newdimen\un \un=.5mm
+\def\bordure{
+\begin{tikzpicture}[overlay,remember picture]
+\def\p{.75}
+\def\ang{45}
+\def\alp{160.2}
+\def\bet{72.42}
+\def\gam{-13.2}
+\draw [very thick, line width = 8pt, color = red!25!blue!33.333!green!50]
+($(current page.north west)+(20*\un,-20*\un)$)
+-- ($(current page.north east)+(-24*\un,-20*\un)$)
+node [draw, ellipse, fill, text=white, pos=.53] {\thetitle}
+arc (90 : 0 : 4*\un)
+-- ($(current page.south east)+(-20*\un,24*\un)$)
+node[text=white,pos=.54 , rotate=90]
+{\tiny Ce document est sous licence GNU FDL,
+ il est librement modifiable et distribuable.
+ Licence et sources complètes disponibles sur le site.
+ Copyright 2016, Jean-Christophe Jameux}
+arc (0 : -90 : 4*\un)
+-- ($(current page.south west)+(24*\un,20*\un)$)
+node[draw, ellipse, fill, text=white, pos=.3] {\bf\large Echologie.org}
+arc (-90 : -180 : 4*\un)
+-- ($(current page.north west)+(20*\un,-20*\un)$);
+
+\un=.9mm
+\node(Triskell) at ($(current page.north west)+(15*\un,-11*\un)$){};
+\draw [fill = white, color = red!25!blue!33.333!green!50]
+(Triskell) + (1.2*\un,-6*\un) circle (15*\un);
+\draw [fill = white, color = white] (Triskell) circle (2*\un);
+\draw [fill = white, color = white]
+(Triskell) + ({120*(1+\p)} : 3*\un)
+arc ({120*(1+\p)} : 120 : 3*\un)
+arc (180+\ang : 180-\ang :3*\un)
+arc (\alp-\ang : \alp+\ang+24.8 : 5*\un);
+\draw [fill = white, color = white]
+(Triskell) + (120*\p : 3*\un)
+arc (120*\p : 0 : 3*\un)
+arc (90+\ang : 90-\ang : 6*\un)
+arc (\bet-\ang : \bet+\ang+5.9 : 8*\un);
+\draw [fill = white, color = white]
+(Triskell) + ({120*(2+\p)} : 3*\un)
+arc ({120*(2+\p)} : 240 : 3*\un)
+arc (\ang : -\ang : 12*\un)
+arc (\gam-\ang : \gam+\ang+.85 : 13*\un);
+\end{tikzpicture}}
+\end_preamble
+\options 12pt
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation landscape
+\suppress_date false
+\justification false
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 16mm
+\topmargin 19mm
+\rightmargin 16mm
+\bottommargin 0mm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle empty
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+
+\lang french
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+title{
+\backslash
+large
+\backslash
+bf La loi log-normale}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A
+\begin_inset Phantom HPhantom
+status open
+
+\begin_layout Plain Layout
+Deca
+\end_layout
+
+\end_inset
+
+Connaitre une variable alléatoire, c'est avant tout connaître sa loi.
+ Dans le cas d'une variable aléatoire réelle à densité 
+\begin_inset Formula $X$
+\end_inset
+
+, cette loi est 
+\begin_inset Phantom HPhantom
+status open
+
+\begin_layout Plain Layout
+Dec.
+\end_layout
+
+\end_inset
+
+entièrement déterminée aussi bien par sa fonction de répartition 
+\begin_inset Formula $F_{X}:x\mapsto P\left(X\leq x\right)$
+\end_inset
+
+ que par sa fonction de densité 
+\begin_inset Formula $f_{X}\coloneqq F_{X}'$
+\end_inset
+
+.
+ Chacune de 
+\begin_inset Phantom HPhantom
+status open
+
+\begin_layout Plain Layout
+D
+\end_layout
+
+\end_inset
+
+ses représentation de la loi de X se montre plus ou moins adaptée à la résolutio
+n de certains problèmes.
+ On est donc souvent amené à voyager d'une représentation à l'autre.
+ L'étude de la loi log-normale sera l'occasion d'illustrer différentes dynamique
+s qui se jouent entre fonctions de répartitions et fonctions de densités
+ dans l'étude des lois de variables aléatoires.
+ Elle sera aussi l'occasion de montrer à quel point il est important de
+ connaître intimement les lois de variables alléatoires usuelles.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "48col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+On dit qu'une variable aléatoire 
+\begin_inset Formula $X$
+\end_inset
+
+ suit une loi log-normale de paramètre 
+\begin_inset Formula $\left(\mu,\sigma^{2}\right)$
+\end_inset
+
+, ce qu'on note 
+\begin_inset Formula $\mathrm{X\sim Log}\!-\mathcal{N}(\mu,\,\sigma^{2})$
+\end_inset
+
+, si son logarithme suit une loi normale de paramètre 
+\begin_inset Formula $\left(\mu,\sigma^{2}\right)$
+\end_inset
+
+.
+ Autrement dit, si elle est de la forme 
+\begin_inset Formula $X=e^{T}$
+\end_inset
+
+ où 
+\begin_inset Formula $T\sim\mathcal{N}(\mu,\sigma^{2})$
+\end_inset
+
+ ; son logarithme est alors bien normal, autrement dit 
+\begin_inset Formula $\ln X\sim\mathcal{N}(\mu,\sigma^{2})$
+\end_inset
+
+.
+ Nous allons montrer comment étudier une telle loi en nous ramenant à des
+ lois normales.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+Pour cela, notons 
+\begin_inset Formula $\Phi$
+\end_inset
+
+ la fonction de répartition de la loi normale centrée réduite et 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ sa fonction de densité.
+\end_layout
+
+\begin_layout Plain Layout
+Comme on connait la relation entre 
+\begin_inset Formula $X$
+\end_inset
+
+ et 
+\begin_inset Formula $T$
+\end_inset
+
+, il est aisé d'établir une relation entre leurs fonctions de répartitions,
+ donc de déterminer la fonction de répartition de 
+\begin_inset Formula $X$
+\end_inset
+
+ :
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "40col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align left
+\begin_inset VSpace -3ex
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+F_{X}\left(x\right):x & \mapsto P\left(X\leq x\right)\\
+ & \mapsto P\left(e^{T}\leq x\right)\\
+ & \mapsto\begin{cases}
+P\left(T\leq\ln x\right) & \mathnormal{si}\;x>0\\
+0 & \mathnormal{si}\;x\leq0
+\end{cases}\\
+ & \mapsto P\left(T\leq\ln x\right)\cdot\mathbb{1}_{\left]0,+\infty\right[}\left(x\right)\\
+ & \mapsto F_{T}(\ln x)\cdot\mathbb{1}_{\left]0,+\infty\right[}\left(x\right)\\
+ & \mapsto\Phi\left(\frac{\ln x-\mu}{\sigma}\right)\cdot\mathbb{1}_{\left]0,+\infty\right[}\left(x\right)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "44col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+La fonction indicatrice d'un ensemble 
+\begin_inset Formula $E$
+\end_inset
+
+, notée 
+\begin_inset Formula $\mathbb{1}_{E}$
+\end_inset
+
+ est définie par :
+\begin_inset VSpace -3ex
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\forall x\in\mathbb{R},\mathbb{1}_{E}=\begin{cases}
+1 & \textrm{si }x\in E\\
+0 & \textrm{si }x\notin E
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset VSpace -1ex
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Elle permet une écriture plus compacte, et donc plus commode, des fonctions
+ ayant des formules algébriques différentes selon les parties de 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+ où elles sont définies.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace 1ex
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Un calcul direct nous permet alors de trouver une expression de la densité
+ de 
+\begin_inset Formula $X$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset space \hspace{}
+\length 6em
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Box Ovalbox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "68col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "1.5ex"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula ${\displaystyle f_{X}:x\mapsto F_{X}'\left(x\right)=\frac{1}{\sigma x}\cdot\varphi\left(\frac{\ln x-\mu}{\sigma}\right)\cdot\mathbb{1}_{\left]0,+\infty\right[}\left(x\right)}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "50col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "52col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Si la relation entre 
+\begin_inset Formula $F_{T}$
+\end_inset
+
+ et 
+\begin_inset Formula $\Phi$
+\end_inset
+
+ ne vous apparaît pas clairement, voyons comment la retrouver en trouvant
+ une relation entre 
+\begin_inset Formula $f_{T}$
+\end_inset
+
+ et 
+\begin_inset Formula $\varphi$
+\end_inset
+
+.
+ Le calcul ci-contre vise à 
+\emph on
+reconnaitre
+\emph default
+ une loi normale centrée réduite dans l'
+\emph on
+écriture
+\emph default
+ d'une loi normale quelconque.
+ Mais nous ne savons 
+\emph on
+reconnaitre
+\emph default
+ une telle loi que sur sa densité, c'est pourquoi nous écrivons la fonction
+ de répartition comme une intégrale de la fonction de densité.
+ On utilisera pour ce faire le changement de variable :
+\begin_inset VSpace -1ex
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula 
+\[
+\tau=\frac{t-\mu}{\sigma}\textrm{ \ (d'où }dt=\sigma d\tau\textrm{)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "45col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset VSpace -7ex
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+F_{T}:u & \mapsto\intop_{-\infty}^{u}f_{T}\left(t\right)dt\\
+ & \mapsto\intop_{-\infty}^{u}\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(t-\mu)^{2}}{2\sigma^{2}}}dt\\
+ & \mapsto\intop_{-\infty}^{\frac{u-\mu}{\sigma}}\frac{1}{\sqrt{2\pi}}e^{-\frac{\tau^{2}}{2}}d\tau\\
+ & \mapsto\intop_{-\infty}^{\frac{u-\mu}{\sigma}}\varphi(\tau)d\tau\\
+ & \mapsto\Phi\left(\frac{u-\mu}{\sigma}\right)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace 1ex
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+De même, s'il ne vous a pas échappé qu'on a pas pris garde à traiter correctemen
+t le cas de la dérivée de 
+\begin_inset Formula $F_{X}$
+\end_inset
+
+ en 0, voici un moyen direct de démontrer qu'on a bien 
+\begin_inset Formula $F_{X}'(0)=0$
+\end_inset
+
+.
+ Comme 
+\begin_inset Formula $\lim_{x\to0^{+}}\frac{\ln x-\mu}{\sigma}=-\infty$
+\end_inset
+
+, on peut affirmer l'existence d'un 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ pour lequel 
+\begin_inset Formula $\forall x\in]0;\alpha[,\forall\tau<\frac{\ln x-\mu}{\sigma},-\tau>\frac{1}{\sqrt{2\pi}}$
+\end_inset
+
+.
+ Dés lors, le calcul suivant achève la démonstration :
+\size footnotesize
+
+\begin_inset VSpace -1ex
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+ & \forall x\in\left]0;\alpha\right[,\frac{F_{X}(x)-F_{X}(0)}{x}=\frac{1}{x}\cdot\Phi\left(\frac{\ln x-\mu}{\sigma}\right)=\frac{1}{x}\cdot\intop_{-\infty}^{\frac{\ln x-\mu}{\sigma}}\frac{1}{\sqrt{2\pi}}e^{-\frac{\tau^{2}}{2}}d\tau\\
+ & <e^{-\ln x}\cdot e^{-\frac{\left(\ln x-\mu\right)^{2}}{2\sigma^{2}}}=e^{-\frac{\left(\ln x\right)^{2}+2\left(\sigma^{2}-\mu\right)\ln x+\mu^{2}}{2\sigma^{2}}}=\frac{1}{x}\cdot\intop_{-\infty}^{\frac{\ln x-\mu}{\sigma}}-\tau.e^{-\frac{\tau^{2}}{2}}d\tau=\frac{1}{x}\cdot e^{-\frac{\left(\ln x-\mu\right)^{2}}{2\sigma^{2}}}\xrightarrow[x\to0^{+}]{}0
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang french
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+bordure
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang french
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang french
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+title{
+\backslash
+large
+\backslash
+bf Moments d'une loi log-normale}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A
+\begin_inset Phantom HPhantom
+status open
+
+\begin_layout Plain Layout
+Deca
+\end_layout
+
+\end_inset
+
+ L'inégalité de Markov prétend que pour toute variable alléatoire positive
+ et pour tout 
+\begin_inset Formula $a>0$
+\end_inset
+
+, on a 
+\begin_inset Formula $P\left(A\geq a\right)\leq\frac{1}{a}\cdot E\left(A\right)$
+\end_inset
+
+.
+ En prenant 
+\begin_inset Formula $A$
+\end_inset
+
+ 
+\begin_inset Phantom HPhantom
+status open
+
+\begin_layout Plain Layout
+Deca
+\end_layout
+
+\end_inset
+
+de la forme 
+\begin_inset Formula $\left|X-E\left(X\right)\right|^{n}$
+\end_inset
+
+ avec 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+ et en posant 
+\begin_inset Formula $s\coloneqq\sqrt[n]{a}$
+\end_inset
+
+, on obtient l'inégalité 
+\begin_inset Formula $P\left(\left|X-E\left(X\right)\right|\geq s\right)\leq\frac{1}{s^{n}}\cdot E\left(\left|X-E\left(X\right)\right|^{n}\right)$
+\end_inset
+
+ valable pour tout 
+\begin_inset Formula $n$
+\end_inset
+
+.
+\begin_inset Newline linebreak
+\end_inset
+
+
+\begin_inset Phantom HPhantom
+status open
+
+\begin_layout Plain Layout
+D
+\end_layout
+
+\end_inset
+
+En particulier, dans le cas où 
+\begin_inset Formula $n=2$
+\end_inset
+
+, en posant 
+\begin_inset Formula $k\coloneqq\frac{s}{\sigma}$
+\end_inset
+
+, on obtient l'inégalité de Bienaymé-Tchebychev 
+\begin_inset Formula $P\left(\left|X-E\left(X\right)\right|\geq k\sigma\right)\leq\frac{1}{\left(k\sigma\right)^{2}}\cdot V(X)=\frac{1}{k^{2}}$
+\end_inset
+
+.
+\begin_inset Newline linebreak
+\end_inset
+
+De telles inégalités permettent de majorer de façon probable l'écart d'une
+ variable alléatoire à sa valeur moyenne.
+ Elle sont à ce titre fondamentale pour réaliser des estimations, par exemple
+ en statistiques.
+ C'est la raison pour laquelle, outre la valeur de 
+\begin_inset Formula $E\left(X\right)$
+\end_inset
+
+, on est intéréssé plus générallement par la valeur de 
+\begin_inset Formula $E\left(X^{n}\right)$
+\end_inset
+
+ pour tout 
+\begin_inset Formula $n\in\mathbb{N}^{*}$
+\end_inset
+
+, cette quantité est appelée le moment d'ordre 
+\begin_inset Formula $n$
+\end_inset
+
+ de 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "43col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset VSpace -2em
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "55col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset VSpace 3em
+\end_inset
+
+En remarquant que :
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula 
+\[
+f_{X}\equiv0\textrm{ sur }\left]-\infty;0\right]
+\]
+
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+et en effectuant le changement de variable : 
+\begin_inset Formula 
+\[
+t=\frac{\ln x-\mu}{\sigma}\textrm{ \ (d'où }dx=\sigma e^{\sigma t+\mu}dt\textrm{)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace -1ex
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+nous sommes maintenant à même de calculer l'espérance de 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ La clef de notre calcul tient dans la remarque suivante : la fonction définie
+ sur 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+ par :
+\begin_inset Formula 
+\[
+t\mapsto\frac{1}{\sqrt{2\pi}}e^{-\frac{(t-\sigma)^{2}}{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace -1ex
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+n'est autre que la fonction de densité d'une loi normale 
+\begin_inset Formula $\mathcal{N}(\sigma,1)$
+\end_inset
+
+, d'où :
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace -1ex
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\intop_{-\infty}^{+\infty}\frac{1}{\sqrt{2\pi}}e^{-\frac{(t-\sigma)^{2}}{2}}dt=1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hspace{}
+\length -3ex
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "40col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{align*}
+E\left(X\right) & =\intop_{-\infty}^{+\infty}x\cdot f_{X}\left(x\right)dx\\
+ & =\intop_{0}^{+\infty}\frac{1}{\sigma}\cdot\varphi\left(\frac{\ln x-\mu}{\sigma}\right)dx\\
+ & =\intop_{-\infty}^{+\infty}\varphi\left(t\right)e^{\sigma t+\mu}dt\\
+ & =\intop_{-\infty}^{+\infty}\frac{1}{\sqrt{2\pi}}e^{-\frac{t^{2}}{2}}e^{\sigma t+\mu}dt\\
+ & =\intop_{-\infty}^{+\infty}\frac{1}{\sqrt{2\pi}}e^{-\frac{t^{2}-2\sigma t-2\mu}{2}}dt\\
+ & =\intop_{-\infty}^{+\infty}\frac{1}{\sqrt{2\pi}}e^{-\frac{\left(t-\sigma\right)^{2}-\sigma^{2}-2\mu}{2}}dt\\
+ & =e^{\frac{\sigma^{2}+2\mu}{2}}\intop_{-\infty}^{+\infty}\frac{1}{\sqrt{2\pi}}e^{-\frac{\left(t-\sigma\right)^{2}}{2}}dt\\
+ & =e^{\mu+\frac{\sigma^{2}}{2}}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "54col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Un moyen direct de déterminer les moments de 
+\begin_inset Formula $X$
+\end_inset
+
+ serait de faire appel au lemme de transfert, en calculant 
+\begin_inset Formula $\int_{-\infty}^{+\infty}x^{n}\cdot f_{X}\left(x\right)dx$
+\end_inset
+
+ pour chaque 
+\begin_inset Formula $n\in\mathbb{N}^{*}$
+\end_inset
+
+.
+ Nous allons nous montrer plus futé ! Nous allons montrer que la variable
+ aléatoire 
+\begin_inset Formula $Y$
+\end_inset
+
+ définie par 
+\begin_inset Formula $Y=X^{n}$
+\end_inset
+
+ suit une loi log-normale dont on va chercher les paramètres.
+ On pourra alors appliquer la formule de l'espérance que nous venons de
+ démontrer en utilisant les paramètres ainsi trouvés.
+\end_layout
+
+\begin_layout Plain Layout
+Pour démontrer que 
+\begin_inset Formula $Y$
+\end_inset
+
+ suit une loi log-normale, il suffit de la mettre sous la forme 
+\begin_inset Formula $e^{T'}$
+\end_inset
+
+où 
+\begin_inset Formula $T'$
+\end_inset
+
+ suit une loi normale.
+\begin_inset VSpace -1.5ex
+\end_inset
+
+
+\begin_inset Formula 
+\[
+Y=X^{n}=\left(e^{T}\right)^{n}=e^{nT}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace -1.5ex
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Il s'agit donc de montrer que 
+\begin_inset Formula $T':=nT$
+\end_inset
+
+ suit une loi normale et d'en trouver les paramètres.
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace -4.5ex
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 0
+use_makebox 0
+width "40col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{align*}
+F_{T'}:t & \mapsto P\left(T'\leq t\right)\\
+ & \mapsto P\left(nT\leq t\right)\\
+ & \mapsto P\left(T\leq\frac{t}{n}\right)\\
+ & \mapsto F_{T}\left(\frac{t}{n}\right)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+D'où
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "45col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{align*}
+f_{T'}:t & \mapsto F_{T'}'\left(t\right)\\
+ & \mapsto\frac{1}{n}f_{T}\left(\frac{t}{n}\right)\\
+ & \mapsto\frac{1}{\sqrt{2\pi}n\sigma}e^{-\frac{\left(\frac{t}{n}-\mu\right)^{2}}{2\sigma^{2}}}\\
+ & \mapsto\frac{1}{\sqrt{2\pi}n\sigma}e^{-\frac{\left(t-n\mu\right)^{2}}{2\left(n\sigma\right)^{2}}}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace 0ex
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Nous avons ainsi 
+\begin_inset Formula $T'\sim\mathcal{N}(n\mu,\left(n\sigma\right)^{2})$
+\end_inset
+
+.
+ Pour arriver à ce résultat, nous avons manipulé la fonction de densité
+ de 
+\begin_inset Formula $T'$
+\end_inset
+
+ dans le but de 
+\shape italic
+faire apparaître
+\shape default
+\size normal
+\emph on
+\color none
+ 
+\size default
+\emph default
+\color inherit
+la densité d'une loi normale.
+ C'est d'ailleurs pour cette raison que nous sommes passé par la densité,
+ comme quand nous avons cherché une relation entre 
+\begin_inset Formula $F_{T}$
+\end_inset
+
+ et 
+\begin_inset Formula $\Phi$
+\end_inset
+
+, c'est le moyen le plus simple de reconnaître une loi normale.
+\end_layout
+
+\begin_layout Plain Layout
+Nous pouvons maintenant conclure fièrement :
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+Y=aX^{b}=ae^{bT}=e^{bT+\ln a}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Il suffit donc de montrer que 
+\begin_inset Formula $T':=bT+\ln a$
+\end_inset
+
+ suit une loi normale dont on cherchera les paramètres
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+En effet trouver les paramètres d'une loi log-normale revient à trouver
+ les paramètres de la loi normale associée, ce qui est clair d'après le
+ contexte.
+\end_layout
+
+\end_inset
+
+.
+\begin_inset Formula 
+\begin{align*}
+F_{T'}(t) & =P\left(T'\leq t\right)\\
+ & =P\left(bT+\ln a\leq t\right)\\
+ & =\begin{cases}
+P\left(T\leq\frac{t-\ln a}{b}\right)=F_{T}\left(\frac{t-\ln a}{b}\right) & \mathnormal{\textrm{si }b>0}\\
+1-P\left(T\leq\frac{t-\ln a}{b}\right)=1-F_{T}\left(\frac{t-\ln a}{b}\right) & \textrm{si }b<0\textrm{ car }P\left(T=\frac{t-\ln a}{b}\right)=0\\
+\mathbf{1}_{\left[\ln a;+\infty\right[} & \textrm{si }\mathnormal{b=0}
+\end{cases}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Ainsi, si 
+\begin_inset Formula $b\neq0$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+f_{T'}(t)=F_{T'}'(t)=\frac{1}{\left|b\right|}f_{T}\left(\frac{t-\ln a}{b}\right)=\frac{1}{\sqrt{2\pi}\sigma\left|b\right|}e^{-\frac{\left(\frac{t-\ln a}{b}-\mu\right)^{2}}{2\sigma^{2}}}=\frac{1}{\sqrt{2\pi}\sigma\left|b\right|}e^{-\frac{\left(t-\left(\ln a+b\mu\right)\right)^{2}}{2\left(\sigma\left|b\right|\right)^{2}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Où l'on voit
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+On 
+\size normal
+\emph on
+\color none
+voit
+\emph default
+, on 
+\emph on
+reconnait.
+
+\size default
+\emph default
+\color inherit
+ Et c'est bien ce qu'on essayait de faire à tout prix: se rapprocher de
+ l'
+\emph on
+écriture
+\emph default
+ d'une loi normale, et c'est pour ça qu'on est passer par la densité
+\emph on
+ (cf
+\emph default
+ note 2).
+\end_layout
+
+\end_inset
+
+ que 
+\begin_inset Formula $T'$
+\end_inset
+
+ suit une loi 
+\begin_inset Formula $\mathcal{N}(\ln a+b\mu,\sigma\left|b\right|)$
+\end_inset
+
+, et 
+\begin_inset Formula $f_{T'}$
+\end_inset
+
+ n'est pas définie si 
+\begin_inset Formula $b=0$
+\end_inset
+
+ car 
+\begin_inset Formula $F_{T'}$
+\end_inset
+
+ n'est pas continue dans ce cas (on a une discontinuité en 
+\begin_inset Formula $a$
+\end_inset
+
+)
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+On a donc pas ici à proprement parler une loi normale, on a ce qu'on appelle
+ une 
+\emph on
+masse se Dirac en 
+\begin_inset Formula $a$
+\end_inset
+
+
+\emph default
+.
+ C'est un cas dégénéré de la loi normale que l'on pourrait noté 
+\begin_inset Formula $\mathcal{N}(a,0)$
+\end_inset
+
+ et que l'on note en fait 
+\begin_inset Formula $\delta_{a}$
+\end_inset
+
+.
+ Pour une telle loi, on a 
+\begin_inset Formula $P(D=a)=1$
+\end_inset
+
+ et 
+\begin_inset Formula $P(D\neq a)=0,$
+\end_inset
+
+ ainsi, 
+\begin_inset Formula $E(D)=a$
+\end_inset
+
+ et 
+\begin_inset Formula $\sigma(D)=0$
+\end_inset
+
+ .
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset VSpace -1ex
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset space \hspace{}
+\length 22em
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Box Ovalbox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "22col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "1.5ex"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Formula ${\displaystyle E\left(X^{n}\right)=e^{n\mu+\frac{n^{2}}{2}\sigma^{2}}}$
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+bordure
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
