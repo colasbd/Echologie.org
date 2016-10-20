@@ -319,7 +319,7 @@ status collapsed
 
 
 \backslash
-begin{tikzpicture}[{shift=(-.5,-2.3)}, overlay]
+begin{tikzpicture}[{shift=(.2,-2.5)}, overlay]
 \end_layout
 
 \begin_layout Plain Layout
