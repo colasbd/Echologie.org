@@ -1,0 +1,101 @@
+%% LyX 2.2.1 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[12pt]{article}
+\usepackage[latin9]{inputenc}
+\usepackage{geometry}
+\geometry{verbose,tmargin=24mm,bmargin=0cm,lmargin=17mm,rmargin=0cm}
+
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+%% Because html converters don't know tabularnewline
+\providecommand{\tabularnewline}{\\}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usetikzlibrary{shapes}
+\usepackage{mathrsfs}
+\usepackage{mathabx}
+\usepackage{txfonts}
+\usepackage{pxfonts}
+\usepackage{titling}
+\usepackage{array}
+
+\newdimen\un
+\un=.6mm
+\def\bordure{
+\begin{tikzpicture}[overlay,remember picture]
+\def\p{.75}
+\def\ang{45}
+\def\alp{160.2}
+\def\bet{72.42}
+\def\gam{-13.2}
+\draw [very thick, line width = 8pt, color = red!25!blue!33.333!green!50]
+($(current page.north west)+(20*\un,-20*\un)$)
+-- ($(current page.north east)+(-24*\un,-20*\un)$)
+node [draw, ellipse, fill, text=white, pos=.5] {\thetitle}
+arc (90 : 0 : 4*\un)
+-- ($(current page.south east)+(-20*\un,24*\un)$)
+node[text=white,pos=.63 , rotate=90]
+{\tiny Ce document est sous licence GNU FDL,
+ il est librement modifiable et distribuable.
+ Sources et licence complètes disponible sur le site.
+ Copyright 2010, Jean-Christophe Jameux}
+arc (0 : -90 : 4*\un)
+-- ($(current page.south west)+(24*\un,20*\un)$)
+node[draw, ellipse, fill, text=white, pos=.28] {\Large\bf Echologie.org}
+arc (-90 : -180 : 4*\un)
+-- ($(current page.north west)+(20*\un,-20*\un)$);
+
+\un=1.1mm
+\node(Triskell) at ($(current page.north west)+(15*\un,-11*\un)$){};
+\draw [fill = white, color = red!25!blue!33.333!green!50]
+(Triskell) + (1.2*\un,-6*\un) circle (15*\un);
+\draw [fill = white, color = white] (Triskell) circle (2*\un);
+\draw [fill = white, color = white]
+(Triskell) + ({120*(1+\p)} : 3*\un)
+arc ({120*(1+\p)} : 120 : 3*\un)
+arc (180+\ang : 180-\ang :3*\un)
+arc (\alp-\ang : \alp+\ang+24.8 : 5*\un);
+\draw [fill = white, color = white]
+(Triskell) + (120*\p : 3*\un)
+arc (120*\p : 0 : 3*\un)
+arc (90+\ang : 90-\ang : 6*\un)
+arc (\bet-\ang : \bet+\ang+5.9 : 8*\un);
+\draw [fill = white, color = white]
+(Triskell) + ({120*(2+\p)} : 3*\un)
+arc ({120*(2+\p)} : 240 : 3*\un)
+arc (\ang : -\ang : 12*\un)
+arc (\gam-\ang : \gam+\ang+.85 : 13*\un);
+\end{tikzpicture}}
+
+\makeatother
+
+\begin{document}
+\title{\Large\bf Calculs de dérivées}\parindent0cm \setlength{\extrarowheight}{7ex}
+\tabcolsep6mm 
+\begin{center}
+{\large{}Dériver }\textit{\large{}proprement}{\large{} en fonction
+de $x$ les expressions suivantes}\\
+{\large{} sans faire de brouillon préalable! \vspace{-5ex}
+}
+\par\end{center}{\large \par}
+
+{\large{}}%
+\begin{tabular}{l}
+{\large{}${\displaystyle \left(2x-3\right)^{4}}$}\tabularnewline
+{\large{}${\displaystyle \left(x^{4}+2x^{2}\right)^{7}}$}\tabularnewline
+{\large{}${\displaystyle \left(x^{3}-4x\right)\cdot\cos\left(x^{2}+x\right)}$}\tabularnewline
+{\large{}${\displaystyle \frac{x+1}{x^{2}-3x}}$}\tabularnewline
+{\large{}${\displaystyle \left(\frac{2x-1}{3x+5}\right)^{5}}$}\tabularnewline
+{\large{}${\displaystyle \sqrt{\frac{1+\ln x^{2}}{4}}}$}\tabularnewline
+{\large{}${\displaystyle e^{\left(x^{2}+x\right)\left(3x^{3}+5\right)}}$}\tabularnewline
+{\large{}${\displaystyle \ln\left(\frac{2x^{2}+4x}{x-1}\right)}$}\tabularnewline
+{\large{}${\displaystyle \frac{\sqrt{x}+1}{x^{2}+3x}}$ }\tabularnewline
+{\large{}${\displaystyle \tan\left(\frac{\sqrt{x^{2}+4x}}{x-1}\right)}$ }\tabularnewline
+{\large{}${\displaystyle \frac{2x}{-\sqrt{x^{2}+1}}}$}\tabularnewline
+\end{tabular}{\large \par}
+
+\bordure
+\end{document}
