@@ -1,8 +1,8 @@
 %% LyX 2.2.1 created this file.  For more info, see http://www.lyx.org/.
 %% Do not edit unless you really know what you are doing.
-\documentclass[french,english,12pt]{paper}
+\documentclass[french,12pt]{paper}
 \usepackage[T1]{fontenc}
-\usepackage[latin9]{inputenc}
+\usepackage[utf8]{inputenc}
 \usepackage[a4paper]{geometry}
 \geometry{verbose,tmargin=37mm,bmargin=0mm,lmargin=27mm,rmargin=27mm}
 \pagestyle{empty}
@@ -42,7 +42,7 @@ arc (90 : 0 : 4*\un)
 node[text=white,pos=.65 , rotate=90]
 {\tiny Ce document est sous licence GNU FDL,
  il est librement modifiable et distribuable.
- Licence et sources complètes disponibles sur le site.
+ Licence et sources complÃ¨tes disponibles sur le site.
  Copyright 2015, Jean-Christophe Jameux}
 arc (0 : -90 : 4*\un)
 -- ($(current page.south west)+(24*\un,20*\un)$)
@@ -83,19 +83,16 @@ arc (\gam-\ang : \gam+\ang+.85 : 13*\un);
 
 \makeatother
 \begin{document}
-\selectlanguage{french}%
 \begin{onehalfspace}
-\title{\Large\bf Sommes de séries géométriques}
+\title{\Large\bf Sommes de sÃ©ries gÃ©omÃ©triques}
 \end{onehalfspace}
 
-\selectlanguage{english}%
 \textbf{\Large{}$\bullet$ Soient $q\in\mathbb{R}$ et $v$ une suite
-géométrique de raison $q$ définie sur $\mathbb{N}$, i.e. vérifiant
+gÃ©omÃ©trique de raison $q$ dÃ©finie sur $\mathbb{N}$, i.e. vÃ©rifiant
 $\forall n\in\mathbb{N},\ v_{n+1}=q\cdot v_{n}$}{\Large \par}
 
-\selectlanguage{french}%
-\textbf{\Large{}$\bullet$ Soit $V$ la série associée, i.e. la suite
-définie sur $\mathbb{N}$ par : 
+\textbf{\Large{}$\bullet$ Soit $V$ la sÃ©rie associÃ©e, i.e. la suite
+dÃ©finie sur $\mathbb{N}$ par : 
 \[
 \begin{cases}
 V_{0}=v_{0}\\
@@ -113,8 +110,8 @@ V_{0}=v_{0}\\
 \textbf{\Large{}$\bullet$ On cherche a exprimer $V_{n}$ }\textbf{\textit{\Large{}en
 fonction}}\textbf{\Large{} de $n\in\mathbb{N}$.}{\Large \par}
 
-\textbf{\Large{}$\bullet$ Par distributivité du produit sur les sommes,
-on a, pour tout $n\in\mathbb{N}$, la suite d'égalités suivante :
+\textbf{\Large{}$\bullet$ Par distributivitÃ© du produit sur les sommes,
+on a, pour tout $n\in\mathbb{N}$, la suite d'Ã©galitÃ©s suivante :
 \[
 \begin{aligned}(1-q)V_{n} & =V_{n}-q\cdot V_{n}\\
  & =\sum_{k=0}^{n}v_{k}-q\cdot\sum_{k=0}^{n}v_{k}\\
@@ -130,11 +127,10 @@ on a, pour tout $n\in\mathbb{N}$, la suite d'égalités suivante :
 \textbf{\Large{}\vspace{-4mm}
 }{\Large \par}
 
-\textbf{\Large{}$\bullet$ En définitive, nous avons ${\displaystyle \forall n\in\mathbb{N},\ V_{n}=\frac{v_{0}-v_{n+1}}{1-q}}$}{\Large \par}
+\textbf{\Large{}$\bullet$ En dÃ©finitive, nous avons ${\displaystyle \forall n\in\mathbb{N},\ V_{n}=\frac{v_{0}-v_{n+1}}{1-q}}$}{\Large \par}
 
 \begin{onehalfspace}
 \bordure
 \end{onehalfspace}
-\selectlanguage{english}%
 
 \end{document}

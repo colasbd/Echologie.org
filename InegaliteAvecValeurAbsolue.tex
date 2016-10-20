@@ -1,8 +1,8 @@
 %% LyX 2.2.1 created this file.  For more info, see http://www.lyx.org/.
 %% Do not edit unless you really know what you are doing.
-\documentclass[french,english,12pt]{paper}
+\documentclass[french,12pt]{paper}
 \usepackage[T1]{fontenc}
-\usepackage[latin9]{inputenc}
+\usepackage[utf8]{inputenc}
 \usepackage[landscape,a4paper]{geometry}
 \geometry{verbose,tmargin=29mm,bmargin=0mm,lmargin=30mm,rmargin=30mm}
 \pagestyle{empty}
@@ -42,7 +42,7 @@ arc (90 : 0 : 4*\un)
 node[text=white,pos=.5 , rotate=90]
 {\tiny Ce document est sous licence GNU FDL,
  il est librement modifiable et distribuable.
- Licence et sources complètes disponibles sur le site.
+ Licence et sources complÃ¨tes disponibles sur le site.
  Copyright 2016, Jean-Christophe Jameux}
 arc (0 : -90 : 4*\un)
 -- ($(current page.south west)+(24*\un,20*\un)$)
@@ -80,39 +80,37 @@ arc (\gam-\ang : \gam+\ang+.85 : 13*\un);
 
 \makeatother
 \begin{document}
-\selectlanguage{french}%
-\title{\large\bf Inégalité avec une valeur absolu}
+\title{\large\bf InÃ©galitÃ© avec une valeur absolu}
 
-\selectlanguage{english}%
 \textbf{\large{}\hphantom{Dec}Voici un exemple assez technique de
-résolution d'inéquation faisant intervenir une valeur absolue :
+rÃ©solution d'inÃ©quation faisant intervenir une valeur absolue :
 \begin{align*}
-\left|x^{2}+2x\right|\leq4 & \Longleftrightarrow-4\leq x^{2}+2x\leq4 & \textrm{On se débarasse de la valeur absolue}\\
- & \Longleftrightarrow-3\leq x^{2}+2x+1\leq5 & \textrm{On cherche à faire apparaître}\\
- & \Longleftrightarrow-3\leq x^{2}+2x+1^{2}\leq5 & \textrm{l'identité remarquable }a^{2}+2ab+b^{2}\\
- & \Longleftrightarrow-3\leq\left(x+1\right)^{2}\leq5 & \textrm{(ce qui revient à mettre sous forme canonique)}\\
- & \Longleftrightarrow0\leq\left(x+1\right)^{2}\leq5 & \textrm{Un carré est toujours positif}\\
- & \Longleftrightarrow-\sqrt{5}\leq x+1\leq\sqrt{5} & \textrm{Comme à la première ligne}\\
+\left|x^{2}+2x\right|\leq4 & \Longleftrightarrow-4\leq x^{2}+2x\leq4 & \textrm{On se dÃ©barasse de la valeur absolue}\\
+ & \Longleftrightarrow-3\leq x^{2}+2x+1\leq5 & \textrm{On cherche Ã  faire apparaÃ®tre}\\
+ & \Longleftrightarrow-3\leq x^{2}+2x+1^{2}\leq5 & \textrm{l'identitÃ© remarquable }a^{2}+2ab+b^{2}\\
+ & \Longleftrightarrow-3\leq\left(x+1\right)^{2}\leq5 & \textrm{(ce qui revient Ã  mettre sous forme canonique)}\\
+ & \Longleftrightarrow0\leq\left(x+1\right)^{2}\leq5 & \textrm{Un carrÃ© est toujours positif}\\
+ & \Longleftrightarrow-\sqrt{5}\leq x+1\leq\sqrt{5} & \textrm{Comme Ã  la premiÃ¨re ligne}\\
  & \Longleftrightarrow-1-\sqrt{5}\leq x\leq-1+\sqrt{5} & \textrm{Et on trouve rapidement les solutions !}
 \end{align*}
-Une telle démonstration n'est pas toujours facile à voir, c'est pourquoi
-on lui préfère souvent la technique suivante, qui consiste à séparer
-les inégalités et à ramener chacune d'elles à une étude de signe en
-faisant apparaître un 0 d'un côté de l'inégalité.
+Une telle dÃ©monstration n'est pas toujours facile Ã  voir, c'est pourquoi
+on lui prÃ©fÃ¨re souvent la technique suivante, qui consiste Ã  sÃ©parer
+les inÃ©galitÃ©s et Ã  ramener chacune d'elles Ã  une Ã©tude de signe en
+faisant apparaÃ®tre un 0 d'un cÃ´tÃ© de l'inÃ©galitÃ©.
 \begin{align*}
 \left|x^{2}+2x\right|\leq4 & \Longleftrightarrow-4\leq x^{2}+2x\leq4\\
  & \Longleftrightarrow-4\leq x^{2}+2x\textrm{ et }x^{2}+2x\leq4\\
  & \Longleftrightarrow0\leq x^{2}+2x+4\textrm{ et }x^{2}+2x-4\leq0
 \end{align*}
-Chacune de ces inégalités peu se résoudre en utilisant un tableau
-de signe. Un rapide calcul de discriminant montre que le polynôme
-$x^{2}+2x+4$ n'a pas de racines réelles et que les racines réelles
-du polynôme $x^{2}+2x-4$ sont $x_{1}=\frac{-2-2\sqrt{5}}{2}=-1-\sqrt{5}$
+Chacune de ces inÃ©galitÃ©s peu se rÃ©soudre en utilisant un tableau
+de signe. Un rapide calcul de discriminant montre que le polynÃ´me
+$x^{2}+2x+4$ n'a pas de racines rÃ©elles et que les racines rÃ©elles
+du polynÃ´me $x^{2}+2x-4$ sont $x_{1}=\frac{-2-2\sqrt{5}}{2}=-1-\sqrt{5}$
 et $x_{2}=\frac{-2+2\sqrt{5}}{2}=-1+\sqrt{5}$ . On a donc $0\leq x^{2}+2x+4$
 pour tout $x\in\mathbb{R}$ et $x^{2}+2x-4\leq0$ pour tout $x\in\left[x_{1}\ ;\,x_{2}\right]$.
 On trouve bien au total pour ensemble de solutions :
 \[
 \left[-1-\sqrt{5}\ ;\,-1+\sqrt{5}\right]
 \]
-}\foreignlanguage{french}{\bordure}
+}\bordure
 \end{document}

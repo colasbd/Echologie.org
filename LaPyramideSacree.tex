@@ -1,8 +1,8 @@
 %% LyX 2.2.1 created this file.  For more info, see http://www.lyx.org/.
 %% Do not edit unless you really know what you are doing.
-\documentclass[french,english,12pt]{paper}
+\documentclass[french,12pt]{paper}
 \usepackage[T1]{fontenc}
-\usepackage[latin9]{inputenc}
+\usepackage[utf8]{inputenc}
 \usepackage[landscape,a4paper]{geometry}
 \geometry{verbose,tmargin=0mm,bmargin=0mm,lmargin=0mm,rmargin=0mm}
 \pagestyle{empty}
@@ -41,7 +41,7 @@ arc (90 : 0 : 4*\un)
 node[text=white,pos=.5 , rotate=90]
 {\tiny Ce document est sous licence GNU FDL,
  il est librement modifiable et distribuable.
- Sources et licence complËtes disponible sur le site.
+ Sources et licence compl√®tes disponible sur le site.
  Copyright 2010, Jean-Christophe Jameux}
 arc (0 : -90 : 4*\un)
 -- ($(current page.south west)+(24*\un,20*\un)$)
@@ -76,10 +76,8 @@ arc (\gam-\ang : \gam+\ang+.85 : 13*\un);
 
 \makeatother
 \begin{document}
-\selectlanguage{french}%
-\title{\large\bf La Pyramide SacrÈe}
+\title{\large\bf La Pyramide Sacr√©e}
 
-\selectlanguage{english}%
 {\footnotesize{}\setlength\extrarowheight{0mm}
 \parindent0mm
 \parskip0.6mm
@@ -111,10 +109,10 @@ arc (\gam-\ang : \gam+\ang+.85 : 13*\un);
 \node (a1) at ($(60:0.5)+(180:.3)$){$k\left(a+b\right)=ka+kb$};
 \node (a2) at ($(60:0.5)+(180:.3)+(-120:0.2)$){$k\left(a-b\right)=ka-kb$};
 \node (a3) at ($(60:0.5)+(0:1.3)$){$\left(a+b\right)k=ak+bk$}; 
-\draw[->,>=latex] (a1) to[out=-10,in=10] node[left]{ 		\hsize4cm 		\vbox{ 			\begin{center} 				en remplaÁant l'addition				 				par une soustraction 			\end{center} 		} 	} (a2);
+\draw[->,>=latex] (a1) to[out=-10,in=10] node[left]{ 		\hsize4cm 		\vbox{ 			\begin{center} 				en rempla√ßant l'addition				 				par une soustraction 			\end{center} 		} 	} (a2);
 \coeur[shift={($(60:0.5)+(0:1.3)+(0,.03)$)},ball color=lightgray,scale=0.05,rotate=-16,opacity=.2]
 \node (a4) at ($(60:0.5)+(0:1.2)+(-50:0.25)$){$\displaystyle\frac ak+\frac bk=\frac{a+b}k$};
-\draw[->,>=latex] (a3) to[out=-170,in=170] node[right]{ 		\hsize5cm 		\vbox{ 			\begin{center} 				en remplaÁant la multiplication				 				par une division 			\end{center} 		} 	} (a4);
+\draw[->,>=latex] (a3) to[out=-170,in=170] node[right]{ 		\hsize5cm 		\vbox{ 			\begin{center} 				en rempla√ßant la multiplication				 				par une division 			\end{center} 		} 	} (a4);
 
 \node at ($(M)+(-.1,0)$){$a\cdot b=b\cdot a$};
 \node at ($(M)+(0,.11)$)
@@ -126,11 +124,9 @@ arc (\gam-\ang : \gam+\ang+.85 : 13*\un);
 			\kern-2mm 			=\par
 			\kern-1.8mm 			$abc$
 		\end{center} 	}};
-	\node at ($(M)+(.1,0)$){$a\cdot1=a$}; 	\node at ($(M)+(0,-.08)$){$\displaystyle a\cdot\frac1a=1$}; 	\coordinate(Om)at($(M)+(-.2,-.08)$); 	\node at ($(M)+(0,-.15)$){$\displaystyle\ks x\cdot a=b\Longleftrightarrow x=\frac{\ks b}a\Longleftrightarrow x=\ks b\cdot\frac1a$}; 	\node (m1) at ($(60:0.5)+(60:0.5)+(180:0.3)$){$k^{a+b}=k^a\cdot k^b$}; 	\node (m3) at ($(60:0.5)+(60:0.5)+(0:0.8)$){$\left(ab\right)^k=a^k\cdot b^k$}; 	\node (m2) at ($(60:0.5)+(60:0.5)+(180:0.3)+(-120:0.2)$){$k^{a-b}=\displaystyle\frac{k^a}{k^b}$}; 	\node (m4) at ($(60:0.5)+(60:0.5)+(0:0.8)+(-60:0.2)$){$\displaystyle\left(\frac ab\right)^k=\frac{a^k}{b^k}$}; 	\draw[->,>=latex] (m1) to[out=-10,in=10] node[left]{ 		\hsize4cm 		\vbox{ 			\begin{center} 				en remplaÁant l'addition				 				par une soustraction 			\end{center} 		} 	} (m2); 	\draw[->,>=latex] (m3) to[out=-170,in=170] node[right]{ 		\hsize5cm 		\vbox{ 			\begin{center} 				en remplaÁant la multiplication				 				par une division 			\end{center} 		} 	} (m4);
+	\node at ($(M)+(.1,0)$){$a\cdot1=a$}; 	\node at ($(M)+(0,-.08)$){$\displaystyle a\cdot\frac1a=1$}; 	\coordinate(Om)at($(M)+(-.2,-.08)$); 	\node at ($(M)+(0,-.15)$){$\displaystyle\ks x\cdot a=b\Longleftrightarrow x=\frac{\ks b}a\Longleftrightarrow x=\ks b\cdot\frac1a$}; 	\node (m1) at ($(60:0.5)+(60:0.5)+(180:0.3)$){$k^{a+b}=k^a\cdot k^b$}; 	\node (m3) at ($(60:0.5)+(60:0.5)+(0:0.8)$){$\left(ab\right)^k=a^k\cdot b^k$}; 	\node (m2) at ($(60:0.5)+(60:0.5)+(180:0.3)+(-120:0.2)$){$k^{a-b}=\displaystyle\frac{k^a}{k^b}$}; 	\node (m4) at ($(60:0.5)+(60:0.5)+(0:0.8)+(-60:0.2)$){$\displaystyle\left(\frac ab\right)^k=\frac{a^k}{b^k}$}; 	\draw[->,>=latex] (m1) to[out=-10,in=10] node[left]{ 		\hsize4cm 		\vbox{ 			\begin{center} 				en rempla√ßant l'addition				 				par une soustraction 			\end{center} 		} 	} (m2); 	\draw[->,>=latex] (m3) to[out=-170,in=170] node[right]{ 		\hsize5cm 		\vbox{ 			\begin{center} 				en rempla√ßant la multiplication				 				par une division 			\end{center} 		} 	} (m4);
 	\node at ($(P)+(-.1,-.1)$){$a^b\neq b^a$}; 	\node at ($(P)+(.1,-.1)$){$a^1=a$}; 	\node at ($(P)+(0,.1)$){$\left(a^b\right)^c\neq a^{\left(b^c\right)}$}; \end{tikzpicture} \hfill\null
 \vfill}{\footnotesize \par}
 
-\selectlanguage{french}%
-\bordure\selectlanguage{english}%
-
+\bordure
 \end{document}

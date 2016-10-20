@@ -1,8 +1,8 @@
 %% LyX 2.2.1 created this file.  For more info, see http://www.lyx.org/.
 %% Do not edit unless you really know what you are doing.
-\documentclass[french,english,12pt]{paper}
+\documentclass[french,12pt]{paper}
 \usepackage[T1]{fontenc}
-\usepackage[latin9]{inputenc}
+\usepackage[utf8]{inputenc}
 \usepackage[landscape,a4paper]{geometry}
 \geometry{verbose,tmargin=27mm,bmargin=0mm,lmargin=28mm,rmargin=28mm}
 \pagestyle{empty}
@@ -42,7 +42,7 @@ arc (90 : 0 : 4*\un)
 node[text=white,pos=.5 , rotate=90]
 {\tiny Ce document est sous licence GNU FDL,
  il est librement modifiable et distribuable.
- Sources et licence complËtes disponible sur le site.
+ Sources et licence compl√®tes disponible sur le site.
  Copyright 2016, Jean-Christophe Jameux}
 arc (0 : -90 : 4*\un)
 -- ($(current page.south west)+(24*\un,20*\un)$)
@@ -77,10 +77,8 @@ arc (\gam-\ang : \gam+\ang+.85 : 13*\un);
 
 \makeatother
 \begin{document}
-\selectlanguage{french}%
-\title{\large\bf Recherche d'un Èquivalent}
+\title{\large\bf Recherche d'un √©quivalent}
 
-\selectlanguage{english}%
 \begin{tikzpicture}[scale=1,overlay,xshift=40,yshift=-400]
 	\shorthandoff{:}
 	\draw[very thick,->,>=latex] (-1,0) -- (5,0);
@@ -91,33 +89,31 @@ arc (\gam-\ang : \gam+\ang+.85 : 13*\un);
 	\draw[very thick, color=purple, opacity=.5] plot[smooth,domain=1.16:5] (\x,{.3*((2*\x+2)^(.5)-(\x^2+1)^(.5))/((8*\x^2-16*\x+16)^(1/3)-2)});
 \node[color=purple] at (3.5,7) {$\mathscr C_f:y=\frac{\sqrt{2x+2}-\sqrt{x^{2}+1}}{\sqrt[3]{8x^{2}-16x+16}-2}$};
 \node[color=red!25!blue!33.333!green!50] at (3,4) {$\mathscr C_g:y=\frac{3\left(2-\sqrt{2}\right)}{2\left(x-1\right)^{2}}$};
-\end{tikzpicture}\textbf{\small{}\phantom{\textbf{\small{}Decale.}}On cherche ‡ dÈterminer
-un Èquivalent simple de la fonction $f$ au voisinage de $1$ gr‚ce
-‡ un changement de variable. AprËs \phantom{\textbf{\small{}Decal.}}quelques
-lignes plus ou moins laborieuses de calculs pas spÈcialement intelligents,
-on obtiendra l'Èquivalent $g$ qui, ‡ une translation \phantom{\textbf{\small{}Dec}}et
-‡ une multiplication par une constante prËs, n'est autre que la fonction
+\end{tikzpicture}\textbf{\small{}\phantom{\textbf{\small{}Decale.}}On cherche √† d√©terminer
+un √©quivalent simple de la fonction $f$ au voisinage de $1$ gr√¢ce
+√† un changement de variable. Apr√®s \phantom{\textbf{\small{}Decal.}}quelques
+lignes plus ou moins laborieuses de calculs pas sp√©cialement intelligents,
+on obtiendra l'√©quivalent $g$ qui, √† une translation \phantom{\textbf{\small{}Dec}}et
+√† une multiplication par une constante pr√®s, n'est autre que la fonction
 $x\mapsto\frac{1}{x^{2}}$. Le graphique ci-dessous permet de voir
-la qualitÈ de l'approximation !\vspace{-15mm}
+la qualit√© de l'approximation !\vspace{-15mm}
 }{\small \par}
 
 \textbf{\small{}
 \begin{align*}
 \textrm{Pour }x\textrm{ voisin de }1\textrm{, on a }\frac{\sqrt{2x+2}-\sqrt{x^{2}+1}}{\sqrt[3]{8x^{2}-16x+16}-2} & =\frac{\sqrt{2\left(1+h\right)+2}-\sqrt{\left(1+h\right)^{2}+1}}{\sqrt[3]{8\left(1+h\right)^{2}-16\left(1+h\right)+16}-2} & \textrm{En posant }x=1+h\\
- & =\frac{\sqrt{4+2h}-\sqrt{2+2h+h^{2}}}{\sqrt[3]{8\left(1+h^{2}\right)}-2} & \textrm{On cherche ‡ utiliser la formule :}\\
+ & =\frac{\sqrt{4+2h}-\sqrt{2+2h+h^{2}}}{\sqrt[3]{8\left(1+h^{2}\right)}-2} & \textrm{On cherche √† utiliser la formule :}\\
  & =\frac{2\cdot\sqrt{1+\frac{h}{2}}-\sqrt{2}\cdot\sqrt{1+\left(h+\frac{h^{2}}{2}\right)}}{2\cdot\sqrt[3]{1+h^{2}}-2} & \left(1+x\right)^{\alpha}\stackrel[x\to0]{}{=}1+\alpha x+o\left(x\right)\\
  & =\frac{2\left(1+\frac{1}{4}h+o\left(h\right)\right)-\sqrt{2}\left(1+\frac{1}{2}h+o\left(h\right)\right)}{2\left(1+\frac{1}{3}h^{2}+o\left(h^{2}\right)\right)-2} & \textrm{Car }o\left(h+\frac{h^{2}}{2}\right)\stackrel[h\to0]{}{=}o\left(h\right)\\
  & =\frac{2-\sqrt{2}+\frac{1-\sqrt{2}}{2}h+o\left(h\right)}{\frac{2}{3}h^{2}+o\left(h^{2}\right)} & \textrm{et }\frac{h^{2}}{2}\stackrel[h\to0]{}{=}o\left(h\right)\\
- & =\frac{3}{2h^{2}}\cdot\frac{2-\sqrt{2}+\frac{1-\sqrt{2}}{2}h+o\left(h\right)}{1+o\left(1\right)} & \textrm{On cherche ‡ utiliser la formule :}\\
+ & =\frac{3}{2h^{2}}\cdot\frac{2-\sqrt{2}+\frac{1-\sqrt{2}}{2}h+o\left(h\right)}{1+o\left(1\right)} & \textrm{On cherche √† utiliser la formule :}\\
  & =\frac{3}{2h^{2}}\cdot\left(2-\sqrt{2}+\frac{1-\sqrt{2}}{2}h+o\left(h\right)\right)\left(1+o\left(1\right)\right) & \frac{1}{1+x}\stackrel[x\to0]{}{=}1-x+o\left(x\right)\\
- & =\frac{3}{2h^{2}}\cdot\left(2-\sqrt{2}+o\left(1\right)\right) & \textrm{(cas particulier de la formule prÈcÈdente)}\\
- & =\frac{3\left(2-\sqrt{2}\right)}{2h^{2}}+o\left(\frac{1}{h^{2}}\right) & \textrm{En dÈveloppant}\\
- & =\frac{3\left(2-\sqrt{2}\right)}{2\left(x-1\right)^{2}}+o\left(\frac{1}{\left(x-1\right)^{2}}\right) & \textrm{En repassant ‡ la variable }x\\
- & \sim\frac{3\left(2-\sqrt{2}\right)}{2\left(x-1\right)^{2}} & \textrm{Terme d'erreur nÈgligeable devant la fonction}
+ & =\frac{3}{2h^{2}}\cdot\left(2-\sqrt{2}+o\left(1\right)\right) & \textrm{(cas particulier de la formule pr√©c√©dente)}\\
+ & =\frac{3\left(2-\sqrt{2}\right)}{2h^{2}}+o\left(\frac{1}{h^{2}}\right) & \textrm{En d√©veloppant}\\
+ & =\frac{3\left(2-\sqrt{2}\right)}{2\left(x-1\right)^{2}}+o\left(\frac{1}{\left(x-1\right)^{2}}\right) & \textrm{En repassant √† la variable }x\\
+ & \sim\frac{3\left(2-\sqrt{2}\right)}{2\left(x-1\right)^{2}} & \textrm{Terme d'erreur n√©gligeable devant la fonction}
 \end{align*}
 }{\small \par}
 
-\selectlanguage{french}%
-\bordure\selectlanguage{english}%
-
+\bordure
 \end{document}

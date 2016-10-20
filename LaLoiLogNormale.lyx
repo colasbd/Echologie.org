@@ -167,7 +167,7 @@ Deca
 
 \end_inset
 
-Connaitre une variable alléatoire, c'est avant tout connaître sa loi.
+Connaitre une variable aléatoire, c'est avant tout connaître sa loi.
  Dans le cas d'une variable aléatoire réelle à densité 
 \begin_inset Formula $X$
 \end_inset
@@ -814,7 +814,7 @@ Deca
 
 \end_inset
 
- L'inégalité de Markov prétend que pour toute variable alléatoire positive
+ L'inégalité de Markov prétend que pour toute variable aléatoire positive
  et pour tout 
 \begin_inset Formula $a>0$
 \end_inset
@@ -889,7 +889,7 @@ En particulier, dans le cas où
 \end_inset
 
 De telles inégalités permettent de majorer de façon probable l'écart d'une
- variable alléatoire à sa valeur moyenne.
+ variable aléatoire à sa valeur moyenne.
  Elle sont à ce titre fondamentale pour réaliser des estimations, par exemple
  en statistiques.
  C'est la raison pour laquelle, outre la valeur de 

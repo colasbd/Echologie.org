@@ -1,8 +1,8 @@
 %% LyX 2.2.1 created this file.  For more info, see http://www.lyx.org/.
 %% Do not edit unless you really know what you are doing.
-\documentclass[french,english,12pt]{paper}
+\documentclass[french,12pt]{paper}
 \usepackage[T1]{fontenc}
-\usepackage[latin9]{inputenc}
+\usepackage[utf8]{inputenc}
 \usepackage[landscape,a4paper]{geometry}
 \geometry{verbose,tmargin=29mm,bmargin=0mm,lmargin=28mm,rmargin=28mm}
 \pagestyle{empty}
@@ -42,7 +42,7 @@ arc (90 : 0 : 4*\un)
 node[text=white,pos=.5 , rotate=90]
 {\tiny Ce document est sous licence GNU FDL,
  il est librement modifiable et distribuable.
- Sources et licence complètes disponible sur le site.
+ Sources et licence complÃ¨tes disponible sur le site.
  Copyright 2015, Jean-Christophe Jameux}
 arc (0 : -90 : 4*\un)
 -- ($(current page.south west)+(24*\un,20*\un)$)
@@ -80,17 +80,15 @@ arc (\gam-\ang : \gam+\ang+.85 : 13*\un);
 
 \makeatother
 \begin{document}
-\selectlanguage{french}%
-\title{\large\bf Faire apparaître une série télescopique}
+\title{\large\bf Faire apparaÃ®tre une sÃ©rie tÃ©lescopique}
 
-\selectlanguage{english}%
 \textbf{\hphantom{Decale}Dans certaines situations, il est possible
 de grandement simplifier le calcul d'une somme en mettant son terme
-général \hphantom{Deca.}sous une forme qui permet la simplification
-de la presque totalité des termes. C'est le principe du télescopage,
-que l'on \hphantom{De}résume par la formule ${\displaystyle \sum_{k=0}^{n}\left(a_{k}-a_{k+1}\right)}=a_{\text{0}}-a_{n+1}$
-où $a$ désigne une suite absolument quelconque. Le calcul ci-dessous
-montre un exemple de la mise en ½uvre de cette technique :}\textbf{\large{}
+gÃ©nÃ©ral \hphantom{Deca.}sous une forme qui permet la simplification
+de la presque totalitÃ© des termes. C'est le principe du tÃ©lescopage,
+que l'on \hphantom{De}rÃ©sume par la formule ${\displaystyle \sum_{k=0}^{n}\left(a_{k}-a_{k+1}\right)}=a_{\text{0}}-a_{n+1}$
+oÃ¹ $a$ dÃ©signe une suite absolument quelconque. Le calcul ci-dessous
+montre un exemple de la mise en Å“uvre de cette technique :}\textbf{\large{}
 \[
 \begin{aligned}\sum_{p=0}^{n}p\cdot p! & =\sum_{p=1}^{n}p\cdot p! & \text{car quand }p=0,\ p\cdot p!=0\\
  & =\sum_{p=1}^{n}(p+1-1)\cdot p!\\
@@ -98,14 +96,12 @@ montre un exemple de la mise en ½uvre de cette technique :}\textbf{\large{}
  & =\sum_{p=1}^{n}\big((p+1)\cdot p!-p\cdot(p-1)!\big)\\
  & =\sum_{p=1}^{n}(a_{p}-a_{p-1}) & \text{en posant, pour tout }p\in\mathbb{N},\ a_{p}=(p+1)\cdot p!\\
  & =-\sum_{k=0}^{n-1}(a_{k}-a_{k+1}) & \text{par le changement d'indice }k=p-1\\
- & =-(a_{0}-a_{n}) & \text{d'après la formule de télescopage}\\
+ & =-(a_{0}-a_{n}) & \text{d'aprÃ¨s la formule de tÃ©lescopage}\\
  & =(n+1)\cdot n!-1\\
  & =(n+1)!-1
 \end{aligned}
 \]
 }{\large \par}
 
-\selectlanguage{french}%
-\bordure\selectlanguage{english}%
-
+\bordure
 \end{document}

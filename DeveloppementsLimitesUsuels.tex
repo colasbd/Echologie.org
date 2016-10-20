@@ -1,8 +1,7 @@
 %% LyX 2.2.1 created this file.  For more info, see http://www.lyx.org/.
 %% Do not edit unless you really know what you are doing.
-\documentclass[french,english,12pt]{paper}
+\documentclass[french,12pt]{paper}
 \usepackage[T1]{fontenc}
-\usepackage[latin9]{inputenc}
 \usepackage[landscape,a4paper]{geometry}
 \geometry{verbose,tmargin=22mm,bmargin=0mm,lmargin=23mm,rmargin=23mm}
 \pagestyle{empty}
@@ -47,7 +46,7 @@ arc (90 : 0 : 4*\un)
 node[text=white,pos=.5 , rotate=90]
 {\tiny Ce document est sous licence GNU FDL,
  il est librement modifiable et distribuable.
- Sources et licence complètes disponible sur le site.
+ Sources et licence complÃ¨tes disponible sur le site.
  Copyright 2016, Jean-Christophe Jameux}
 arc (0 : -90 : 4*\un)
 -- ($(current page.south west)+(24*\un,20*\un)$)
@@ -89,16 +88,14 @@ arc (\gam-\ang : \gam+\ang+.85 : 13*\un);
 
 \makeatother
 \begin{document}
-\selectlanguage{french}%
-\title{\large\bf Développements limités usuels}
+\title{\large\bf DÃ©veloppements limitÃ©s usuels}
 
-\selectlanguage{english}%
 \textbf{\hphantom{Decalage}On trouvera ci-dessous des approximations
 utiles au voisinage de 0. Ces approximations permettent d'obtenir
-des \hphantom{Decala..}équivalents simples dans de nombreuses situations.
+des \hphantom{Decala..}Ã©quivalents simples dans de nombreuses situations.
 Les graphiques en regard de certaines fonctions permettent de se \hphantom{Decal}rendre
-compte de la qualité de l'approximation suivant l'ordre auquel on
-pousse le développement limité.}
+compte de la qualitÃ© de l'approximation suivant l'ordre auquel on
+pousse le dÃ©veloppement limitÃ©.}
 
 \medskip{}
 
@@ -106,7 +103,7 @@ pousse le développement limité.}
 
 \textbf{\large{}\hspace{-10mm}}%
 \begin{tabular}{crll}
-\textbf{\large{}\phantom{$\frac{1}{\frac{1}{\frac{1}{\frac{1}{1}}}}Decalage$}} & \multirow{1}{*}[70mm]{\textbf{\large{}\hphantom{\textbf{\large{}Fonctions}}}} & \textbf{\large{}Approximation affine} & \textbf{\large{}\hfill{}Développement limité d'ordre $n$\hfill{}\null}\tabularnewline
+\textbf{\large{}\phantom{$\frac{1}{\frac{1}{\frac{1}{\frac{1}{1}}}}Decalage$}} & \multirow{1}{*}[70mm]{\textbf{\large{}\hphantom{\textbf{\large{}Fonctions}}}} & \textbf{\large{}Approximation affine} & \textbf{\large{}\hfill{}DÃ©veloppement limitÃ© d'ordre $n$\hfill{}\null}\tabularnewline
 \textbf{\large{}\vphantom{$\frac{1}{\frac{1}{\frac{1}{\frac{1}{\frac{1}{1}}}}}$}} & \textbf{\large{}$f(x)$} & \textbf{\large{}$=f(0)+f'(0)\cdot x+o\left(x\right)$} & \textbf{\large{}$=f(0)+f'(0)\cdot x+f''(0)\cdot\frac{x^{2}}{2!}+f'''(0)\cdot\frac{x^{3}}{3!}+\cdots+f^{\left(n\right)}\left(0\right)\cdot\frac{x^{n}}{n!}+o\left(x^{n}\right)$}\tabularnewline
 \textbf{\large{}\vphantom{$\frac{1}{\frac{1}{\frac{1}{\frac{1}{\frac{1}{1}}}}}$}\begin{tikzpicture}[xshift=5, yshift=-20, yscale=.5, overlay]
 	\shorthandoff{:}
@@ -167,7 +164,5 @@ pousse le développement limité.}
 \textbf{\large{}\vphantom{$\frac{1}{\frac{1}{\frac{1}{\frac{1}{\frac{1}{1}}}}}$}} & \textbf{\large{}$\sqrt[3]{1+x}$} & \textbf{\large{}$=1+\frac{1}{3}x+o\left(x\right)$} & \textbf{\large{}$=1+\frac{1}{3}x-\frac{1}{9}x^{2}+\frac{5}{81}x^{3}+\cdots+\left(-1\right)^{n+1}\cdot\frac{2\times5\times8\times\cdots\times\left(3n-4\right)}{3^{n}\cdot n!}\cdot x^{n}+o\left(x^{n}\right)$}\tabularnewline
 \end{tabular}{\large \par}
 
-\selectlanguage{french}%
-\bordure\selectlanguage{english}%
-
+\bordure
 \end{document}

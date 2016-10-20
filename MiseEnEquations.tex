@@ -1,8 +1,8 @@
 %% LyX 2.2.1 created this file.  For more info, see http://www.lyx.org/.
 %% Do not edit unless you really know what you are doing.
-\documentclass[english,12pt]{paper}
+\documentclass[french,12pt]{paper}
 \usepackage[T1]{fontenc}
-\usepackage[latin9]{inputenc}
+\usepackage[utf8]{inputenc}
 \usepackage[landscape,a4paper]{geometry}
 \geometry{verbose,tmargin=30mm,bmargin=20mm,lmargin=35mm,rmargin=35mm}
 \pagestyle{empty}
@@ -41,7 +41,7 @@ arc (90 : 0 : 4*\un)
 node[text=white,pos=.5 , rotate=90]
 {\tiny Ce document est sous licence GNU FDL,
  il est librement modifiable et distribuable.
- Sources et licence complètes disponible sur le site.
+ Sources et licence complÃ¨tes disponible sur le site.
  Copyright 2016, Jean-Christophe Jameux}
 arc (0 : -90 : 4*\un)
 -- ($(current page.south west)+(24*\un,20*\un)$)
@@ -71,48 +71,55 @@ arc (\gam-\ang : \gam+\ang+.85 : 13*\un);
 \makeatother
 
 \usepackage{babel}
-\begin{document}
-\title{Mise en équations}
+\makeatletter
+\addto\extrasfrench{%
+   \providecommand{\og}{\leavevmode\flqq~}%
+   \providecommand{\fg}{\ifdim\lastskip>\z@\unskip\fi~\frqq}%
+}
 
-\textbf{\large{}\hphantom{\textbf{\large{}D}}Dans la boîte à outil
-du mathématicien, la mise en équation est l'arme la plus destructrice...
-De difficultés ! Donnons-en un exemple : }{\large \par}
+\makeatother
+\begin{document}
+\title{Mise en Ã©quations}
+
+\textbf{\large{}\hphantom{\textbf{\large{}D}}Dans la boÃ®te Ã  outil
+du mathÃ©maticien, la mise en Ã©quation est l'arme la plus destructrice...
+De difficultÃ©s ! Donnons-en un exemple : }{\large \par}
 \begin{center}
 \textbf{\large{}}%
 \begin{minipage}[t]{0.8\columnwidth}%
 \begin{center}
 \textbf{\large{}Un nombre entier a pour reste 35 dans la division
-euclidienne par 69, et dans la division par 75, il a même quotient
+euclidienne par 69, et dans la division par 75, il a mÃªme quotient
 et pour reste 17. Quel est ce nombre ?}
 \par\end{center}%
 \end{minipage}
 \par\end{center}{\large \par}
 
-\textbf{\large{}On peut tout à fait trouver la solution de ce problème
-en tatonant, mais rien ne garantit qu'on aboutira, et pire, face à
-un autre problème, on repart de zéro. La clef de la mise en équation,
-c'est de nomer les éléments du problème, afin de pouvoir formuler
-le problème comme si l'on connaissait la solution. Dans notre exemple,
-on peut appeler $n$ le nombre entier recherché, et $q$ le quotient
-commun. La résolution du problème arrive très vite après la mise en
-équation :
+\textbf{\large{}On peut tout Ã  fait trouver la solution de ce problÃ¨me
+en tatonant, mais rien ne garantit qu'on aboutira, et pire, face Ã 
+un autre problÃ¨me, on repart de zÃ©ro. La clef de la mise en Ã©quation,
+c'est de nomer les Ã©lÃ©ments du problÃ¨me, afin de pouvoir formuler
+le problÃ¨me comme si l'on connaissait la solution. Dans notre exemple,
+on peut appeler $n$ le nombre entier recherchÃ©, et $q$ le quotient
+commun. La rÃ©solution du problÃ¨me arrive trÃ¨s vite aprÃ¨s la mise en
+Ã©quation :
 \begin{align*}
 \begin{cases}
 n=69q+35\\
 n=75q+17
 \end{cases} & \Longrightarrow0=-6q+18 & \textrm{En soustrayant les deux lignes}\\
  & \Longrightarrow q=3 & \textrm{On trouve ainsi le quotient commun}\\
- & \Longrightarrow n=69\times3+35 & \textrm{On substitue dans la première équation}\\
- & \Longrightarrow n=242 & \textrm{(ou la deuxième : \ensuremath{n=75\times3+17=242})}
+ & \Longrightarrow n=69\times3+35 & \textrm{On substitue dans la premiÃ¨re Ã©quation}\\
+ & \Longrightarrow n=242 & \textrm{(ou la deuxiÃ¨me : \ensuremath{n=75\times3+17=242})}
 \end{align*}
-En faisant ainsi, on ne démontre pas que 242 est une solution de notre
-problème, puisque nous avons des implications et non des équivalences.
-Ce que nous avons montré, c'est que seul 242 peut être solution, mais
-c'est un jeu d'enfant de vérifier que ce nombre répond bien aux conditions
-du problème. On a ainsi fait mieux que trouver une solution du problème,
-on a prouvé qu'il n'y en avait pas d'autres, et on a surtout, en prenant
-un peu de recul, mis en pratique une technique de résolution de problème
-très puissante et très générale.}{\large \par}
+En faisant ainsi, on ne dÃ©montre pas que 242 est une solution de notre
+problÃ¨me, puisque nous avons des implications et non des Ã©quivalences.
+Ce que nous avons montrÃ©, c'est que seul 242 peut Ãªtre solution, mais
+c'est un jeu d'enfant de vÃ©rifier que ce nombre rÃ©pond bien aux conditions
+du problÃ¨me. On a ainsi fait mieux que trouver une solution du problÃ¨me,
+on a prouvÃ© qu'il n'y en avait pas d'autres, et on a surtout, en prenant
+un peu de recul, mis en pratique une technique de rÃ©solution de problÃ¨me
+trÃ¨s puissante et trÃ¨s gÃ©nÃ©rale.}{\large \par}
 
 \bordure
 \end{document}

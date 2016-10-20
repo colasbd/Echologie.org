@@ -1,8 +1,8 @@
 %% LyX 2.2.1 created this file.  For more info, see http://www.lyx.org/.
 %% Do not edit unless you really know what you are doing.
-\documentclass[french,english,12pt]{paper}
+\documentclass[french,12pt]{paper}
 \usepackage[T1]{fontenc}
-\usepackage[latin9]{inputenc}
+\usepackage[utf8]{inputenc}
 \usepackage[a4paper]{geometry}
 \geometry{verbose,tmargin=34mm,bmargin=0mm,lmargin=30mm,rmargin=30mm}
 \pagestyle{empty}
@@ -42,7 +42,7 @@ arc (90 : 0 : 4*\un)
 node[text=white,pos=.65 , rotate=90]
 {\tiny Ce document est sous licence GNU FDL,
  il est librement modifiable et distribuable.
- Licence et sources complètes disponibles sur le site.
+ Licence et sources complÃ¨tes disponibles sur le site.
  Copyright 2016, Jean-Christophe Jameux}
 arc (0 : -90 : 4*\un)
 -- ($(current page.south west)+(24*\un,20*\un)$)
@@ -80,43 +80,39 @@ arc (\gam-\ang : \gam+\ang+.85 : 13*\un);
 
 \makeatother
 \begin{document}
-\selectlanguage{french}%
 \title{\LARGE\bf Calcul de limite}
 
-\selectlanguage{english}%
-\textbf{\large{}\hphantom{Dec}Quand on souhaite réaliser un calcul
-de limite et que l'on est face à une forme indéterminée, il est judicieux
-de commencer par faire les calculs ``à la louche'' afin d'avoir
-une idée de la limite. Il devient dés lors plus simple de voir comment
-lever l'indétermination. Par exemple, quand $x$ est proche de $-\infty$
+\textbf{\large{}\hphantom{Dec}Quand on souhaite rÃ©aliser un calcul
+de limite et que l'on est face Ã  une forme indÃ©terminÃ©e, il est judicieux
+de commencer par faire les calculs ``Ã  la louche'' afin d'avoir
+une idÃ©e de la limite. Il devient dÃ©s lors plus simple de voir comment
+lever l'indÃ©termination. Par exemple, quand $x$ est proche de $-\infty$
 :}{\large \par}
 
 \textbf{
 \begin{align*}
-\frac{\sqrt{x^{2}+1}-2x}{x^{2}} & \approx\frac{\sqrt{x^{2}}-2x}{x^{2}} & \textrm{Car \ensuremath{1} est négligeable devant \ensuremath{x^{2}}}\\
- & \approx\frac{-x-2x}{x^{2}} & \textrm{Car quand \ensuremath{x} est négatif, }\sqrt{x^{2}}=\left|x\right|=-x\\
- & \approx\frac{-3x}{x^{2}} & \textrm{On a toujours une forme indéterminée : \ensuremath{\frac{+\infty}{+\infty}}}\\
- & \approx\frac{-3}{x} & \textrm{(ce nombre est positif par la règle des signes)}\\
- & \approx0 & \textrm{(et même \ensuremath{0^{+}})}
+\frac{\sqrt{x^{2}+1}-2x}{x^{2}} & \approx\frac{\sqrt{x^{2}}-2x}{x^{2}} & \textrm{Car \ensuremath{1} est nÃ©gligeable devant \ensuremath{x^{2}}}\\
+ & \approx\frac{-x-2x}{x^{2}} & \textrm{Car quand \ensuremath{x} est nÃ©gatif, }\sqrt{x^{2}}=\left|x\right|=-x\\
+ & \approx\frac{-3x}{x^{2}} & \textrm{On a toujours une forme indÃ©terminÃ©e : \ensuremath{\frac{+\infty}{+\infty}}}\\
+ & \approx\frac{-3}{x} & \textrm{(ce nombre est positif par la rÃ¨gle des signes)}\\
+ & \approx0 & \textrm{(et mÃªme \ensuremath{0^{+}})}
 \end{align*}
 }
 
-\textbf{\large{}Nos calculs à la louche nous incitent à faire apparaître
-un $-x$ dans l'écriture de $\sqrt{x^{2}+1}$. Voyons ce que cela
+\textbf{\large{}Nos calculs Ã  la louche nous incitent Ã  faire apparaÃ®tre
+un $-x$ dans l'Ã©criture de $\sqrt{x^{2}+1}$. Voyons ce que cela
 donne :}\textbf{
 \begin{align*}
  & \phantom{=.}\lim_{x\to-\infty}\frac{\sqrt{x^{2}+1}-2x}{x^{2}}\\
  & =\lim_{x\to-\infty}\frac{\sqrt{x^{2}\cdot\left(1+\frac{1}{x^{2}}\right)}-2x}{x^{2}} & \textrm{On met le \ensuremath{x^{2}} en facteur sous la racine}\\
- & =\lim_{x\to-\infty}\frac{\sqrt{x^{2}}\cdot\sqrt{1+\frac{1}{x^{2}}}-2x}{x^{2}} & \textrm{(il domine le polynôme \ensuremath{x^{2}+1} en \ensuremath{+\infty})}\\
- & =\lim_{x\to-\infty}\frac{\left|x\right|\cdot\sqrt{1+\frac{1}{x^{2}}}-2x}{x^{2}} & \textrm{afin de le séparer du \ensuremath{1+\frac{1}{x^{2}}}}\\
+ & =\lim_{x\to-\infty}\frac{\sqrt{x^{2}}\cdot\sqrt{1+\frac{1}{x^{2}}}-2x}{x^{2}} & \textrm{(il domine le polynÃ´me \ensuremath{x^{2}+1} en \ensuremath{+\infty})}\\
+ & =\lim_{x\to-\infty}\frac{\left|x\right|\cdot\sqrt{1+\frac{1}{x^{2}}}-2x}{x^{2}} & \textrm{afin de le sÃ©parer du \ensuremath{1+\frac{1}{x^{2}}}}\\
  & =\lim_{x\to-\infty}\frac{-x\cdot\sqrt{1+\frac{1}{x^{2}}}-2x}{x^{2}} & \textrm{(qui tend vers \ensuremath{1} quand \ensuremath{x} tend vers \ensuremath{-\infty})}\\
- & =\lim_{x\to-\infty}\frac{x\cdot\left(-\sqrt{1+\frac{1}{x^{2}}}-2\right)}{x^{2}} & {\scriptscriptstyle \left(-\sqrt{1+\frac{1}{x^{2}}}-2\right)}\textrm{ joue le rôle du -3 du dessus}\\
- & =\lim_{x\to-\infty}\frac{\left(-\sqrt{1+\frac{1}{x^{2}}}-2\right)}{x} & \textrm{On simplifie les infinis "de même taille"}\\
+ & =\lim_{x\to-\infty}\frac{x\cdot\left(-\sqrt{1+\frac{1}{x^{2}}}-2\right)}{x^{2}} & {\scriptscriptstyle \left(-\sqrt{1+\frac{1}{x^{2}}}-2\right)}\textrm{ joue le rÃ´le du -3 du dessus}\\
+ & =\lim_{x\to-\infty}\frac{\left(-\sqrt{1+\frac{1}{x^{2}}}-2\right)}{x} & \textrm{On simplifie les infinis "de mÃªme taille"}\\
  & =0 & \textrm{Car }\lim_{x\to-\infty}-\sqrt{1+\frac{1}{x^{2}}}-2=-3
 \end{align*}
 }
 
-\selectlanguage{french}%
-\bordure\selectlanguage{english}%
-
+\bordure
 \end{document}
