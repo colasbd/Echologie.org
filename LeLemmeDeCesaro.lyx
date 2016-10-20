@@ -65,9 +65,9 @@ arc (\gam-\ang : \gam+\ang+.85 : 13*\un);
 \options 12pt
 \use_default_options true
 \maintain_unincluded_children false
-\language english
+\language french
 \language_package default
-\inputencoding auto
+\inputencoding utf8
 \fontencoding global
 \font_roman "default" "default"
 \font_sans "default" "default"
@@ -120,7 +120,7 @@ arc (\gam-\ang : \gam+\ang+.85 : 13*\un);
 \tocdepth 3
 \paragraph_separation skip
 \defskip bigskip
-\quotes_language english
+\quotes_language french
 \papercolumns 1
 \papersides 1
 \paperpagestyle empty
@@ -134,8 +134,6 @@ arc (\gam-\ang : \gam+\ang+.85 : 13*\un);
 \begin_body
 
 \begin_layout Standard
-
-\lang french
 \begin_inset ERT
 status open
 
@@ -159,7 +157,6 @@ bf Le lemme de Cesàro}
 
 \series bold
 \size large
-\lang french
 Soit 
 \begin_inset Formula $(u_{n})_{n\in\mathbb{N}^{*}}$
 \end_inset
@@ -178,8 +175,6 @@ Soit
 \end_layout
 
 \begin_layout Standard
-
-\lang french
 \begin_inset VSpace defskip
 \end_inset
 
@@ -190,7 +185,6 @@ Soit
 
 \series bold
 \size large
-\lang french
 \begin_inset Box Ovalbox
 position "t"
 hor_pos "c"
@@ -213,7 +207,6 @@ status open
 
 \series bold
 \size large
-\lang french
 Soit 
 \begin_inset Formula $\varepsilon>0$
 \end_inset
@@ -237,7 +230,6 @@ Soit
 
 \series bold
 \size large
-\lang french
 Montrons alors 
 \begin_inset Formula $\forall n\geq N_{1},\left|\frac{\sum_{k=N_{1}}^{n}u_{k}}{n}\right|<\frac{\varepsilon}{2}$
 \end_inset
@@ -246,8 +238,6 @@ Montrons alors
 \end_layout
 
 \begin_layout Plain Layout
-
-\lang french
 \begin_inset VSpace defskip
 \end_inset
 
@@ -258,7 +248,6 @@ Montrons alors
 
 \series bold
 \size large
-\lang french
 \begin_inset Box Ovalbox
 position "t"
 hor_pos "c"
@@ -281,7 +270,6 @@ status open
 
 \series bold
 \size large
-\lang french
 Soit donc 
 \begin_inset Formula $n\geq N_{1}$
 \end_inset
@@ -303,8 +291,6 @@ Soit donc
 \end_layout
 
 \begin_layout Plain Layout
-
-\lang french
 \begin_inset VSpace defskip
 \end_inset
 
@@ -330,7 +316,6 @@ De même, puisque
 
 \series bold
 \size large
-\lang french
 En posant 
 \begin_inset Formula $N=\max(N_{1},N_{2})$
 \end_inset
@@ -349,7 +334,6 @@ En posant
 
 \series bold
 \size large
-\lang french
 \begin_inset Formula 
 \[
 {\displaystyle \left|\frac{\sum_{k=1}^{n}u_{k}}{n}\right|=\left|\frac{\sum_{k=1}^{N_{1}-1}u_{k}}{n}+\frac{\sum_{k=N_{1}}^{n}u_{k}}{n}\right|\leq\left|\frac{\sum_{k=1}^{N_{1}-1}u_{k}}{n}\right|+\left|\frac{\sum_{k=N_{1}}^{n}u_{k}}{n}\right|<\frac{\varepsilon}{2}+\frac{\varepsilon}{2}=\varepsilon}
@@ -367,8 +351,6 @@ En posant
 
 \begin_layout Standard
 \noindent
-
-\lang french
 \begin_inset ERT
 status open
 

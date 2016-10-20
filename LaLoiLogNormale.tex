@@ -1,8 +1,8 @@
 %% LyX 2.2.1 created this file.  For more info, see http://www.lyx.org/.
 %% Do not edit unless you really know what you are doing.
-\documentclass[french,english,12pt]{paper}
+\documentclass[french,12pt]{paper}
 \usepackage[T1]{fontenc}
-\usepackage[latin9]{inputenc}
+\usepackage[utf8]{inputenc}
 \usepackage[landscape,a4paper]{geometry}
 \geometry{verbose,tmargin=19mm,bmargin=0mm,lmargin=16mm,rmargin=16mm}
 \pagestyle{empty}
@@ -46,7 +46,7 @@ arc (90 : 0 : 4*\un)
 node[text=white,pos=.54 , rotate=90]
 {\tiny Ce document est sous licence GNU FDL,
  il est librement modifiable et distribuable.
- Licence et sources complètes disponibles sur le site.
+ Licence et sources complÃ¨tes disponibles sur le site.
  Copyright 2016, Jean-Christophe Jameux}
 arc (0 : -90 : 4*\un)
 -- ($(current page.south west)+(24*\un,20*\un)$)
@@ -87,39 +87,37 @@ arc (\gam-\ang : \gam+\ang+.85 : 13*\un);
 
 \makeatother
 \begin{document}
-\selectlanguage{french}%
 \title{\large\bf La loi log-normale}
 
-\selectlanguage{english}%
-A\hphantom{Deca}Connaitre une variable alléatoire, c'est avant tout
-connaître sa loi. Dans le cas d'une variable aléatoire réelle à densité
-$X$, cette loi est \hphantom{Dec.}entièrement déterminée aussi bien
-par sa fonction de répartition $F_{X}:x\mapsto P\left(X\leq x\right)$
-que par sa fonction de densité $f_{X}\coloneqq F_{X}'$. Chacune de
-\hphantom{D}ses représentation de la loi de X se montre plus ou moins
-adaptée à la résolution de certains problèmes. On est donc souvent
-amené à voyager d'une représentation à l'autre. L'étude de la loi
-log-normale sera l'occasion d'illustrer différentes dynamiques qui
-se jouent entre fonctions de répartitions et fonctions de densités
-dans l'étude des lois de variables aléatoires. Elle sera aussi l'occasion
-de montrer à quel point il est important de connaître intimement les
-lois de variables alléatoires usuelles.
+A\hphantom{Deca}Connaitre une variable allÃ©atoire, c'est avant tout
+connaÃ®tre sa loi. Dans le cas d'une variable alÃ©atoire rÃ©elle Ã  densitÃ©
+$X$, cette loi est \hphantom{Dec.}entiÃ¨rement dÃ©terminÃ©e aussi bien
+par sa fonction de rÃ©partition $F_{X}:x\mapsto P\left(X\leq x\right)$
+que par sa fonction de densitÃ© $f_{X}\coloneqq F_{X}'$. Chacune de
+\hphantom{D}ses reprÃ©sentation de la loi de X se montre plus ou moins
+adaptÃ©e Ã  la rÃ©solution de certains problÃ¨mes. On est donc souvent
+amenÃ© Ã  voyager d'une reprÃ©sentation Ã  l'autre. L'Ã©tude de la loi
+log-normale sera l'occasion d'illustrer diffÃ©rentes dynamiques qui
+se jouent entre fonctions de rÃ©partitions et fonctions de densitÃ©s
+dans l'Ã©tude des lois de variables alÃ©atoires. Elle sera aussi l'occasion
+de montrer Ã  quel point il est important de connaÃ®tre intimement les
+lois de variables allÃ©atoires usuelles.
 
 \begin{minipage}[t]{0.48\columnwidth}%
-On dit qu'une variable aléatoire $X$ suit une loi log-normale de
-paramètre $\left(\mu,\sigma^{2}\right)$, ce qu'on note $\mathrm{X\sim Log}\!-\mathcal{N}(\mu,\,\sigma^{2})$,
-si son logarithme suit une loi normale de paramètre $\left(\mu,\sigma^{2}\right)$.
-Autrement dit, si elle est de la forme $X=e^{T}$ où $T\sim\mathcal{N}(\mu,\sigma^{2})$
+On dit qu'une variable alÃ©atoire $X$ suit une loi log-normale de
+paramÃ¨tre $\left(\mu,\sigma^{2}\right)$, ce qu'on note $\mathrm{X\sim Log}\!-\mathcal{N}(\mu,\,\sigma^{2})$,
+si son logarithme suit une loi normale de paramÃ¨tre $\left(\mu,\sigma^{2}\right)$.
+Autrement dit, si elle est de la forme $X=e^{T}$ oÃ¹ $T\sim\mathcal{N}(\mu,\sigma^{2})$
 ; son logarithme est alors bien normal, autrement dit $\ln X\sim\mathcal{N}(\mu,\sigma^{2})$.
-Nous allons montrer comment étudier une telle loi en nous ramenant
-à des lois normales. 
+Nous allons montrer comment Ã©tudier une telle loi en nous ramenant
+Ã  des lois normales. 
 
-Pour cela, notons $\Phi$ la fonction de répartition de la loi normale
-centrée réduite et $\varphi$ sa fonction de densité.
+Pour cela, notons $\Phi$ la fonction de rÃ©partition de la loi normale
+centrÃ©e rÃ©duite et $\varphi$ sa fonction de densitÃ©.
 
-Comme on connait la relation entre $X$ et $T$, il est aisé d'établir
-une relation entre leurs fonctions de répartitions, donc de déterminer
-la fonction de répartition de $X$ :
+Comme on connait la relation entre $X$ et $T$, il est aisÃ© d'Ã©tablir
+une relation entre leurs fonctions de rÃ©partitions, donc de dÃ©terminer
+la fonction de rÃ©partition de $X$ :
 
 \begin{minipage}[t]{0.4\columnwidth}%
 \begin{flushleft}
@@ -138,8 +136,8 @@ P\left(T\leq\ln x\right) & \mathnormal{si}\;x>0\\
 \par\end{flushleft}%
 \end{minipage}\hfill{}%
 \begin{minipage}[t]{0.44\columnwidth}%
-La fonction indicatrice d'un ensemble $E$, notée $\mathbb{1}_{E}$
-est définie par :\vspace{-3ex}
+La fonction indicatrice d'un ensemble $E$, notÃ©e $\mathbb{1}_{E}$
+est dÃ©finie par :\vspace{-3ex}
 \[
 \forall x\in\mathbb{R},\mathbb{1}_{E}=\begin{cases}
 1 & \textrm{si }x\in E\\
@@ -149,14 +147,14 @@ est définie par :\vspace{-3ex}
 
 \vspace{-1ex}
 
-Elle permet une écriture plus compacte, et donc plus commode, des
-fonctions ayant des formules algébriques différentes selon les parties
-de $\mathbb{R}$ où elles sont définies.%
+Elle permet une Ã©criture plus compacte, et donc plus commode, des
+fonctions ayant des formules algÃ©briques diffÃ©rentes selon les parties
+de $\mathbb{R}$ oÃ¹ elles sont dÃ©finies.%
 \end{minipage}
 
 \vspace{1ex}
 Un calcul direct nous permet alors de trouver une expression de la
-densité de $X$:
+densitÃ© de $X$:
 
 \medskip{}
 
@@ -167,16 +165,16 @@ ${\displaystyle f_{X}:x\mapsto F_{X}'\left(x\right)=\frac{1}{\sigma x}\cdot\varp
 \end{minipage}\hfill{}%
 \begin{minipage}[t]{0.5\columnwidth}%
 \begin{minipage}[t]{0.52\columnwidth}%
-Si la relation entre $F_{T}$ et $\Phi$ ne vous apparaît pas clairement,
+Si la relation entre $F_{T}$ et $\Phi$ ne vous apparaÃ®t pas clairement,
 voyons comment la retrouver en trouvant une relation entre $f_{T}$
-et $\varphi$. Le calcul ci-contre vise à \emph{reconnaitre} une loi
-normale centrée réduite dans l'\emph{écriture} d'une loi normale quelconque.
-Mais nous ne savons \emph{reconnaitre} une telle loi que sur sa densité,
-c'est pourquoi nous écrivons la fonction de répartition comme une
-intégrale de la fonction de densité. On utilisera pour ce faire le
+et $\varphi$. Le calcul ci-contre vise Ã  \emph{reconnaitre} une loi
+normale centrÃ©e rÃ©duite dans l'\emph{Ã©criture} d'une loi normale quelconque.
+Mais nous ne savons \emph{reconnaitre} une telle loi que sur sa densitÃ©,
+c'est pourquoi nous Ã©crivons la fonction de rÃ©partition comme une
+intÃ©grale de la fonction de densitÃ©. On utilisera pour ce faire le
 changement de variable :\vspace{-1ex}
 \[
-\tau=\frac{t-\mu}{\sigma}\textrm{ \ (d'où }dt=\sigma d\tau\textrm{)}
+\tau=\frac{t-\mu}{\sigma}\textrm{ \ (d'oÃ¹ }dt=\sigma d\tau\textrm{)}
 \]
 %
 \end{minipage} \hfill{}%
@@ -194,11 +192,11 @@ F_{T}:u & \mapsto\intop_{-\infty}^{u}f_{T}\left(t\right)dt\\
 
 \vspace{1ex}
 
-De même, s'il ne vous a pas échappé qu'on a pas pris garde à traiter
-correctement le cas de la dérivée de $F_{X}$ en 0, voici un moyen
-direct de démontrer qu'on a bien $F_{X}'(0)=0$. Comme $\lim_{x\to0^{+}}\frac{\ln x-\mu}{\sigma}=-\infty$,
+De mÃªme, s'il ne vous a pas Ã©chappÃ© qu'on a pas pris garde Ã  traiter
+correctement le cas de la dÃ©rivÃ©e de $F_{X}$ en 0, voici un moyen
+direct de dÃ©montrer qu'on a bien $F_{X}'(0)=0$. Comme $\lim_{x\to0^{+}}\frac{\ln x-\mu}{\sigma}=-\infty$,
 on peut affirmer l'existence d'un $\alpha$ pour lequel $\forall x\in]0;\alpha[,\forall\tau<\frac{\ln x-\mu}{\sigma},-\tau>\frac{1}{\sqrt{2\pi}}$.
-Dés lors, le calcul suivant achève la démonstration :{\footnotesize{}\vspace{-1ex}
+DÃ©s lors, le calcul suivant achÃ¨ve la dÃ©monstration :{\footnotesize{}\vspace{-1ex}
 \begin{align*}
  & \forall x\in\left]0;\alpha\right[,\frac{F_{X}(x)-F_{X}(0)}{x}=\frac{1}{x}\cdot\Phi\left(\frac{\ln x-\mu}{\sigma}\right)=\frac{1}{x}\cdot\intop_{-\infty}^{\frac{\ln x-\mu}{\sigma}}\frac{1}{\sqrt{2\pi}}e^{-\frac{\tau^{2}}{2}}d\tau\\
  & <e^{-\ln x}\cdot e^{-\frac{\left(\ln x-\mu\right)^{2}}{2\sigma^{2}}}=e^{-\frac{\left(\ln x\right)^{2}+2\left(\sigma^{2}-\mu\right)\ln x+\mu^{2}}{2\sigma^{2}}}=\frac{1}{x}\cdot\intop_{-\infty}^{\frac{\ln x-\mu}{\sigma}}-\tau.e^{-\frac{\tau^{2}}{2}}d\tau=\frac{1}{x}\cdot e^{-\frac{\left(\ln x-\mu\right)^{2}}{2\sigma^{2}}}\xrightarrow[x\to0^{+}]{}0
@@ -206,28 +204,26 @@ Dés lors, le calcul suivant achève la démonstration :{\footnotesize{}\vspace{-1e
 }{\footnotesize \par}%
 \end{minipage} 
 
-\selectlanguage{french}%
 \bordure
 
 \newpage{}
 
 \title{\large\bf Moments d'une loi log-normale}
 
-\selectlanguage{english}%
-A\hphantom{Deca} L'inégalité de Markov prétend que pour toute variable
-alléatoire positive et pour tout $a>0$, on a $P\left(A\geq a\right)\leq\frac{1}{a}\cdot E\left(A\right)$.
+A\hphantom{Deca} L'inÃ©galitÃ© de Markov prÃ©tend que pour toute variable
+allÃ©atoire positive et pour tout $a>0$, on a $P\left(A\geq a\right)\leq\frac{1}{a}\cdot E\left(A\right)$.
 En prenant $A$ \hphantom{Deca}de la forme $\left|X-E\left(X\right)\right|^{n}$
 avec $n\in\mathbb{N}$ et en posant $s\coloneqq\sqrt[n]{a}$, on obtient
-l'inégalité $P\left(\left|X-E\left(X\right)\right|\geq s\right)\leq\frac{1}{s^{n}}\cdot E\left(\left|X-E\left(X\right)\right|^{n}\right)$
+l'inÃ©galitÃ© $P\left(\left|X-E\left(X\right)\right|\geq s\right)\leq\frac{1}{s^{n}}\cdot E\left(\left|X-E\left(X\right)\right|^{n}\right)$
 valable pour tout $n$.\linebreak{}
-\hphantom{D}En particulier, dans le cas où $n=2$, en posant $k\coloneqq\frac{s}{\sigma}$,
-on obtient l'inégalité de Bienaymé-Tchebychev $P\left(\left|X-E\left(X\right)\right|\geq k\sigma\right)\leq\frac{1}{\left(k\sigma\right)^{2}}\cdot V(X)=\frac{1}{k^{2}}$.\linebreak{}
-De telles inégalités permettent de majorer de façon probable l'écart
-d'une variable alléatoire à sa valeur moyenne. Elle sont à ce titre
-fondamentale pour réaliser des estimations, par exemple en statistiques.
+\hphantom{D}En particulier, dans le cas oÃ¹ $n=2$, en posant $k\coloneqq\frac{s}{\sigma}$,
+on obtient l'inÃ©galitÃ© de BienaymÃ©-Tchebychev $P\left(\left|X-E\left(X\right)\right|\geq k\sigma\right)\leq\frac{1}{\left(k\sigma\right)^{2}}\cdot V(X)=\frac{1}{k^{2}}$.\linebreak{}
+De telles inÃ©galitÃ©s permettent de majorer de faÃ§on probable l'Ã©cart
+d'une variable allÃ©atoire Ã  sa valeur moyenne. Elle sont Ã  ce titre
+fondamentale pour rÃ©aliser des estimations, par exemple en statistiques.
 C'est la raison pour laquelle, outre la valeur de $E\left(X\right)$,
-on est intéréssé plus générallement par la valeur de $E\left(X^{n}\right)$
-pour tout $n\in\mathbb{N}^{*}$, cette quantité est appelée le moment
+on est intÃ©rÃ©ssÃ© plus gÃ©nÃ©rallement par la valeur de $E\left(X^{n}\right)$
+pour tout $n\in\mathbb{N}^{*}$, cette quantitÃ© est appelÃ©e le moment
 d'ordre $n$ de $X$.
 
 \begin{minipage}[t]{0.43\columnwidth}%
@@ -240,22 +236,22 @@ f_{X}\equiv0\textrm{ sur }\left]-\infty;0\right]
 \]
 et en effectuant le changement de variable : 
 \[
-t=\frac{\ln x-\mu}{\sigma}\textrm{ \ (d'où }dx=\sigma e^{\sigma t+\mu}dt\textrm{)}
+t=\frac{\ln x-\mu}{\sigma}\textrm{ \ (d'oÃ¹ }dx=\sigma e^{\sigma t+\mu}dt\textrm{)}
 \]
 
 \vspace{-1ex}
 
-nous sommes maintenant à même de calculer l'espérance de $X$. La
+nous sommes maintenant Ã  mÃªme de calculer l'espÃ©rance de $X$. La
 clef de notre calcul tient dans la remarque suivante : la fonction
-définie sur $\mathbb{R}$ par :
+dÃ©finie sur $\mathbb{R}$ par :
 \[
 t\mapsto\frac{1}{\sqrt{2\pi}}e^{-\frac{(t-\sigma)^{2}}{2}}
 \]
 
 \vspace{-1ex}
 
-n'est autre que la fonction de densité d'une loi normale $\mathcal{N}(\sigma,1)$,
-d'où :
+n'est autre que la fonction de densitÃ© d'une loi normale $\mathcal{N}(\sigma,1)$,
+d'oÃ¹ :
 
 \vspace{-1ex}
 \[
@@ -278,16 +274,16 @@ E\left(X\right) & =\intop_{-\infty}^{+\infty}x\cdot f_{X}\left(x\right)dx\\
 \end{minipage}%
 \end{minipage}\hfill{}%
 \begin{minipage}[t]{0.54\columnwidth}%
-Un moyen direct de déterminer les moments de $X$ serait de faire
+Un moyen direct de dÃ©terminer les moments de $X$ serait de faire
 appel au lemme de transfert, en calculant $\int_{-\infty}^{+\infty}x^{n}\cdot f_{X}\left(x\right)dx$
-pour chaque $n\in\mathbb{N}^{*}$. Nous allons nous montrer plus futé
-! Nous allons montrer que la variable aléatoire $Y$ définie par $Y=X^{n}$
-suit une loi log-normale dont on va chercher les paramètres. On pourra
-alors appliquer la formule de l'espérance que nous venons de démontrer
-en utilisant les paramètres ainsi trouvés.
+pour chaque $n\in\mathbb{N}^{*}$. Nous allons nous montrer plus futÃ©
+! Nous allons montrer que la variable alÃ©atoire $Y$ dÃ©finie par $Y=X^{n}$
+suit une loi log-normale dont on va chercher les paramÃ¨tres. On pourra
+alors appliquer la formule de l'espÃ©rance que nous venons de dÃ©montrer
+en utilisant les paramÃ¨tres ainsi trouvÃ©s.
 
-Pour démontrer que $Y$ suit une loi log-normale, il suffit de la
-mettre sous la forme $e^{T'}$où $T'$ suit une loi normale.\vspace{-1.5ex}
+Pour dÃ©montrer que $Y$ suit une loi log-normale, il suffit de la
+mettre sous la forme $e^{T'}$oÃ¹ $T'$ suit une loi normale.\vspace{-1.5ex}
 \[
 Y=X^{n}=\left(e^{T}\right)^{n}=e^{nT}
 \]
@@ -295,7 +291,7 @@ Y=X^{n}=\left(e^{T}\right)^{n}=e^{nT}
 \vspace{-1.5ex}
 
 Il s'agit donc de montrer que $T':=nT$ suit une loi normale et d'en
-trouver les paramètres.
+trouver les paramÃ¨tres.
 
 \vspace{-4.5ex}
 
@@ -307,7 +303,7 @@ F_{T'}:t & \mapsto P\left(T'\leq t\right)\\
  & \mapsto F_{T}\left(\frac{t}{n}\right)
 \end{align*}
 %
-\end{minipage}D'où%
+\end{minipage}D'oÃ¹%
 \begin{minipage}[c][1\totalheight][t]{0.45\columnwidth}%
 \begin{align*}
 f_{T'}:t & \mapsto F_{T'}'\left(t\right)\\
@@ -321,14 +317,14 @@ f_{T'}:t & \mapsto F_{T'}'\left(t\right)\\
 \vspace{0ex}
 
 Nous avons ainsi $T'\sim\mathcal{N}(n\mu,\left(n\sigma\right)^{2})$.
-Pour arriver à ce résultat, nous avons manipulé la fonction de densité
-de $T'$ dans le but de \textit{faire apparaître}\emph{ }la densité
+Pour arriver Ã  ce rÃ©sultat, nous avons manipulÃ© la fonction de densitÃ©
+de $T'$ dans le but de \textit{faire apparaÃ®tre}\emph{ }la densitÃ©
 d'une loi normale. C'est d'ailleurs pour cette raison que nous sommes
-passé par la densité, comme quand nous avons cherché une relation
-entre $F_{T}$ et $\Phi$, c'est le moyen le plus simple de reconnaître
+passÃ© par la densitÃ©, comme quand nous avons cherchÃ© une relation
+entre $F_{T}$ et $\Phi$, c'est le moyen le plus simple de reconnaÃ®tre
 une loi normale.
 
-Nous pouvons maintenant conclure fièrement :
+Nous pouvons maintenant conclure fiÃ¨rement :
 
 \vspace{-1ex}
 

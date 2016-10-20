@@ -65,9 +65,9 @@ arc (\gam-\ang : \gam+\ang+.85 : 13*\un);
 \options 12pt
 \use_default_options true
 \maintain_unincluded_children false
-\language english
+\language french
 \language_package default
-\inputencoding auto
+\inputencoding utf8
 \fontencoding global
 \font_roman "default" "default"
 \font_sans "default" "default"
@@ -120,7 +120,7 @@ arc (\gam-\ang : \gam+\ang+.85 : 13*\un);
 \tocdepth 3
 \paragraph_separation skip
 \defskip 0bp
-\quotes_language english
+\quotes_language french
 \papercolumns 1
 \papersides 1
 \paperpagestyle empty
@@ -135,8 +135,6 @@ arc (\gam-\ang : \gam+\ang+.85 : 13*\un);
 \begin_body
 
 \begin_layout Standard
-
-\lang french
 \begin_inset ERT
 status open
 
@@ -160,7 +158,6 @@ bf La fonction Partie Entière}
 
 \series bold
 \size large
-\lang french
 \begin_inset Phantom HPhantom
 status open
 
@@ -168,7 +165,6 @@ status open
 
 \series bold
 \size large
-\lang french
 Deca.
 \end_layout
 
@@ -190,7 +186,6 @@ status open
 
 \series bold
 \size large
-\lang french
 De..
 \end_layout
 
@@ -224,7 +219,6 @@ status open
 
 \series bold
 \size large
-\lang french
 D
 \end_layout
 
@@ -245,7 +239,6 @@ Comme
 
 \series bold
 \size large
-\lang french
 \begin_inset Formula $\forall x\in\mathbb{R}_{+},\exists n\in\mathbb{Z},n\leq x<n+1$
 \end_inset
 
@@ -256,7 +249,6 @@ Comme
 
 \series bold
 \size large
-\lang french
 \begin_inset Formula $\forall x\in\mathbb{R}_{-},\exists n\in\mathbb{Z},n\leq x<n+1$
 \end_inset
 
@@ -267,7 +259,6 @@ Comme
 
 \series bold
 \size large
-\lang french
 \begin_inset Formula $\forall x\in\mathbb{R},\forall n_{1},n_{2}\in\mathbb{Z},(n_{1}\leq x<n_{1}+1\text{ et }n_{2}\leq x<n_{2}+1)\Longrightarrow n_{1}=n_{2}$
 \end_inset
 
@@ -282,7 +273,6 @@ Comme
 
 \series bold
 \size large
-\lang french
 \begin_inset Box Ovalbox
 position "t"
 hor_pos "c"
@@ -305,7 +295,6 @@ status open
 
 \series bold
 \size large
-\lang french
 Soit 
 \begin_inset Formula $x\in\mathbb{R}_{+}$
 \end_inset
@@ -352,7 +341,6 @@ Soit
 
 \series bold
 \size large
-\lang french
 \begin_inset VSpace vfill
 \end_inset
 
@@ -379,7 +367,6 @@ status open
 
 \series bold
 \size large
-\lang french
 Soit maintenant 
 \begin_inset Formula $x\in\mathbb{R_{-}}$
 \end_inset
@@ -426,7 +413,6 @@ Soit maintenant
 
 \series bold
 \size large
-\lang french
 \begin_inset VSpace vfill
 \end_inset
 
@@ -453,7 +439,6 @@ status open
 
 \series bold
 \size large
-\lang french
 Enfin, soient 
 \begin_inset Formula $x\in\mathbb{R}$
 \end_inset
@@ -505,8 +490,6 @@ Enfin, soient
 \end_layout
 
 \begin_layout Standard
-
-\lang french
 \begin_inset ERT
 status open
 

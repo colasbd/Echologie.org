@@ -67,9 +67,9 @@ arc (\gam-\ang : \gam+\ang+.85 : 13*\un);
 \options 12pt
 \use_default_options true
 \maintain_unincluded_children false
-\language english
+\language french
 \language_package default
-\inputencoding auto
+\inputencoding utf8
 \fontencoding global
 \font_roman "default" "default"
 \font_sans "default" "default"
@@ -122,7 +122,7 @@ arc (\gam-\ang : \gam+\ang+.85 : 13*\un);
 \tocdepth 3
 \paragraph_separation skip
 \defskip smallskip
-\quotes_language english
+\quotes_language french
 \papercolumns 1
 \papersides 1
 \paperpagestyle empty
@@ -138,8 +138,6 @@ arc (\gam-\ang : \gam+\ang+.85 : 13*\un);
 \begin_layout Standard
 \paragraph_spacing onehalf
 \noindent
-
-\lang french
 \begin_inset ERT
 status open
 
@@ -198,7 +196,6 @@ bf Sommes de séries arithmétiques}
 
 \series bold
 \size larger
-\lang french
 \begin_inset Formula $\bullet$
 \end_inset
 
@@ -230,7 +227,6 @@ U_{0}=u_{0}\\
 
 \series bold
 \size larger
-\lang french
 \begin_inset VSpace -10mm
 \end_inset
 
@@ -242,7 +238,6 @@ U_{0}=u_{0}\\
 
 \series bold
 \size larger
-\lang french
 Ce qu'on note usuellement sous la forme : 
 \begin_inset Formula ${\displaystyle U_{n}=\sum_{k=0}^{n}u_{k}}$
 \end_inset
@@ -256,7 +251,6 @@ Ce qu'on note usuellement sous la forme :
 
 \series bold
 \size larger
-\lang french
 \begin_inset Formula $\bullet$
 \end_inset
 
@@ -281,7 +275,6 @@ en fonction
 
 \series bold
 \size larger
-\lang french
 \begin_inset Formula $\bullet$
 \end_inset
 
@@ -305,7 +298,6 @@ en fonction
 
 \series bold
 \size larger
-\lang french
 \begin_inset VSpace -15mm
 \end_inset
 
@@ -329,7 +321,6 @@ en fonction
 
 \series bold
 \size larger
-\lang french
 \begin_inset Formula $\bullet$
 \end_inset
 
@@ -359,7 +350,6 @@ en fonction
 
 \series bold
 \size larger
-\lang french
 \begin_inset VSpace -5mm
 \end_inset
 
@@ -371,7 +361,6 @@ en fonction
 
 \series bold
 \size larger
-\lang french
 \begin_inset Formula $\bullet$
 \end_inset
 
@@ -388,7 +377,6 @@ en fonction
 
 \series bold
 \size larger
-\lang french
 \begin_inset ERT
 status open
 

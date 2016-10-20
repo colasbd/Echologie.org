@@ -66,9 +66,9 @@ arc (\gam-\ang : \gam+\ang+.85 : 13*\un);
 \end_preamble
 \use_default_options false
 \maintain_unincluded_children false
-\language english
+\language french
 \language_package none
-\inputencoding auto
+\inputencoding utf8
 \fontencoding default
 \font_roman "default" "default"
 \font_sans "default" "default"
@@ -121,7 +121,7 @@ arc (\gam-\ang : \gam+\ang+.85 : 13*\un);
 \tocdepth 3
 \paragraph_separation indent
 \paragraph_indentation default
-\quotes_language english
+\quotes_language french
 \papercolumns 1
 \papersides 1
 \paperpagestyle default

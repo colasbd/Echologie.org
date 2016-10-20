@@ -65,9 +65,9 @@ arc (\gam-\ang : \gam+\ang+.85 : 13*\un);
 \options 12pt
 \use_default_options true
 \maintain_unincluded_children false
-\language english
+\language french
 \language_package default
-\inputencoding auto
+\inputencoding utf8
 \fontencoding global
 \font_roman "default" "default"
 \font_sans "default" "default"
@@ -120,7 +120,7 @@ arc (\gam-\ang : \gam+\ang+.85 : 13*\un);
 \tocdepth 3
 \paragraph_separation skip
 \defskip bigskip
-\quotes_language english
+\quotes_language french
 \papercolumns 1
 \papersides 1
 \paperpagestyle empty
@@ -135,8 +135,6 @@ arc (\gam-\ang : \gam+\ang+.85 : 13*\un);
 
 \begin_layout Standard
 \noindent
-
-\lang french
 \begin_inset ERT
 status open
 
@@ -155,8 +153,6 @@ bf Vrai/Faux sur les quadrilatères}
 \end_layout
 
 \begin_layout Standard
-
-\lang french
 Un quadrilatère symétrique par rapport aux médiatrices des côtés est un
  carré.
  
@@ -267,8 +263,6 @@ Un quadrilatère ayant ses côtés opposés deux à deux de même longueur est
 \end_layout
 
 \begin_layout Standard
-
-\lang french
 \begin_inset VSpace vfill
 \end_inset
 
@@ -277,8 +271,6 @@ Un quadrilatère ayant ses côtés opposés deux à deux de même longueur est
 
 \begin_layout Standard
 \noindent
-
-\lang french
 \begin_inset ERT
 status open
 
