@@ -886,7 +886,7 @@ En particulier, dans le cas où
 
 De telles inégalités permettent de majorer de façon probable l'écart d'une
  variable aléatoire à sa valeur moyenne.
- Elle sont à ce titre fondamentale pour réaliser des estimations, par exemple
+ Elle sont à ce titre fondamentales pour réaliser des estimations, par exemple
  en statistiques.
  C'est la raison pour laquelle, outre la valeur de 
 \begin_inset Formula $E\left(X\right)$
