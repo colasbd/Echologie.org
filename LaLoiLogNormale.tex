@@ -89,19 +89,19 @@ arc (\gam-\ang : \gam+\ang+.85 : 13*\un);
 \begin{document}
 \title{\large\bf La loi log-normale}
 
-A\hphantom{Deca}Connaitre une variable aléatoire, c'est avant tout
+A\hphantom{Deca}Connaître une variable aléatoire, c'est avant tout
 connaître sa loi. Dans le cas d'une variable aléatoire réelle à densité
 $X$, cette loi est \hphantom{Dec.}entièrement déterminée aussi bien
 par sa fonction de répartition $F_{X}:x\mapsto P\left(X\leq x\right)$
 que par sa fonction de densité $f_{X}\coloneqq F_{X}'$. Chacune de
-\hphantom{D}ses représentation de la loi de X se montre plus ou moins
-adaptée à la résolution de certains problèmes. On est donc souvent
+\hphantom{D}ces représentations de la loi de X se montre plus ou
+moins adaptée à la résolution de certains problèmes. On est donc souvent
 amené à voyager d'une représentation à l'autre. L'étude de la loi
 log-normale sera l'occasion d'illustrer différentes dynamiques qui
 se jouent entre fonctions de répartitions et fonctions de densités
 dans l'étude des lois de variables aléatoires. Elle sera aussi l'occasion
 de montrer à quel point il est important de connaître intimement les
-lois de variables alléatoires usuelles.
+lois de variables aléatoires usuelles.
 
 \begin{minipage}[t]{0.48\columnwidth}%
 On dit qu'une variable aléatoire $X$ suit une loi log-normale de
@@ -116,7 +116,7 @@ Pour cela, notons $\Phi$ la fonction de répartition de la loi normale
 centrée réduite et $\varphi$ sa fonction de densité.
 
 Comme on connait la relation entre $X$ et $T$, il est aisé d'établir
-une relation entre leurs fonctions de répartitions, donc de déterminer
+une relation entre leurs fonctions de répartitions, et donc de déterminer
 la fonction de répartition de $X$ :
 
 \begin{minipage}[t]{0.4\columnwidth}%
@@ -199,7 +199,7 @@ on peut affirmer l'existence d'un $\alpha$ pour lequel $\forall x\in]0;\alpha[,\
 Dés lors, le calcul suivant achève la démonstration :{\footnotesize{}\vspace{-1ex}
 \begin{align*}
  & \forall x\in\left]0;\alpha\right[,\frac{F_{X}(x)-F_{X}(0)}{x}=\frac{1}{x}\cdot\Phi\left(\frac{\ln x-\mu}{\sigma}\right)=\frac{1}{x}\cdot\intop_{-\infty}^{\frac{\ln x-\mu}{\sigma}}\frac{1}{\sqrt{2\pi}}e^{-\frac{\tau^{2}}{2}}d\tau\\
- & <e^{-\ln x}\cdot e^{-\frac{\left(\ln x-\mu\right)^{2}}{2\sigma^{2}}}=e^{-\frac{\left(\ln x\right)^{2}+2\left(\sigma^{2}-\mu\right)\ln x+\mu^{2}}{2\sigma^{2}}}=\frac{1}{x}\cdot\intop_{-\infty}^{\frac{\ln x-\mu}{\sigma}}-\tau.e^{-\frac{\tau^{2}}{2}}d\tau=\frac{1}{x}\cdot e^{-\frac{\left(\ln x-\mu\right)^{2}}{2\sigma^{2}}}\xrightarrow[x\to0^{+}]{}0
+ & <\frac{1}{x}\cdot\intop_{-\infty}^{\frac{\ln x-\mu}{\sigma}}-\tau.e^{-\frac{\tau^{2}}{2}}d\tau=\frac{1}{x}\cdot e^{-\frac{\left(\ln x-\mu\right)^{2}}{2\sigma^{2}}}=e^{-\ln x}\cdot e^{-\frac{\left(\ln x-\mu\right)^{2}}{2\sigma^{2}}}=e^{-\frac{\left(\ln x\right)^{2}+2\left(\sigma^{2}-\mu\right)\ln x+\mu^{2}}{2\sigma^{2}}}\xrightarrow[x\to0^{+}]{}0
 \end{align*}
 }{\footnotesize \par}%
 \end{minipage} 
@@ -211,18 +211,17 @@ Dés lors, le calcul suivant achève la démonstration :{\footnotesize{}\vspace{
 \title{\large\bf Moments d'une loi log-normale}
 
 A\hphantom{Deca} L'inégalité de Markov prétend que pour toute variable
-aléatoire positive et pour tout $a>0$, on a $P\left(A\geq a\right)\leq\frac{1}{a}\cdot E\left(A\right)$.
-En prenant $A$ \hphantom{Deca}de la forme $\left|X-E\left(X\right)\right|^{n}$
+aléatoire positive et pour tout $a>0$, on a $P\left(A\geq a\right)\leq\frac{1}{a}\cdot E\left(A\right)$.\linebreak{}
+ \hphantom{Deca}En prenant $A$ de la forme $\left|X-E\left(X\right)\right|^{n}$
 avec $n\in\mathbb{N}$ et en posant $s\coloneqq\sqrt[n]{a}$, on obtient
-l'inégalité $P\left(\left|X-E\left(X\right)\right|\geq s\right)\leq\frac{1}{s^{n}}\cdot E\left(\left|X-E\left(X\right)\right|^{n}\right)$
-valable pour tout $n$.\linebreak{}
+l'inégalité $P\left(\left|X-E\left(X\right)\right|\geq s\right)\leq\frac{1}{s^{n}}\cdot E\left(\left|X-E\left(X\right)\right|^{n}\right)$.
 \hphantom{D}En particulier, dans le cas où $n=2$, en posant $k\coloneqq\frac{s}{\sigma}$,
 on obtient l'inégalité de Bienaymé-Tchebychev $P\left(\left|X-E\left(X\right)\right|\geq k\sigma\right)\leq\frac{1}{\left(k\sigma\right)^{2}}\cdot V(X)=\frac{1}{k^{2}}$.\linebreak{}
 De telles inégalités permettent de majorer de façon probable l'écart
 d'une variable aléatoire à sa valeur moyenne. Elle sont à ce titre
 fondamentale pour réaliser des estimations, par exemple en statistiques.
 C'est la raison pour laquelle, outre la valeur de $E\left(X\right)$,
-on est intéréssé plus générallement par la valeur de $E\left(X^{n}\right)$
+on est intéressé plus générallement par la valeur de $E\left(X^{n}\right)$
 pour tout $n\in\mathbb{N}^{*}$, cette quantité est appelée le moment
 d'ordre $n$ de $X$.
 
@@ -276,7 +275,7 @@ E\left(X\right) & =\intop_{-\infty}^{+\infty}x\cdot f_{X}\left(x\right)dx\\
 \begin{minipage}[t]{0.54\columnwidth}%
 Un moyen direct de déterminer les moments de $X$ serait de faire
 appel au lemme de transfert, en calculant $\int_{-\infty}^{+\infty}x^{n}\cdot f_{X}\left(x\right)dx$
-pour chaque $n\in\mathbb{N}^{*}$. Nous allons nous montrer plus futé
+pour chaque $n\in\mathbb{N}^{*}$. Nous allons nous montrer plus futés
 ! Nous allons montrer que la variable aléatoire $Y$ définie par $Y=X^{n}$
 suit une loi log-normale dont on va chercher les paramètres. On pourra
 alors appliquer la formule de l'espérance que nous venons de démontrer

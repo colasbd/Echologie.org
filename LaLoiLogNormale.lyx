@@ -167,7 +167,7 @@ Deca
 
 \end_inset
 
-Connaitre une variable aléatoire, c'est avant tout connaître sa loi.
+Connaître une variable aléatoire, c'est avant tout connaître sa loi.
  Dans le cas d'une variable aléatoire réelle à densité 
 \begin_inset Formula $X$
 \end_inset
@@ -201,14 +201,14 @@ D
 
 \end_inset
 
-ses représentation de la loi de X se montre plus ou moins adaptée à la résolutio
-n de certains problèmes.
+ces représentations de la loi de X se montre plus ou moins adaptée à la
+ résolution de certains problèmes.
  On est donc souvent amené à voyager d'une représentation à l'autre.
  L'étude de la loi log-normale sera l'occasion d'illustrer différentes dynamique
 s qui se jouent entre fonctions de répartitions et fonctions de densités
  dans l'étude des lois de variables aléatoires.
  Elle sera aussi l'occasion de montrer à quel point il est important de
- connaître intimement les lois de variables alléatoires usuelles.
+ connaître intimement les lois de variables aléatoires usuelles.
 \end_layout
 
 \begin_layout Standard
@@ -289,7 +289,7 @@ Comme on connait la relation entre
 \end_inset
 
 , il est aisé d'établir une relation entre leurs fonctions de répartitions,
- donc de déterminer la fonction de répartition de 
+ et donc de déterminer la fonction de répartition de 
 \begin_inset Formula $X$
 \end_inset
 
@@ -747,7 +747,7 @@ t le cas de la dérivée de
 \begin_inset Formula 
 \begin{align*}
  & \forall x\in\left]0;\alpha\right[,\frac{F_{X}(x)-F_{X}(0)}{x}=\frac{1}{x}\cdot\Phi\left(\frac{\ln x-\mu}{\sigma}\right)=\frac{1}{x}\cdot\intop_{-\infty}^{\frac{\ln x-\mu}{\sigma}}\frac{1}{\sqrt{2\pi}}e^{-\frac{\tau^{2}}{2}}d\tau\\
- & <e^{-\ln x}\cdot e^{-\frac{\left(\ln x-\mu\right)^{2}}{2\sigma^{2}}}=e^{-\frac{\left(\ln x\right)^{2}+2\left(\sigma^{2}-\mu\right)\ln x+\mu^{2}}{2\sigma^{2}}}=\frac{1}{x}\cdot\intop_{-\infty}^{\frac{\ln x-\mu}{\sigma}}-\tau.e^{-\frac{\tau^{2}}{2}}d\tau=\frac{1}{x}\cdot e^{-\frac{\left(\ln x-\mu\right)^{2}}{2\sigma^{2}}}\xrightarrow[x\to0^{+}]{}0
+ & <\frac{1}{x}\cdot\intop_{-\infty}^{\frac{\ln x-\mu}{\sigma}}-\tau.e^{-\frac{\tau^{2}}{2}}d\tau=\frac{1}{x}\cdot e^{-\frac{\left(\ln x-\mu\right)^{2}}{2\sigma^{2}}}=e^{-\ln x}\cdot e^{-\frac{\left(\ln x-\mu\right)^{2}}{2\sigma^{2}}}=e^{-\frac{\left(\ln x\right)^{2}+2\left(\sigma^{2}-\mu\right)\ln x+\mu^{2}}{2\sigma^{2}}}\xrightarrow[x\to0^{+}]{}0
 \end{align*}
 
 \end_inset
@@ -824,8 +824,7 @@ Deca
 \end_inset
 
 .
- En prenant 
-\begin_inset Formula $A$
+\begin_inset Newline linebreak
 \end_inset
 
  
@@ -838,7 +837,11 @@ Deca
 
 \end_inset
 
-de la forme 
+En prenant 
+\begin_inset Formula $A$
+\end_inset
+
+ de la forme 
 \begin_inset Formula $\left|X-E\left(X\right)\right|^{n}$
 \end_inset
 
@@ -854,15 +857,8 @@ de la forme
 \begin_inset Formula $P\left(\left|X-E\left(X\right)\right|\geq s\right)\leq\frac{1}{s^{n}}\cdot E\left(\left|X-E\left(X\right)\right|^{n}\right)$
 \end_inset
 
- valable pour tout 
-\begin_inset Formula $n$
-\end_inset
-
 .
-\begin_inset Newline linebreak
-\end_inset
-
-
+ 
 \begin_inset Phantom HPhantom
 status open
 
@@ -896,7 +892,7 @@ De telles inégalités permettent de majorer de façon probable l'écart d'une
 \begin_inset Formula $E\left(X\right)$
 \end_inset
 
-, on est intéréssé plus générallement par la valeur de 
+, on est intéressé plus générallement par la valeur de 
 \begin_inset Formula $E\left(X^{n}\right)$
 \end_inset
 
@@ -1151,7 +1147,7 @@ Un moyen direct de déterminer les moments de
 \end_inset
 
 .
- Nous allons nous montrer plus futé ! Nous allons montrer que la variable
+ Nous allons nous montrer plus futés ! Nous allons montrer que la variable
  aléatoire 
 \begin_inset Formula $Y$
 \end_inset
