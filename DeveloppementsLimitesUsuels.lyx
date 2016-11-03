@@ -70,7 +70,7 @@ arc (\gam-\ang : \gam+\ang+.85 : 13*\un);
 \maintain_unincluded_children false
 \language french
 \language_package default
-\inputencoding utf8-plain
+\inputencoding utf8
 \fontencoding global
 \font_roman "default" "default"
 \font_sans "default" "default"
@@ -117,7 +117,7 @@ arc (\gam-\ang : \gam+\ang+.85 : 13*\un);
 \end_index
 \leftmargin 23mm
 \topmargin 22mm
-\rightmargin 23mm
+\rightmargin 17mm
 \bottommargin 0mm
 \secnumdepth 3
 \tocdepth 3
@@ -169,7 +169,7 @@ Decalage
 \end_inset
 
 On trouvera ci-dessous des approximations utiles au voisinage de 0.
- Ces approximations permettent d'obtenir des 
+ Ces approximations permettent d'obtenir des équivalents 
 \begin_inset Phantom HPhantom
 status open
 
@@ -179,8 +179,9 @@ Decala..
 
 \end_inset
 
-équivalents simples dans de nombreuses situations.
- Les graphiques en regard de certaines fonctions permettent de se 
+simples dans de nombreuses situations.
+ Les graphiques en regard de certaines fonctions permettent de se rendre
+ compte de la 
 \begin_inset Phantom HPhantom
 status open
 
@@ -190,19 +191,18 @@ Decal
 
 \end_inset
 
-rendre compte de la qualité de l'approximation suivant l'ordre auquel on
- pousse le développement limité.
+qualité de l'approximation suivant l'ordre auquel on pousse le développement
+ limité.
 \end_layout
 
 \begin_layout Standard
-\begin_inset VSpace medskip
+\begin_inset VSpace -4ex
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
- 
 \begin_inset ERT
 status open
 
@@ -212,7 +212,7 @@ status open
 \backslash
 setlength{
 \backslash
-extrarowheight}{3mm}
+extrarowheight}{5.7ex}
 \end_layout
 
 \end_inset
@@ -238,7 +238,7 @@ tabcolsep3mm
 \series bold
 \size large
 \begin_inset space \hspace{}
-\length -10mm
+\length -3.5ex
 \end_inset
 
 
@@ -261,7 +261,7 @@ tabcolsep3mm
 status open
 
 \begin_layout Plain Layout
-\begin_inset Formula $\frac{1}{\frac{1}{\frac{1}{\frac{1}{1}}}}Decalage$
+\begin_inset Formula $Decalage$
 \end_inset
 
 
@@ -353,21 +353,6 @@ null
 
 \begin_layout Plain Layout
 
-\series bold
-\size large
-\begin_inset Phantom VPhantom
-status open
-
-\begin_layout Plain Layout
-\begin_inset Formula $\frac{1}{\frac{1}{\frac{1}{\frac{1}{\frac{1}{1}}}}}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \end_inset
@@ -426,19 +411,6 @@ status open
 
 \series bold
 \size large
-\begin_inset Phantom VPhantom
-status open
-
-\begin_layout Plain Layout
-\begin_inset Formula $\frac{1}{\frac{1}{\frac{1}{\frac{1}{\frac{1}{1}}}}}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
 \begin_inset ERT
 status collapsed
 
@@ -592,19 +564,6 @@ end{tikzpicture}
 
 \series bold
 \size large
-\begin_inset Phantom VPhantom
-status open
-
-\begin_layout Plain Layout
-\begin_inset Formula $\frac{1}{\frac{1}{\frac{1}{\frac{1}{\frac{1}{1}}}}}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
 \begin_inset ERT
 status collapsed
 
@@ -758,19 +717,6 @@ end{tikzpicture}
 
 \series bold
 \size large
-\begin_inset Phantom VPhantom
-status open
-
-\begin_layout Plain Layout
-\begin_inset Formula $\frac{1}{\frac{1}{\frac{1}{\frac{1}{\frac{1}{1}}}}}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
 \begin_inset ERT
 status collapsed
 
@@ -924,19 +870,6 @@ end{tikzpicture}
 
 \series bold
 \size large
-\begin_inset Phantom VPhantom
-status open
-
-\begin_layout Plain Layout
-\begin_inset Formula $\frac{1}{\frac{1}{\frac{1}{\frac{1}{\frac{1}{1}}}}}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
 \begin_inset ERT
 status collapsed
 
@@ -1090,19 +1023,6 @@ end{tikzpicture}
 
 \series bold
 \size large
-\begin_inset Phantom VPhantom
-status open
-
-\begin_layout Plain Layout
-\begin_inset Formula $\frac{1}{\frac{1}{\frac{1}{\frac{1}{\frac{1}{1}}}}}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
 \begin_inset ERT
 status collapsed
 
@@ -1251,19 +1171,6 @@ Formule compliquée
 
 \series bold
 \size large
-\begin_inset Phantom VPhantom
-status open
-
-\begin_layout Plain Layout
-\begin_inset Formula $\frac{1}{\frac{1}{\frac{1}{\frac{1}{\frac{1}{1}}}}}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
 \begin_inset ERT
 status collapsed
 
@@ -1414,21 +1321,6 @@ end{tikzpicture}
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\series bold
-\size large
-\begin_inset Phantom VPhantom
-status open
-
-\begin_layout Plain Layout
-\begin_inset Formula $\frac{1}{\frac{1}{\frac{1}{\frac{1}{\frac{1}{1}}}}}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
 
 \end_layout
 
