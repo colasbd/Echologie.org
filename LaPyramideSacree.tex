@@ -3,7 +3,7 @@
 \documentclass[french,12pt]{paper}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage[landscape,a4paper]{geometry}
+\usepackage[landscape,a4paper]{geometry}fr
 \geometry{verbose,tmargin=0mm,bmargin=0mm,lmargin=0mm,rmargin=0mm}
 \pagestyle{empty}
 \setlength{\parskip}{\bigskipamount}
@@ -111,7 +111,7 @@ arc (\gam-\ang : \gam+\ang+.85 : 13*\un);
 \node (a3) at ($(60:0.5)+(0:1.3)$){$\left(a+b\right)k=ak+bk$}; 
 \draw[->,>=latex] (a1) to[out=-10,in=10] node[left]{ 		\hsize4cm 		\vbox{ 			\begin{center} 				en remplaçant l'addition				 				par une soustraction 			\end{center} 		} 	} (a2);
 \coeur[shift={($(60:0.5)+(0:1.3)+(0,.03)$)},ball color=lightgray,scale=0.05,rotate=-16,opacity=.2]
-\node (a4) at ($(60:0.5)+(0:1.2)+(-50:0.25)$){$\displaystyle\frac ak+\frac bk=\frac{a+b}k$};
+\node (a4) at ($(60:0.5)+(0:1.2)+(-50:0.25)$){$\displaystyle\frac{a+b}k = \frac ak+\frac bk$};
 \draw[->,>=latex] (a3) to[out=-170,in=170] node[right]{ 		\hsize5cm 		\vbox{ 			\begin{center} 				en remplaçant la multiplication				 				par une division 			\end{center} 		} 	} (a4);
 
 \node at ($(M)+(-.1,0)$){$a\cdot b=b\cdot a$};
